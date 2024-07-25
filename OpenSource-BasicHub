@@ -1,0 +1,201 @@
+-- Open source script :D
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Main = Instance.new("ScreenGui")
+local Window = Instance.new("Frame")
+local Bar = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local MappedArea = Instance.new("Frame")
+local Unload = Instance.new("TextButton")
+local Chams = Instance.new("TextButton")
+local JumpPower = Instance.new("TextButton")
+local Gravity = Instance.new("TextButton")
+local WalkSpeed = Instance.new("TextButton")
+local NumberString = Instance.new("TextBox")
+local InfYield = Instance.new("TextButton")
+
+--Properties:
+
+Main.Name = "Main"
+Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Window.Name = "Window"
+Window.Parent = Main
+Window.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Window.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Window.Position = UDim2.new(0.249369487, 0, 0.25, 0)
+Window.Size = UDim2.new(0.5, 0, 0.5, 0)
+
+Bar.Name = "Bar"
+Bar.Parent = Window
+Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar.Size = UDim2.new(1, 0, 0.100000001, 0)
+
+Title.Name = "Title"
+Title.Parent = Bar
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.00999999978, 0, 0, 0)
+Title.Size = UDim2.new(0.100000001, 0, 1, 0)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Program.exe"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextSize = 14.000
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+MappedArea.Name = "MappedArea"
+MappedArea.Parent = Window
+MappedArea.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MappedArea.BackgroundTransparency = 1.000
+MappedArea.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MappedArea.BorderSizePixel = 0
+MappedArea.Position = UDim2.new(0, 0, 0.0987653881, 0)
+MappedArea.Size = UDim2.new(1, 0, 0.899999976, 0)
+
+Unload.Name = "Unload"
+Unload.Parent = MappedArea
+Unload.BackgroundColor3 = Color3.fromRGB(139, 0, 0)
+Unload.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Unload.Position = UDim2.new(0.703026474, 0, 0.761316895, 0)
+Unload.Size = UDim2.new(0.25, 0, 0, 50)
+Unload.Font = Enum.Font.Gotham
+Unload.Text = "Unload"
+Unload.TextColor3 = Color3.fromRGB(255, 255, 255)
+Unload.TextSize = 19.000
+
+Chams.Name = "Chams"
+Chams.Parent = MappedArea
+Chams.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Chams.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Chams.Position = UDim2.new(0.0488650687, 0, 0.761316895, 0)
+Chams.Size = UDim2.new(0.25, 0, 0, 50)
+Chams.Font = Enum.Font.Gotham
+Chams.Text = "Esp"
+Chams.TextColor3 = Color3.fromRGB(255, 255, 255)
+Chams.TextSize = 19.000
+
+JumpPower.Name = "JumpPower"
+JumpPower.Parent = MappedArea
+JumpPower.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+JumpPower.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JumpPower.Position = UDim2.new(0.37358132, 0, 0.531550109, 0)
+JumpPower.Size = UDim2.new(0.25, 0, 0, 50)
+JumpPower.Font = Enum.Font.Gotham
+JumpPower.Text = "JumpPower"
+JumpPower.TextColor3 = Color3.fromRGB(255, 255, 255)
+JumpPower.TextSize = 19.000
+
+Gravity.Name = "Gravity"
+Gravity.Parent = MappedArea
+Gravity.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Gravity.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gravity.Position = UDim2.new(0.701450169, 0, 0.531550109, 0)
+Gravity.Size = UDim2.new(0.25, 0, 0, 50)
+Gravity.Font = Enum.Font.Gotham
+Gravity.Text = "Gravity"
+Gravity.TextColor3 = Color3.fromRGB(255, 255, 255)
+Gravity.TextSize = 19.000
+
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = MappedArea
+WalkSpeed.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+WalkSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WalkSpeed.Position = UDim2.new(0.0472887754, 0, 0.531550109, 0)
+WalkSpeed.Size = UDim2.new(0.25, 0, 0, 50)
+WalkSpeed.Font = Enum.Font.Gotham
+WalkSpeed.Text = "WalkSpeed"
+WalkSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+WalkSpeed.TextSize = 19.000
+
+NumberString.Name = "NumberString"
+NumberString.Parent = MappedArea
+NumberString.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+NumberString.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NumberString.Position = UDim2.new(0.34205547, 0, 0.185185239, 0)
+NumberString.Size = UDim2.new(0, 200, 0, 50)
+NumberString.Font = Enum.Font.Gotham
+NumberString.Text = ""
+NumberString.TextColor3 = Color3.fromRGB(255, 255, 255)
+NumberString.TextSize = 14.000
+
+InfYield.Name = "InfYield"
+InfYield.Parent = MappedArea
+InfYield.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+InfYield.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfYield.Position = UDim2.new(0.375157624, 0, 0.761316895, 0)
+InfYield.Size = UDim2.new(0.25, 0, 0, 50)
+InfYield.Font = Enum.Font.Gotham
+InfYield.Text = "Infinite Yield"
+InfYield.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfYield.TextSize = 19.000
+
+-- Function to set the walk speed
+local function setWalkSpeed()
+	local speed = tonumber(NumberString.Text)
+	if speed then
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
+	end
+end
+
+local function setJumpPower()
+	local speed = tonumber(NumberString.Text)
+	if speed then
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = speed
+	end
+end
+
+local function setGravity()
+	local speed = tonumber(NumberString.Text)
+	if speed then
+		game.Workspace.Gravity = speed
+	end
+end
+
+local function unloadEvent()
+	Main:Destroy()
+	warn("Gui Unloaded Sucesssfully.")
+end
+
+local function loadInfYield()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end
+
+local function espEvent()
+	local ESP = Instance.new("Highlight")
+	ESP.FillColor = Color3.new(1, 0, 0)
+	ESP.OutlineColor = Color3.new(1, 1, 1)
+	ESP.FillTransparency = 0.5
+	ESP.OutlineTransparency = 0
+
+	function createESP(player)
+		local character = player.Character
+		if character then
+			local highlight = ESP:Clone()
+			highlight.Parent = character
+			highlight.Adornee = character
+		end
+	end
+
+	while true do
+		for _, player in ipairs(game.Players:GetPlayers()) do
+			createESP(player)
+		end
+		wait(1)
+	end
+end
+
+-- Connect button events
+WalkSpeed.MouseButton1Click:Connect(setWalkSpeed)
+JumpPower.MouseButton1Click:Connect(setJumpPower)
+Gravity.MouseButton1Click:Connect(setGravity)
+Chams.MouseButton1Click:Connect(espEvent)
+InfYield.MouseButton1Click:Connect(loadInfYield)
+Unload.MouseButton1Click:Connect(unloadEvent)
+warn("Script Has Loaded All Instances Sucessfully.")
+warn("Script Is Open Source :D")
