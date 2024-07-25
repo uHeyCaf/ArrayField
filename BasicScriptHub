@@ -1,0 +1,51 @@
+-- Cria a GUI
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local WalkSpeedButton = Instance.new("TextButton")
+local JumpPowerButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+
+-- Propriedades da GUI
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frame.Position = UDim2.new(0.5, -100, 0.5, -50)
+Frame.Size = UDim2.new(0, 200, 0, 100)
+Frame.BackgroundTransparency = 0.5
+
+UICorner.Parent = Frame
+
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Title.Size = UDim2.new(1, 0, 0.2, 0)
+Title.Text = "Gato's Basic ScriptHub"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.BackgroundTransparency = 1
+
+WalkSpeedButton.Parent = Frame
+WalkSpeedButton.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+WalkSpeedButton.Position = UDim2.new(0.1, 0, 0.4, 0)
+WalkSpeedButton.Size = UDim2.new(0.35, 0, 0.3, 0)
+WalkSpeedButton.Text = "WalkSpeed"
+UICorner:Clone().Parent = WalkSpeedButton
+
+JumpPowerButton.Parent = Frame
+JumpPowerButton.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+JumpPowerButton.Position = UDim2.new(0.55, 0, 0.4, 0)
+JumpPowerButton.Size = UDim2.new(0.35, 0, 0.3, 0)
+JumpPowerButton.Text = "JumpPower"
+UICorner:Clone().Parent = JumpPowerButton
+
+-- Funções dos botões
+WalkSpeedButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/9GDxN4eg'))()
+    ScreenGui:Destroy()
+end)
+
+JumpPowerButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/m6BV12nz'))()
+    ScreenGui:Destroy()
+end)
