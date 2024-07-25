@@ -23,6 +23,7 @@ local Title = Instance.new("TextLabel")
 Main.Name = "Main"
 Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Main.ResetOnSpawn = false
 
 Window.Name = "Window"
 Window.Parent = Main
@@ -32,6 +33,8 @@ Window.Draggable = true
 Window.Position = UDim2.new(0.232030272, 0, 0.195987672, 0)
 Window.Selectable = true
 Window.Size = UDim2.new(0.533574998, 0, 0.615740716, 0)
+Window.Active = true
+Window.Draggable = true
 
 MappedArea.Name = "MappedArea"
 MappedArea.Parent = Window
