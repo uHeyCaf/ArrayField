@@ -1,4 +1,3 @@
--- Open source script :D
 -- Gui to Lua
 -- Version: 3.2
 
@@ -6,8 +5,6 @@
 
 local Main = Instance.new("ScreenGui")
 local Window = Instance.new("Frame")
-local Bar = Instance.new("Frame")
-local Title = Instance.new("TextLabel")
 local MappedArea = Instance.new("Frame")
 local Unload = Instance.new("TextButton")
 local Chams = Instance.new("TextButton")
@@ -16,6 +13,10 @@ local Gravity = Instance.new("TextButton")
 local WalkSpeed = Instance.new("TextButton")
 local NumberString = Instance.new("TextBox")
 local InfYield = Instance.new("TextButton")
+local Say = Instance.new("TextButton")
+local Unesp = Instance.new("TextButton")
+local Bar = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
 
 --Properties:
 
@@ -27,8 +28,118 @@ Window.Name = "Window"
 Window.Parent = Main
 Window.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
 Window.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Window.Position = UDim2.new(0.249369487, 0, 0.25, 0)
-Window.Size = UDim2.new(0.5, 0, 0.5, 0)
+Window.Draggable = true
+Window.Position = UDim2.new(0.249369487, 0, 0.155864194, 0)
+Window.Selectable = true
+Window.Size = UDim2.new(0.5, 0, 0.688271582, 0)
+
+MappedArea.Name = "MappedArea"
+MappedArea.Parent = Window
+MappedArea.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MappedArea.BackgroundTransparency = 1.000
+MappedArea.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MappedArea.BorderSizePixel = 0
+MappedArea.Position = UDim2.new(0, 0, 0.0987653881, 0)
+MappedArea.Size = UDim2.new(1, 0, 0.899999976, 0)
+
+Unload.Name = "Unload"
+Unload.Parent = MappedArea
+Unload.BackgroundColor3 = Color3.fromRGB(139, 0, 0)
+Unload.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Unload.Position = UDim2.new(0.701450169, 0, 0.599383652, 0)
+Unload.Size = UDim2.new(0.25, 0, 0, 50)
+Unload.Font = Enum.Font.Gotham
+Unload.Text = "Unload"
+Unload.TextColor3 = Color3.fromRGB(255, 255, 255)
+Unload.TextSize = 19.000
+
+Chams.Name = "Chams"
+Chams.Parent = MappedArea
+Chams.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Chams.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Chams.Position = UDim2.new(0.0472887754, 0, 0.599383652, 0)
+Chams.Size = UDim2.new(0.25, 0, 0, 50)
+Chams.Font = Enum.Font.Gotham
+Chams.Text = "Esp"
+Chams.TextColor3 = Color3.fromRGB(255, 255, 255)
+Chams.TextSize = 19.000
+
+JumpPower.Name = "JumpPower"
+JumpPower.Parent = MappedArea
+JumpPower.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+JumpPower.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JumpPower.Position = UDim2.new(0.372005016, 0, 0.369616866, 0)
+JumpPower.Size = UDim2.new(0.25, 0, 0, 50)
+JumpPower.Font = Enum.Font.Gotham
+JumpPower.Text = "JumpPower"
+JumpPower.TextColor3 = Color3.fromRGB(255, 255, 255)
+JumpPower.TextSize = 19.000
+
+Gravity.Name = "Gravity"
+Gravity.Parent = MappedArea
+Gravity.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Gravity.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gravity.Position = UDim2.new(0.699873865, 0, 0.369616866, 0)
+Gravity.Size = UDim2.new(0.25, 0, 0, 50)
+Gravity.Font = Enum.Font.Gotham
+Gravity.Text = "Gravity"
+Gravity.TextColor3 = Color3.fromRGB(255, 255, 255)
+Gravity.TextSize = 19.000
+
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = MappedArea
+WalkSpeed.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+WalkSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WalkSpeed.Position = UDim2.new(0.0457124822, 0, 0.369616866, 0)
+WalkSpeed.Size = UDim2.new(0.25, 0, 0, 50)
+WalkSpeed.Font = Enum.Font.Gotham
+WalkSpeed.Text = "WalkSpeed"
+WalkSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+WalkSpeed.TextSize = 19.000
+
+NumberString.Name = "NumberString"
+NumberString.Parent = MappedArea
+NumberString.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+NumberString.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NumberString.Position = UDim2.new(0.343631774, 0, 0.122903235, 0)
+NumberString.Size = UDim2.new(0, 200, 0, 50)
+NumberString.Font = Enum.Font.Gotham
+NumberString.Text = ""
+NumberString.TextColor3 = Color3.fromRGB(255, 255, 255)
+NumberString.TextSize = 14.000
+
+InfYield.Name = "InfYield"
+InfYield.Parent = MappedArea
+InfYield.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+InfYield.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfYield.Position = UDim2.new(0.37358132, 0, 0.599383652, 0)
+InfYield.Size = UDim2.new(0.25, 0, 0, 50)
+InfYield.Font = Enum.Font.Gotham
+InfYield.Text = "Infinite Yield"
+InfYield.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfYield.TextSize = 19.000
+
+Say.Name = "Say"
+Say.Parent = MappedArea
+Say.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Say.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Say.Position = UDim2.new(0.372005016, 0, 0.828581452, 0)
+Say.Size = UDim2.new(0.25, 0, 0, 50)
+Say.Font = Enum.Font.Gotham
+Say.Text = "Load Chat Bypasser (not by me)"
+Say.TextColor3 = Color3.fromRGB(255, 255, 255)
+Say.TextSize = 10.000
+
+Unesp.Name = "Unesp"
+Unesp.Parent = MappedArea
+Unesp.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Unesp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Unesp.Position = UDim2.new(0.0457124822, 0, 0.828581452, 0)
+Unesp.Size = UDim2.new(0.25, 0, 0, 50)
+Unesp.Font = Enum.Font.Gotham
+Unesp.Text = "Unesp"
+Unesp.TextColor3 = Color3.fromRGB(255, 255, 255)
+Unesp.TextSize = 19.000
 
 Bar.Name = "Bar"
 Bar.Parent = Window
@@ -49,93 +160,7 @@ Title.TextColor3 = Color3.fromRGB(0, 0, 0)
 Title.TextSize = 14.000
 Title.TextXAlignment = Enum.TextXAlignment.Left
 
-MappedArea.Name = "MappedArea"
-MappedArea.Parent = Window
-MappedArea.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MappedArea.BackgroundTransparency = 1.000
-MappedArea.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MappedArea.BorderSizePixel = 0
-MappedArea.Position = UDim2.new(0, 0, 0.0987653881, 0)
-MappedArea.Size = UDim2.new(1, 0, 0.899999976, 0)
-
-Unload.Name = "Unload"
-Unload.Parent = MappedArea
-Unload.BackgroundColor3 = Color3.fromRGB(139, 0, 0)
-Unload.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Unload.Position = UDim2.new(0.703026474, 0, 0.761316895, 0)
-Unload.Size = UDim2.new(0.25, 0, 0, 50)
-Unload.Font = Enum.Font.Gotham
-Unload.Text = "Unload"
-Unload.TextColor3 = Color3.fromRGB(255, 255, 255)
-Unload.TextSize = 19.000
-
-Chams.Name = "Chams"
-Chams.Parent = MappedArea
-Chams.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-Chams.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Chams.Position = UDim2.new(0.0488650687, 0, 0.761316895, 0)
-Chams.Size = UDim2.new(0.25, 0, 0, 50)
-Chams.Font = Enum.Font.Gotham
-Chams.Text = "Esp"
-Chams.TextColor3 = Color3.fromRGB(255, 255, 255)
-Chams.TextSize = 19.000
-
-JumpPower.Name = "JumpPower"
-JumpPower.Parent = MappedArea
-JumpPower.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-JumpPower.BorderColor3 = Color3.fromRGB(0, 0, 0)
-JumpPower.Position = UDim2.new(0.37358132, 0, 0.531550109, 0)
-JumpPower.Size = UDim2.new(0.25, 0, 0, 50)
-JumpPower.Font = Enum.Font.Gotham
-JumpPower.Text = "JumpPower"
-JumpPower.TextColor3 = Color3.fromRGB(255, 255, 255)
-JumpPower.TextSize = 19.000
-
-Gravity.Name = "Gravity"
-Gravity.Parent = MappedArea
-Gravity.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-Gravity.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Gravity.Position = UDim2.new(0.701450169, 0, 0.531550109, 0)
-Gravity.Size = UDim2.new(0.25, 0, 0, 50)
-Gravity.Font = Enum.Font.Gotham
-Gravity.Text = "Gravity"
-Gravity.TextColor3 = Color3.fromRGB(255, 255, 255)
-Gravity.TextSize = 19.000
-
-WalkSpeed.Name = "WalkSpeed"
-WalkSpeed.Parent = MappedArea
-WalkSpeed.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-WalkSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
-WalkSpeed.Position = UDim2.new(0.0472887754, 0, 0.531550109, 0)
-WalkSpeed.Size = UDim2.new(0.25, 0, 0, 50)
-WalkSpeed.Font = Enum.Font.Gotham
-WalkSpeed.Text = "WalkSpeed"
-WalkSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
-WalkSpeed.TextSize = 19.000
-
-NumberString.Name = "NumberString"
-NumberString.Parent = MappedArea
-NumberString.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
-NumberString.BorderColor3 = Color3.fromRGB(0, 0, 0)
-NumberString.Position = UDim2.new(0.34205547, 0, 0.185185239, 0)
-NumberString.Size = UDim2.new(0, 200, 0, 50)
-NumberString.Font = Enum.Font.Gotham
-NumberString.Text = ""
-NumberString.TextColor3 = Color3.fromRGB(255, 255, 255)
-NumberString.TextSize = 14.000
-
-InfYield.Name = "InfYield"
-InfYield.Parent = MappedArea
-InfYield.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-InfYield.BorderColor3 = Color3.fromRGB(0, 0, 0)
-InfYield.Position = UDim2.new(0.375157624, 0, 0.761316895, 0)
-InfYield.Size = UDim2.new(0.25, 0, 0, 50)
-InfYield.Font = Enum.Font.Gotham
-InfYield.Text = "Infinite Yield"
-InfYield.TextColor3 = Color3.fromRGB(255, 255, 255)
-InfYield.TextSize = 19.000
-
--- Function to set the walk speed
+-- Functions
 local function setWalkSpeed()
 	local speed = tonumber(NumberString.Text)
 	if speed then
@@ -166,42 +191,103 @@ local function loadInfYield()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end
 
-local function espEvent()
-	local ESP = Instance.new("Highlight")
-	ESP.FillColor = Color3.new(1, 0, 0)
-	ESP.OutlineColor = Color3.new(1, 1, 1)
-	ESP.FillTransparency = 0.5
-	ESP.OutlineTransparency = 0
-
-	function createESP(player)
-		local character = player.Character
-		if character then
-			local highlight = ESP:Clone()
-			highlight.Parent = character
-			highlight.Adornee = character
+local function addHighlightToPlayers()
+	for _, player in pairs(game:GetService("Players"):GetPlayers()) do
+		if player.Character and player.Character:FindFirstChild("Humanoid") then
+			local highlight = Instance.new("Highlight")
+			highlight.Adornee = player.Character
+			highlight.Parent = player.Character
 		end
 	end
+end
 
-	while true do
-		for _, player in ipairs(game.Players:GetPlayers()) do
-			createESP(player)
+local function removeHighlightFromPlayers()
+	for _, player in pairs(game:GetService("Players"):GetPlayers()) do
+		if player.Character then
+			-- Loop através de todos os objetos no personagem do jogador
+			for _, child in pairs(player.Character:GetChildren()) do
+				if child:IsA("Highlight") then
+					child:Destroy()
+				end
+			end
 		end
-		wait(1)
 	end
+end
+
+game:GetService("Players").PlayerRemoving:Connect(function(player)
+	if player.Character then
+		for _, child in pairs(player.Character:GetChildren()) do
+			if child:IsA("Highlight") then
+				child:Destroy()
+			end
+		end
+	end
+end)
+
+game:GetService("Players").PlayerAdded:Connect(function(player)
+	player.CharacterAdded:Connect(function(character)
+		local highlight = Instance.new("Highlight")
+		highlight.Adornee = character
+		highlight.Parent = character
+	end)
+end)
+
+
+local function chatBypass()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/SkireScripts/Ouxie/main/Projects/simplebypass.lua"))()
 end
 
 -- Connect button events
 WalkSpeed.MouseButton1Click:Connect(setWalkSpeed)
 JumpPower.MouseButton1Click:Connect(setJumpPower)
 Gravity.MouseButton1Click:Connect(setGravity)
-Chams.MouseButton1Click:Connect(espEvent)
+Chams.MouseButton1Click:Connect(addHighlightToPlayers)
 InfYield.MouseButton1Click:Connect(loadInfYield)
 Unload.MouseButton1Click:Connect(unloadEvent)
+Say.MouseButton1Click:Connect(chatBypass)
+Unesp.MouseButton1Click:Connect(removeHighlightFromPlayers)
 
 -- Drag Function
-Window.Selectable = true
-Window.Draggable = true
+
+local frame = Window
+local userInputService = game:GetService("UserInputService")
+local guiService = game:GetService("GuiService")
+
+local dragging = false
+local dragStart = nil
+local startPos = nil
+
+-- Função para iniciar o arrasto
+local function onInputBegan(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		dragging = true
+		dragStart = input.Position
+		startPos = frame.Position
+	end
+end
+
+-- Função para atualizar a posição do Frame enquanto está arrastando
+local function onInputChanged(input)
+	if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+		local delta = input.Position - dragStart
+		frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+end
+
+-- Função para parar o arrasto
+local function onInputEnded(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		dragging = false
+	end
+end
+
+-- Conectar as funções aos eventos de entrada do usuário
+userInputService.InputBegan:Connect(onInputBegan)
+userInputService.InputChanged:Connect(onInputChanged)
+userInputService.InputEnded:Connect(onInputEnded)
 
 -- Warnings 
 warn("Script Has Loaded All Instances Sucessfully.")
 warn("Script Is Open Source :D")
+print("Credits Of Esp To: nixoy_inmb & a little of IA")
+print("Credits Of Chat Bypass To: SkireScripts")
