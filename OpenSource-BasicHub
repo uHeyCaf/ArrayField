@@ -197,5 +197,11 @@ Gravity.MouseButton1Click:Connect(setGravity)
 Chams.MouseButton1Click:Connect(espEvent)
 InfYield.MouseButton1Click:Connect(loadInfYield)
 Unload.MouseButton1Click:Connect(unloadEvent)
+
+-- Drag Function
+Window.Selectable = true
+Window.Draggable = true
+
+-- Warnings 
 warn("Script Has Loaded All Instances Sucessfully.")
 warn("Script Is Open Source :D")
