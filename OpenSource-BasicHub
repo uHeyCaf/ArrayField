@@ -203,6 +203,67 @@ showGUI.TextSize = 25.000
 showGUI.Visible = false
 
 -- Functions
+
+local function sendMessage()
+	local message = NumberString.Text
+	if #message > 0 then
+		local tcs = game:GetService("TextChatService")
+		local chat = tcs.ChatInputBarConfiguration.TargetTextChannel
+
+		local function replace(str, find_str, replace_str)
+			local escaped_find_str = find_str:gsub("[%-%^%$%(%)%%%.%[%]%*%+%-%?]", "%%%0")
+			return str:gsub(escaped_find_str, replace_str)
+		end
+
+		local letters = {
+			["a"] = "Α", ["A"] = "α",
+			["b"] = "Β", ["B"] = "b",
+			["c"] = "С", ["C"] = "с",
+			["d"] = "D", ["D"] = "ԁ",
+			["e"] = "Ε", ["E"] = "ȩ",
+			["f"] = "Ғ", ["F"] = "Ғ",
+			["g"] = "ԍ", ["G"] = "ԍ",
+			["h"] = "Η", ["H"] = "һ",
+			["i"] = "I", ["I"] = "i",
+			["j"] = "Ј", ["J"] = "ј",
+			["k"] = "Κ", ["K"] = "κ",
+			["l"] = "L", ["L"] = "L",
+			["m"] = "Μ", ["M"] = "м",
+			["n"] = "Ν", ["N"] = "n",
+			["o"] = "Ο", ["O"] = "ο",
+			["p"] = "Ρ", ["P"] = "р",
+			["q"] = "Ԛ", ["Q"] = "ԛ",
+			["r"] = "R", ["R"] = "r",
+			["s"] = "Ṡ", ["S"] = "ş",
+			["t"] = "Τ", ["T"] = "t",
+			["u"] = "ᴜ", ["U"] = "u",
+			["v"] = "Ѵ", ["V"] = "ѵ",
+			["w"] = "Ԝ", ["W"] = "ԝ",
+			["x"] = "Χ", ["X"] = "x",
+			["y"] = "Υ", ["Y"] = "y",
+			["z"] = "Ζ", ["Z"] = "ᴢ"
+		}
+
+		local function filter(msg)
+			for search, replacement in pairs(letters) do
+				msg = replace(msg, search, replacement)
+			end
+			return msg
+		end
+
+		local function sendchat(msg)
+			if tcs.ChatVersion == Enum.ChatVersion.LegacyChatService then
+				game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents").SayMessageRequest:FireServer(msg, "All")
+			else
+				chat:SendAsync(msg)
+			end
+		end
+
+		sendchat(filter(message))
+		NumberString.Text = "hi"
+	end
+end
+
 local function setWalkSpeed()
 	local speed = tonumber(NumberString.Text)
 	if speed then
@@ -273,12 +334,7 @@ game:GetService("Players").PlayerAdded:Connect(function(player)
 		highlight.Parent = character
 	end)
 end)
-
-
-local function chatBypass()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/SkireScripts/Ouxie/main/Projects/simplebypass.lua"))()
-end
-
+	
 local function minClick()
 	Window.Visible = false
 	showGUI.Visible = true
@@ -296,7 +352,7 @@ Gravity.MouseButton1Click:Connect(setGravity)
 Chams.MouseButton1Click:Connect(addHighlightToPlayers)
 InfYield.MouseButton1Click:Connect(loadInfYield)
 Unload.MouseButton1Click:Connect(unloadEvent)
-Say.MouseButton1Click:Connect(chatBypass)
+Say.MouseButton1Click:Connect(sendMessage)
 Unesp.MouseButton1Click:Connect(removeHighlightFromPlayers)
 Minimize.MouseButton1Click:Connect(minClick)
 showGUI.MouseButton1Click:Connect(showGUIEvent)
@@ -343,5 +399,4 @@ userInputService.InputEnded:Connect(onInputEnded)
 -- Warnings 
 warn("Script Has Loaded All Instances Sucessfully.")
 warn("Script Is Open Source :D")
-print("Credits Of Esp To: nixoy_inmb & a little of IA")
-print("Credits Of Chat Bypass To: SkireScripts")
+print("Credits Of Esp And NEW Chat Bypass To: nixoy_inmb & a little of IA")
