@@ -17,13 +17,15 @@ local Say = Instance.new("TextButton")
 local Unesp = Instance.new("TextButton")
 local Bar = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
+local Minimize = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local showGUI = Instance.new("TextButton")
 
 --Properties:
 
 Main.Name = "Main"
 Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Main.ResetOnSpawn = false
 
 Window.Name = "Window"
 Window.Parent = Main
@@ -32,9 +34,7 @@ Window.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Window.Draggable = true
 Window.Position = UDim2.new(0.232030272, 0, 0.195987672, 0)
 Window.Selectable = true
-Window.Size = UDim2.new(0.533574998, 0, 0.615740716, 0)
-Window.Active = true
-Window.Draggable = true
+Window.Size = UDim2.new(0.532786846, 0, 0.614197552, 0)
 
 MappedArea.Name = "MappedArea"
 MappedArea.Parent = Window
@@ -43,14 +43,14 @@ MappedArea.BackgroundTransparency = 1.000
 MappedArea.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MappedArea.BorderSizePixel = 0
 MappedArea.Position = UDim2.new(0, 0, 0.0987653881, 0)
-MappedArea.Size = UDim2.new(1, 0, 0.898876429, 0)
+MappedArea.Size = UDim2.new(1.00147927, 0, 0.899497509, 0)
 
 Unload.Name = "Unload"
 Unload.Parent = MappedArea
 Unload.BackgroundColor3 = Color3.fromRGB(139, 0, 0)
 Unload.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Unload.Position = UDim2.new(0.701450169, 0, 0.599383652, 0)
-Unload.Size = UDim2.new(0.249211356, 0, 0.125, 0)
+Unload.Size = UDim2.new(0.248153612, 0, 0.122905031, 0)
 Unload.Font = Enum.Font.Gotham
 Unload.Text = "Unload"
 Unload.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -61,7 +61,7 @@ Chams.Parent = MappedArea
 Chams.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 Chams.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Chams.Position = UDim2.new(0.0472887754, 0, 0.599383652, 0)
-Chams.Size = UDim2.new(0.249211356, 0, 0.125, 0)
+Chams.Size = UDim2.new(0.248153612, 0, 0.122905031, 0)
 Chams.Font = Enum.Font.Gotham
 Chams.Text = "Esp"
 Chams.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -72,7 +72,7 @@ JumpPower.Parent = MappedArea
 JumpPower.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 JumpPower.BorderColor3 = Color3.fromRGB(0, 0, 0)
 JumpPower.Position = UDim2.new(0.372005016, 0, 0.369616866, 0)
-JumpPower.Size = UDim2.new(0.249211356, 0, 0.125, 0)
+JumpPower.Size = UDim2.new(0.248153612, 0, 0.122905031, 0)
 JumpPower.Font = Enum.Font.Gotham
 JumpPower.Text = "JumpPower"
 JumpPower.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -83,7 +83,7 @@ Gravity.Parent = MappedArea
 Gravity.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 Gravity.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Gravity.Position = UDim2.new(0.699873865, 0, 0.369616866, 0)
-Gravity.Size = UDim2.new(0.249211356, 0, 0.125, 0)
+Gravity.Size = UDim2.new(0.248153612, 0, 0.122905031, 0)
 Gravity.Font = Enum.Font.Gotham
 Gravity.Text = "Gravity"
 Gravity.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -94,7 +94,7 @@ WalkSpeed.Parent = MappedArea
 WalkSpeed.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 WalkSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
 WalkSpeed.Position = UDim2.new(0.0457124822, 0, 0.369616866, 0)
-WalkSpeed.Size = UDim2.new(0.249211356, 0, 0.125, 0)
+WalkSpeed.Size = UDim2.new(0.248153612, 0, 0.122905031, 0)
 WalkSpeed.Font = Enum.Font.Gotham
 WalkSpeed.Text = "WalkSpeed"
 WalkSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -105,7 +105,7 @@ NumberString.Parent = MappedArea
 NumberString.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 NumberString.BorderColor3 = Color3.fromRGB(0, 0, 0)
 NumberString.Position = UDim2.new(0.343631774, 0, 0.122903235, 0)
-NumberString.Size = UDim2.new(0.315457404, 0, 0.125, 0)
+NumberString.Size = UDim2.new(0.314623326, 0, 0.122905031, 0)
 NumberString.Font = Enum.Font.Gotham
 NumberString.Text = ""
 NumberString.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -116,7 +116,7 @@ InfYield.Parent = MappedArea
 InfYield.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 InfYield.BorderColor3 = Color3.fromRGB(0, 0, 0)
 InfYield.Position = UDim2.new(0.37358132, 0, 0.599383652, 0)
-InfYield.Size = UDim2.new(0.249211356, 0, 0.125, 0)
+InfYield.Size = UDim2.new(0.248153612, 0, 0.122905031, 0)
 InfYield.Font = Enum.Font.Gotham
 InfYield.Text = "Infinite Yield"
 InfYield.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -127,18 +127,20 @@ Say.Parent = MappedArea
 Say.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 Say.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Say.Position = UDim2.new(0.372005016, 0, 0.828581452, 0)
-Say.Size = UDim2.new(0.249211356, 0, 0.125, 0)
+Say.Size = UDim2.new(0.248153612, 0, 0.122905031, 0)
 Say.Font = Enum.Font.Gotham
-Say.Text = "Say Whats In The Text Box (bypass)"
+Say.Text = "chat filter bypass"
 Say.TextColor3 = Color3.fromRGB(255, 255, 255)
+Say.TextScaled = true
 Say.TextSize = 10.000
+Say.TextWrapped = true
 
 Unesp.Name = "Unesp"
 Unesp.Parent = MappedArea
 Unesp.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 Unesp.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Unesp.Position = UDim2.new(0.0457124822, 0, 0.828581452, 0)
-Unesp.Size = UDim2.new(0.249211356, 0, 0.125, 0)
+Unesp.Size = UDim2.new(0.248153612, 0, 0.122905031, 0)
 Unesp.Font = Enum.Font.Gotham
 Unesp.Text = "Unesp"
 Unesp.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -148,7 +150,7 @@ Bar.Name = "Bar"
 Bar.Parent = Window
 Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Bar.Size = UDim2.new(1, 0, 0.0988764018, 0)
+Bar.Size = UDim2.new(1, 0, 0.0979899466, 0)
 
 Title.Name = "Title"
 Title.Parent = Bar
@@ -156,13 +158,49 @@ Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Title.BorderSizePixel = 0
 Title.Position = UDim2.new(0.00999999978, 0, 0, 0)
-Title.Size = UDim2.new(0.0993690863, 0, 1, 0)
+Title.Size = UDim2.new(0.0989660248, 0, 1, 0)
 Title.Font = Enum.Font.SourceSans
-Title.Text = "Program.exe"
+Title.Text = "ScriptHub.lua"
 Title.TextColor3 = Color3.fromRGB(0, 0, 0)
 Title.TextSize = 14.000
 Title.TextXAlignment = Enum.TextXAlignment.Left
 
+Minimize.Name = "Minimize"
+Minimize.Parent = Bar
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Minimize.BorderSizePixel = 0
+Minimize.Position = UDim2.new(0.899556875, 0, 0, 0)
+Minimize.Size = UDim2.new(0.0487444624, 0, 1, 0)
+Minimize.Font = Enum.Font.Gotham
+Minimize.Text = "-"
+Minimize.TextColor3 = Color3.fromRGB(0, 0, 0)
+Minimize.TextSize = 25.000
+
+Close.Name = "Close"
+Close.Parent = Bar
+Close.BackgroundColor3 = Color3.fromRGB(255, 130, 130)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.94829917, 0, 0, 0)
+Close.Size = UDim2.new(0.0517008789, 0, 1, 0)
+Close.Font = Enum.Font.Gotham
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 25.000
+
+showGUI.Name = "showGUI"
+showGUI.Parent = Main
+showGUI.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+showGUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+showGUI.Position = UDim2.new(0.00630516978, 0, 0.0123456791, 0)
+showGUI.Size = UDim2.new(0, 200, 0, 49)
+showGUI.Font = Enum.Font.Gotham
+showGUI.Text = "Show GUI"
+showGUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+showGUI.TextSize = 25.000
+showGUI.Visible = false
 
 -- Functions
 local function setWalkSpeed()
@@ -241,6 +279,16 @@ local function chatBypass()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/SkireScripts/Ouxie/main/Projects/simplebypass.lua"))()
 end
 
+local function minClick()
+	Window.Visible = false
+	showGUI.Visible = true
+end
+
+local function showGUIEvent()
+	Window.Visible = true
+	showGUI.Visible = false
+end
+
 -- Connect button events
 WalkSpeed.MouseButton1Click:Connect(setWalkSpeed)
 JumpPower.MouseButton1Click:Connect(setJumpPower)
@@ -250,6 +298,8 @@ InfYield.MouseButton1Click:Connect(loadInfYield)
 Unload.MouseButton1Click:Connect(unloadEvent)
 Say.MouseButton1Click:Connect(chatBypass)
 Unesp.MouseButton1Click:Connect(removeHighlightFromPlayers)
+Minimize.MouseButton1Click:Connect(minClick)
+showGUI.MouseButton1Click:Connect(showGUIEvent)
 
 -- Drag Function
 
