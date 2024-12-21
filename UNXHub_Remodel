@@ -1,12 +1,3 @@
-local discordLink = "https://discord.gg/2AXC2XggjH"
-
-setclipboard(discordLink)
-game:GetService("StarterGui"):SetCore("SendNotification", {
-	Title = "Join Caty Exploits!",
-	Text = "Caty Exploits Has Many Things To Do! :D",
-	Duration = 3,
-})
-
 -- i got this  from scriptblox!
 
 local Modules = {
