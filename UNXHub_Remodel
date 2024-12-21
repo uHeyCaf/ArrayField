@@ -1,41 +1,3 @@
--- i got this  from scriptblox!
-
-local Modules = {
-	Colors =  {
-		["Green"] = "0,255,0",
-		["Red"] = "255, 0, 0"
-	}
-}
-
-Modules.ChangeColor = function() 
-	game:GetService("RunService").Heartbeat:Connect(function()
-		if game:GetService("CoreGui"):FindFirstChild("DevConsoleMaster") then 
-			for _, v in pairs(game:GetService("CoreGui"):FindFirstChild("DevConsoleMaster"):GetDescendants()) do 
-				if v:IsA("TextLabel") then 
-					v.RichText = true 
-				end 
-			end 
-		end
-	end)
-end
-
-Modules.print = function(color, text, size)
-	if not Modules.Colors[color] then 
-		warn("Color was not found!")
-		return 
-	end 
-
-
-	local Text = '<font color="rgb(' .. Modules.Colors[color] .. ')"'
-	if size then
-		Text = Text .. ' size="' .. tostring(size) .. '"'
-	end
-	Text = Text .. '>' .. tostring(text) .. '</font>'
-	print(Text)
-end
-
-Modules.ChangeColor()
-
 -- Instances
 
 local MainUI = Instance.new("ScreenGui")
@@ -543,8 +505,7 @@ local function DestroyPlr()
 end
 
 local function QuitUNX()
-	MainUI:Destroy()
-	Modules.print("Red", "Goodbye ".. game.Players.LocalPlayer.Name .." We I'll Miss You...")
+    MainUI:Destroy()
 end
 
 local function MinUNX()
@@ -606,8 +567,3 @@ RedzHub.MouseButton1Click:Connect(LoadRedz);
 LoadOverdrive.MouseButton1Click:Connect(LoadMM2);
 JerkScript.MouseButton1Click:Connect(jerklol);
 WhiteTheeme.MouseButton1Click:Connect(WhiteTheme)
--- Warnings
-
-Modules.print("Green", "Everything Should Be Loaded, Have Fun!")
-message.txt
-21 KB
