@@ -66,9 +66,17 @@ local Minimize = Instance.new("TextButton")
 local UICorner_23 = Instance.new("UICorner")
 local OpenUNX = Instance.new("TextButton")
 local UICorner_24 = Instance.new("UICorner")
+local SFX1 = Instance.new("Sound")
+local SFX2 = Instance.new("Sound")
 
 print("Instances Loaded, Script Loaded 33%")
 --Properties:
+
+SFX1.Parent = game.SoundService
+SFX1.SoundId = "rbxassetid://8284260932"
+
+SFX2.Parent = game.SoundService
+SFX2.SoundId = "rbxassetid://6655708496"
 
 MainUI.Name = "MainUI"
 MainUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -518,7 +526,11 @@ local function DestroyPlr()
 end
 
 local function QuitUNX()
+	SFX1:Play()
 	MainUI:Destroy()
+	wait(SFX1.TimeLength)
+	SFX1:Destroy()
+	SFX2:Destroy()
 	print("Goodbye ".. game.Players.LocalPlayer.Name .." We I'll Miss You...")
 end
 
@@ -560,7 +572,7 @@ local function CopyDiscLink()
 		Text = "Caty Exploits Has Many Things To Do! :D",
 		Duration = 3,
 	})
-	
+
 	CopyDisc.Text = "Link In Clipboard"
 	wait(3)
 	CopyDisc.Text = "Copy Discord Link"
@@ -572,8 +584,51 @@ local function jerklol()
 end
 
 local function WhiteTheme()
+	SFX2:Play()
 	WhiteTheeme.Text = "Sorry, This Is Not Done Yet..."
+	wait(SFX2.TimeLength)
+	SFX2:Destroy()	
 end
+
+local UserInputService = game:GetService("UserInputService")
+
+local gui = MainFrame
+
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+	local delta = input.Position - dragStart
+	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+gui.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		dragging = true
+		dragStart = input.Position
+		startPos = gui.Position
+
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+
+gui.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		dragInput = input
+	end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		update(input)
+	end
+end)
 
 print("Functions Loaded, Script Loaded 67%")
 
