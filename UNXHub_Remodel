@@ -1,3 +1,15 @@
+print("  █    ██  ███▄    █ ▒██   ██▒ ██░ ██  █    ██  ▄▄▄▄   ")
+print("  ██  ▓██▒ ██ ▀█   █ ▒▒ █ █ ▒░▓██░ ██▒ ██  ▓██▒▓█████▄ ")
+print(" ▓██  ▒██░▓██  ▀█ ██▒░░  █   ░▒██▀▀██░▓██  ▒██░▒██▒ ▄██")
+print(" ▓▓█  ░██░▓██▒  ▐▌██▒ ░ █ █ ▒ ░▓█ ░██ ▓▓█  ░██░▒██░█▀  ")
+print(" ▒▒█████▓ ▒██░   ▓██░▒██▒ ▒██▒░▓█▒░██▓▒▒█████▓ ░▓█  ▀█▓")
+print(" ░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒ ▒▒ ░ ░▓ ░ ▒ ░░▒░▒░▒▓▒ ▒ ▒ ░▒▓███▀▒")
+print(" ░░▒░ ░ ░ ░ ░░   ░ ▒░░░   ░▒ ░ ▒ ░▒░ ░░░▒░ ░ ░ ▒░▒   ░ ")
+print("  ░░░ ░ ░    ░   ░ ░  ░    ░   ░  ░░ ░ ░░░ ░ ░  ░    ░ ")
+print("    ░              ░  ░    ░   ░  ░  ░   ░      ░      ")
+print("                                                     ░ ")
+print("UNXHub - Not The Best, Not The Worst.")
+print("")
 -- Instances
 
 local MainUI = Instance.new("ScreenGui")
@@ -55,6 +67,7 @@ local UICorner_23 = Instance.new("UICorner")
 local OpenUNX = Instance.new("TextButton")
 local UICorner_24 = Instance.new("UICorner")
 
+print("Instances Loaded, Script Loaded 33%")
 --Properties:
 
 MainUI.Name = "MainUI"
@@ -230,7 +243,7 @@ LoadIy.BorderSizePixel = 0
 LoadIy.Position = UDim2.new(0.536895692, 0, 0.0335820913, 0)
 LoadIy.Size = UDim2.new(0.424936384, 0, 0.138059705, 0)
 LoadIy.Font = Enum.Font.Gotham
-LoadIy.Text = "Load Infinite Yield"
+LoadIy.Text = "Load InfYield"
 LoadIy.TextColor3 = Color3.fromRGB(255, 255, 255)
 LoadIy.TextSize = 14.000
 LoadIy.TextWrapped = true
@@ -505,7 +518,8 @@ local function DestroyPlr()
 end
 
 local function QuitUNX()
-    MainUI:Destroy()
+	MainUI:Destroy()
+	print("Goodbye ".. game.Players.LocalPlayer.Name .." We I'll Miss You...")
 end
 
 local function MinUNX()
@@ -537,7 +551,19 @@ local function LoadMM2()
 end
 
 local function CopyDiscLink()
+	local discordLink = "https://discord.gg/2AXC2XggjH"
+
+	setclipboard(discordLink)
+
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Join Cat Exploits!",
+		Text = "Caty Exploits Has Many Things To Do! :D",
+		Duration = 3,
+	})
 	
+	CopyDisc.Text = "Link In Clipboard"
+	wait(3)
+	CopyDisc.Text = "Copy Discord Link"
 end
 
 local function jerklol()
@@ -548,6 +574,8 @@ end
 local function WhiteTheme()
 	WhiteTheeme.Text = "Sorry, This Is Not Done Yet..."
 end
+
+print("Functions Loaded, Script Loaded 67%")
 
 -- Connect Script To Buttons
 
@@ -568,3 +596,10 @@ LoadOverdrive.MouseButton1Click:Connect(LoadMM2);
 JerkScript.MouseButton1Click:Connect(jerklol);
 WhiteTheeme.MouseButton1Click:Connect(WhiteTheme);
 LoadFlyGUI.MouseButton1Click:Connect(LoadFlyUI);
+CopyDisc.MouseButton1Click:Connect(CopyDiscLink)
+
+-- Warnings
+
+print("Script Should Be All Loaded Now, Have Fun!")
+print("-----------------------------------------------------------------------------------")
+print("Fun Fact: UNXHub Remodeled Is Fully Open Sourced!")
