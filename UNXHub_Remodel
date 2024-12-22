@@ -566,4 +566,5 @@ LoadIy.MouseButton1Click:Connect(LoadIyF);
 RedzHub.MouseButton1Click:Connect(LoadRedz);
 LoadOverdrive.MouseButton1Click:Connect(LoadMM2);
 JerkScript.MouseButton1Click:Connect(jerklol);
-WhiteTheeme.MouseButton1Click:Connect(WhiteTheme)
+WhiteTheeme.MouseButton1Click:Connect(WhiteTheme);
+LoadFlyGUI.MouseButton1Click:Connect(LoadFlyUI);
