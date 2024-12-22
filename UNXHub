@@ -1,3 +1,8 @@
+-- If You Are Here Just Beacuse Of The Code, Fell Free To Explore, Mod, Etc...
+-- Line 19:  Start Creating The UI
+-- Line 84: Personalizing The UI
+-- Line 518: Scripts & Functions :)
+
 print("  █    ██  ███▄    █ ▒██   ██▒ ██░ ██  █    ██  ▄▄▄▄   ")
 print("  ██  ▓██▒ ██ ▀█   █ ▒▒ █ █ ▒░▓██░ ██▒ ██  ▓██▒▓█████▄ ")
 print(" ▓██  ▒██░▓██  ▀█ ██▒░░  █   ░▒██▀▀██░▓██  ▒██░▒██▒ ▄██")
@@ -10,6 +15,7 @@ print("    ░              ░  ░    ░   ░  ░  ░   ░      ░      
 print("                                                     ░ ")
 print("UNXHub - Not The Best, Not The Worst.")
 print("")
+
 -- Instances
 
 local MainUI = Instance.new("ScreenGui")
@@ -64,8 +70,11 @@ local Button3 = Instance.new("TextButton")
 local UICorner_22 = Instance.new("UICorner")
 local Minimize = Instance.new("TextButton")
 local UICorner_23 = Instance.new("UICorner")
-local OpenUNX = Instance.new("TextButton")
+local Others = Instance.new("Folder")
+local TitleUNX = Instance.new("TextLabel")
 local UICorner_24 = Instance.new("UICorner")
+local OpenUNX = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
 local SFX1 = Instance.new("Sound")
 local SFX2 = Instance.new("Sound")
 
@@ -76,7 +85,7 @@ SFX1.Parent = game.SoundService
 SFX1.SoundId = "rbxassetid://8284260932"
 
 SFX2.Parent = game.SoundService
-SFX2.SoundId = "rbxassetid://6655708496"
+SFX2.SoundId = "rbxassetid://6324790483"
 
 MainUI.Name = "MainUI"
 MainUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -251,7 +260,7 @@ LoadIy.BorderSizePixel = 0
 LoadIy.Position = UDim2.new(0.536895692, 0, 0.0335820913, 0)
 LoadIy.Size = UDim2.new(0.424936384, 0, 0.138059705, 0)
 LoadIy.Font = Enum.Font.Gotham
-LoadIy.Text = "Load InfYield"
+LoadIy.Text = "Load Infinite Yield"
 LoadIy.TextColor3 = Color3.fromRGB(255, 255, 255)
 LoadIy.TextSize = 14.000
 LoadIy.TextWrapped = true
@@ -467,14 +476,34 @@ Minimize.TextWrapped = true
 
 UICorner_23.Parent = Minimize
 
+Others.Name = "Others"
+Others.Parent = MainFrame
+
+TitleUNX.Name = "TitleUNX"
+TitleUNX.Parent = Others
+TitleUNX.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TitleUNX.BackgroundTransparency = 0.500
+TitleUNX.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TitleUNX.BorderSizePixel = 0
+TitleUNX.Position = UDim2.new(0, 0, 0, -29)
+TitleUNX.Size = UDim2.new(0, 87, 0, 23)
+TitleUNX.Font = Enum.Font.Gotham
+TitleUNX.Text = "UNXHub"
+TitleUNX.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleUNX.TextScaled = false
+TitleUNX.TextSize = 14.000
+TitleUNX.TextWrapped = true
+
+UICorner_24.Parent = TitleUNX
+
 OpenUNX.Name = "OpenUNX"
 OpenUNX.Parent = MainUI
 OpenUNX.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 OpenUNX.BackgroundTransparency = 0.500
 OpenUNX.BorderColor3 = Color3.fromRGB(0, 0, 0)
 OpenUNX.BorderSizePixel = 0
-OpenUNX.Position = UDim2.new(0.009, 0, 0.017, 0)
-OpenUNX.Size = UDim2.new(0.230769232, 0, 0.0989761129, 0)
+OpenUNX.Position = UDim2.new(0.00921375863, 0, 0.0173852593, 0)
+OpenUNX.Size = UDim2.new(0.180093572, 0, 0.0520359166, 0)
 OpenUNX.Visible = false
 OpenUNX.Font = Enum.Font.Gotham
 OpenUNX.Text = " Open UNXHub"
@@ -482,7 +511,7 @@ OpenUNX.TextColor3 = Color3.fromRGB(0, 0, 0)
 OpenUNX.TextSize = 14.000
 OpenUNX.TextWrapped = true
 
-UICorner_24.Parent = OpenUNX
+UICorner_25.Parent = OpenUNX
 
 -- Scripts (IMPORTANT)
 
@@ -585,9 +614,181 @@ end
 
 local function WhiteTheme()
 	SFX2:Play()
-	WhiteTheeme.Text = "Sorry, This Is Not Done Yet..."
-	wait(SFX2.TimeLength)
-	SFX2:Destroy()	
+	MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+	Page01.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+	PlayerIput.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	PlayerIput.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+	PlayerIput.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Speed.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	Speed.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Jump.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	Jump.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Zoom.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	Zoom.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Gravity.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	Gravity.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Line.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+
+	DestroyChar.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	DestroyChar.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Page02.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+	LoadIy.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	LoadIy.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Line_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+	LoadFlyGUI.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	LoadFlyGUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	JerkScript.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	JerkScript.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	RedzHub.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	RedzHub.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	LoadOverdrive.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	LoadOverdrive.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Page03.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+	BlackTheme.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	BlackTheme.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	WhiteTheeme.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	WhiteTheeme.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Line_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+	Button1.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	Button1.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Button2.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	Button2.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Button3.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	Button3.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Minimize.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	Minimize.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	OpenUNX.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+	OpenUNX.TextColor3 = Color3.fromRGB(0, 0, 0)
+	
+	TitleUNX.TextColor3 = Color3.fromRGB(0, 0, 0)
+	TitleUNX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+end
+
+local function DarkMode()
+	SFX2:Play()
+	MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+	Page01.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Page01.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+	Page02.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Page02.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+	Page03.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Page03.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+	PlayerIput.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	PlayerIput.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	PlayerIput.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+	PlayerIput.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	Speed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Speed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	Jump.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Jump.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Jump.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	Zoom.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Zoom.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Zoom.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	Gravity.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Gravity.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Gravity.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	Line.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+
+	DestroyChar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	DestroyChar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	DestroyChar.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	CopyDisc.BackgroundColor3 = Color3.fromRGB(0, 98, 255)
+	CopyDisc.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	CopyDisc.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	LoadIy.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	LoadIy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	LoadIy.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	Line_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+
+	LoadFlyGUI.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	LoadFlyGUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	LoadFlyGUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	JerkScript.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	JerkScript.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	JerkScript.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	RedzHub.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	RedzHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	RedzHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	LoadOverdrive.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	LoadOverdrive.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	LoadOverdrive.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	BlackTheme.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	BlackTheme.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	BlackTheme.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	WhiteTheeme.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	WhiteTheeme.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	WhiteTheeme.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+	Line_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+
+	Quit.BackgroundColor3 = Color3.fromRGB(116, 0, 0)
+	Quit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Quit.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	Button1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Button1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Button1.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	Button2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Button2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Button2.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	Button3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Button3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Button3.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	Minimize.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+	OpenUNX.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	OpenUNX.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	
+	TitleUNX.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TitleUNX.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 end
 
 local UserInputService = game:GetService("UserInputService")
@@ -652,9 +853,10 @@ JerkScript.MouseButton1Click:Connect(jerklol);
 WhiteTheeme.MouseButton1Click:Connect(WhiteTheme);
 LoadFlyGUI.MouseButton1Click:Connect(LoadFlyUI);
 CopyDisc.MouseButton1Click:Connect(CopyDiscLink)
+BlackTheme.MouseButton1Click:Connect(DarkMode)
 
 -- Warnings
 
 print("Script Should Be All Loaded Now, Have Fun!")
 print("-----------------------------------------------------------------------------------")
-print("Fun Fact: UNXHub Remodeled Is Fully Open Sourced!")
+print("Fun Fact: UNXHub Is Fully Open Sourced Now!")
