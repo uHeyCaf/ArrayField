@@ -1,7 +1,7 @@
 -- If You Are Here Just Beacuse Of The Code, Fell Free To Explore, Mod, Etc...
--- Line 19:  Start Creating The UI
--- Line 84: Personalizing The UI
--- Line 518: Scripts & Functions :)
+-- Line 21:  Start Creating The UI
+-- Line 91: Personalizing The UI
+-- Line 570: Scripts & Functions :)
 
 print("  █    ██  ███▄    █ ▒██   ██▒ ██░ ██  █    ██  ▄▄▄▄   ")
 print("  ██  ▓██▒ ██ ▀█   █ ▒▒ █ █ ▒░▓██░ ██▒ ██  ▓██▒▓█████▄ ")
@@ -75,6 +75,13 @@ local TitleUNX = Instance.new("TextLabel")
 local UICorner_24 = Instance.new("UICorner")
 local OpenUNX = Instance.new("TextButton")
 local UICorner_25 = Instance.new("UICorner")
+local TestingUI = Instance.new("ScreenGui")
+local Warning = Instance.new("Frame")
+local UICorner26 = Instance.new("UICorner")
+local WarningLabel = Instance.new("ImageLabel")
+local ErrorMessage = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local currentTime = os.date("%H:%M:%S")
 local SFX1 = Instance.new("Sound")
 local SFX2 = Instance.new("Sound")
 
@@ -513,6 +520,51 @@ OpenUNX.TextWrapped = true
 
 UICorner_25.Parent = OpenUNX
 
+TestingUI.Name = "TestingUI"
+TestingUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+TestingUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Warning.Name = "Warning"
+Warning.Parent = TestingUI
+Warning.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Warning.BackgroundTransparency = 0.500
+Warning.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Warning.BorderSizePixel = 0
+Warning.Position = UDim2.new(0.688038111, 0, 0.874137938, 0)
+Warning.Size = UDim2.new(0.305965543, 0, 0.108620681, 0)
+Warning.Visible = false
+
+UICorner26.Parent = Warning
+
+WarningLabel.Name = "WarningLabel"
+WarningLabel.Parent = Warning
+WarningLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WarningLabel.BackgroundTransparency = 1.000
+WarningLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WarningLabel.BorderSizePixel = 0
+WarningLabel.Position = UDim2.new(0.0150753772, 0, 0.0952381045, 0)
+WarningLabel.Size = UDim2.new(0.123115577, 0, 0.793650866, 0)
+WarningLabel.Image = "http://www.roblox.com/asset/?id=111966164173521"
+
+ErrorMessage.Name = "ErrorMessage"
+ErrorMessage.Parent = Warning
+ErrorMessage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ErrorMessage.BackgroundTransparency = 1.000
+ErrorMessage.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ErrorMessage.BorderSizePixel = 0
+ErrorMessage.Position = UDim2.new(0.158291459, 0, 0.0952381045, 0)
+ErrorMessage.Size = UDim2.new(0.824120581, 0, 0.793650866, 0)
+ErrorMessage.Font = Enum.Font.Gotham
+ErrorMessage.Text = "Error Message"
+ErrorMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
+ErrorMessage.TextScaled = true
+ErrorMessage.TextSize = 24.000
+ErrorMessage.TextWrapped = true
+ErrorMessage.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint.Parent = ErrorMessage
+UITextSizeConstraint.MaxTextSize = 24
+
 -- Scripts (IMPORTANT)
 
 local function AAA1()
@@ -613,6 +665,12 @@ local function jerklol()
 end
 
 local function WhiteTheme()
+	if MainFrame.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
+		warn("<<< UNXHUB >>> Default Theme Already Applied")
+	else
+		print("White Theme Applied")
+	end
+
 	SFX2:Play()
 	MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 
@@ -682,12 +740,18 @@ local function WhiteTheme()
 
 	OpenUNX.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
 	OpenUNX.TextColor3 = Color3.fromRGB(0, 0, 0)
-	
+
 	TitleUNX.TextColor3 = Color3.fromRGB(0, 0, 0)
 	TitleUNX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 end
 
 local function DarkMode()
+	if MainFrame.BackgroundColor3 == Color3.fromRGB(0, 0, 0) then
+		warn("<<< UNXHUB >>> Default Theme Already Applied")
+	else
+		print("Default Theme Applied")
+	end
+
 	SFX2:Play()
 	MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -705,7 +769,7 @@ local function DarkMode()
 	PlayerIput.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	PlayerIput.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
 	PlayerIput.TextColor3 = Color3.fromRGB(255, 255, 255)
-
+	-- Dev Note: 7 Maybe 7.2
 	Speed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	Speed.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	Speed.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -786,9 +850,19 @@ local function DarkMode()
 
 	OpenUNX.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	OpenUNX.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	
+
 	TitleUNX.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TitleUNX.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+end
+
+local function ShowError()
+
+	ErrorMessage.Text = "Welcome To UNXHub, Have Fun!"
+	warn("<<< UNXHUB Information: >>> ".. "``".. ErrorMessage.Text .."``" .." At " .. currentTime)
+
+	Warning.Visible = true
+	wait(4)
+	Warning.Visible = false
 end
 
 local UserInputService = game:GetService("UserInputService")
@@ -858,5 +932,13 @@ BlackTheme.MouseButton1Click:Connect(DarkMode)
 -- Warnings
 
 print("Script Should Be All Loaded Now, Have Fun!")
+print()
 print("-----------------------------------------------------------------------------------")
-print("Fun Fact: UNXHub Is Fully Open Sourced Now!")
+print()
+print("Fun Fact: Also Uhh... Uh... 	Uh...")
+print("Dev Note: No Dev Note This Time, Or Is It?")
+print()
+print("-----------------------------------------------------------------------------------")
+print()
+
+ShowError()
