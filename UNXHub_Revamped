@@ -1,0 +1,952 @@
+-- Setting Up Variables: Line 5
+-- Setting Up UI: Line 67
+-- Setting Up Buttons & Functions: Line 548
+
+local UNXHubUI = Instance.new("ScreenGui")
+local TabsFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Bar = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Minimize = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local ButtonSafeArea = Instance.new("Frame")
+local LocalPlayerTab1 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local ESPTab2 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local ConfigTab4 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local OtherTab3 = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local MainFrame = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local Bar2 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Tab1 = Instance.new("Frame")
+local ApplyWS = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local WSTextBox = Instance.new("TextBox")
+local UICorner_10 = Instance.new("UICorner")
+local ApplyJP = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local JPTextBox = Instance.new("TextBox")
+local UICorner_12 = Instance.new("UICorner")
+local ApplyZoom = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local ZoomTextBox = Instance.new("TextBox")
+local UICorner_14 = Instance.new("UICorner")
+local Tab2 = Instance.new("Frame")
+local EnableESP = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local ESPColor = Instance.new("TextBox")
+local UICorner_16 = Instance.new("UICorner")
+local EnableOut = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local OutlineColor = Instance.new("TextBox")
+local UICorner_18 = Instance.new("UICorner")
+local Tab3 = Instance.new("Frame")
+local ApplyFPS = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local FPSTextBox = Instance.new("TextBox")
+local UICorner_20 = Instance.new("UICorner")
+local ExecScript = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local ScriptEditor = Instance.new("TextBox")
+local UICorner_22 = Instance.new("UICorner")
+local OverdriveH = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local LoadIy = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local IYUniversal = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local Tab4 = Instance.new("Frame")
+local OpenUNX = Instance.new("TextButton")
+local UICorner_26 = Instance.new("UICorner")
+
+UNXHubUI.Name = "UNXHubUI"
+UNXHubUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+UNXHubUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TabsFrame.Name = "TabsFrame"
+TabsFrame.Parent = UNXHubUI
+TabsFrame.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+TabsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabsFrame.BorderSizePixel = 0
+TabsFrame.Position = UDim2.new(0.190651953, 0, 0.207302064, 0)
+TabsFrame.Size = UDim2.new(0.114544891, 0, 0.58013612, 0)
+
+UICorner.Parent = TabsFrame
+
+Bar.Name = "Bar"
+Bar.Parent = TabsFrame
+Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bar.BackgroundTransparency = 1.000
+Bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar.BorderSizePixel = 0
+Bar.Size = UDim2.new(1, 0, 0.0853333324, 0)
+
+Close.Name = "Close"
+Close.Parent = Bar
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.0796140134, 0, 0.28125, 0)
+Close.Size = UDim2.new(0.127516776, 0, 0.5625, 0)
+Close.Font = Enum.Font.Unknown
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 0, 0)
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+UICorner_2.CornerRadius = UDim.new(0, 999)
+UICorner_2.Parent = Close
+
+Minimize.Name = "Minimize"
+Minimize.Parent = Bar
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+Minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Minimize.BorderSizePixel = 0
+Minimize.Position = UDim2.new(0.255924493, 0, 0.28125, 0)
+Minimize.Size = UDim2.new(0.127516776, 0, 0.5625, 0)
+Minimize.Font = Enum.Font.Unknown
+Minimize.Text = "-"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 0)
+Minimize.TextSize = 14.000
+Minimize.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0, 999)
+UICorner_3.Parent = Minimize
+
+ButtonSafeArea.Name = "ButtonSafeArea"
+ButtonSafeArea.Parent = TabsFrame
+ButtonSafeArea.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonSafeArea.BackgroundTransparency = 1.000
+ButtonSafeArea.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ButtonSafeArea.BorderSizePixel = 0
+ButtonSafeArea.Position = UDim2.new(0, 0, 0.101333335, 0)
+ButtonSafeArea.Size = UDim2.new(1, 0, 0.901333332, 0)
+
+LocalPlayerTab1.Name = "LocalPlayerTab1"
+LocalPlayerTab1.Parent = ButtonSafeArea
+LocalPlayerTab1.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+LocalPlayerTab1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LocalPlayerTab1.BorderSizePixel = 0
+LocalPlayerTab1.Position = UDim2.new(0.0469798669, 0, -0.00295857992, 0)
+LocalPlayerTab1.Size = UDim2.new(0.906040251, 0, 0.100591719, 0)
+LocalPlayerTab1.Font = Enum.Font.SourceSansLight
+LocalPlayerTab1.Text = "Local Player"
+LocalPlayerTab1.TextColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayerTab1.TextSize = 18.000
+LocalPlayerTab1.TextWrapped = true
+
+UICorner_4.Parent = LocalPlayerTab1
+
+ESPTab2.Name = "ESPTab2"
+ESPTab2.Parent = ButtonSafeArea
+ESPTab2.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ESPTab2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ESPTab2.BorderSizePixel = 0
+ESPTab2.Position = UDim2.new(0.0469798669, 0, 0.126365125, 0)
+ESPTab2.Size = UDim2.new(0.906040251, 0, 0.100591719, 0)
+ESPTab2.Font = Enum.Font.SourceSansLight
+ESPTab2.Text = "Visuals"
+ESPTab2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESPTab2.TextSize = 18.000
+ESPTab2.TextWrapped = true
+
+UICorner_5.Parent = ESPTab2
+
+ConfigTab4.Name = "ConfigTab4"
+ConfigTab4.Parent = ButtonSafeArea
+ConfigTab4.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ConfigTab4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ConfigTab4.BorderSizePixel = 0
+ConfigTab4.Position = UDim2.new(0.0469798669, 0, 0.388328403, 0)
+ConfigTab4.Size = UDim2.new(0.906040251, 0, 0.100591719, 0)
+ConfigTab4.Font = Enum.Font.SourceSansLight
+ConfigTab4.Text = "Configurations"
+ConfigTab4.TextColor3 = Color3.fromRGB(255, 255, 255)
+ConfigTab4.TextSize = 18.000
+ConfigTab4.TextWrapped = true
+
+UICorner_6.Parent = ConfigTab4
+
+OtherTab3.Name = "OtherTab3"
+OtherTab3.Parent = ButtonSafeArea
+OtherTab3.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+OtherTab3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OtherTab3.BorderSizePixel = 0
+OtherTab3.Position = UDim2.new(0.0469798669, 0, 0.255688727, 0)
+OtherTab3.Size = UDim2.new(0.906040251, 0, 0.100591719, 0)
+OtherTab3.Font = Enum.Font.SourceSansLight
+OtherTab3.Text = "Other"
+OtherTab3.TextColor3 = Color3.fromRGB(255, 255, 255)
+OtherTab3.TextSize = 18.000
+OtherTab3.TextWrapped = true
+
+UICorner_7.Parent = OtherTab3
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = UNXHubUI
+MainFrame.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.316412836, 0, 0.209644228, 0)
+MainFrame.Size = UDim2.new(0.492004901, 0, 0.58013612, 0)
+
+UICorner_8.Parent = MainFrame
+
+Bar2.Name = "Bar2"
+Bar2.Parent = MainFrame
+Bar2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bar2.BackgroundTransparency = 1.000
+Bar2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar2.BorderSizePixel = 0
+Bar2.Size = UDim2.new(1, 0, 0.0853333324, 0)
+
+TextLabel.Parent = Bar2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(1, 0, 0.8125, 0)
+TextLabel.Font = Enum.Font.SourceSansLight
+TextLabel.Text = "UNXHub Revamped! (Beta 0.3.0)"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 18.000
+TextLabel.TextWrapped = true
+
+Tab1.Name = "Tab1"
+Tab1.Parent = MainFrame
+Tab1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tab1.BackgroundTransparency = 1.000
+Tab1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab1.BorderSizePixel = 0
+Tab1.Position = UDim2.new(0, 0, 0.0693333298, 0)
+Tab1.Size = UDim2.new(1, 0, 0.925333321, 0)
+Tab1.Visible = false
+
+ApplyWS.Name = "ApplyWS"
+ApplyWS.Parent = Tab1
+ApplyWS.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ApplyWS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ApplyWS.BorderSizePixel = 0
+ApplyWS.Position = UDim2.new(0.0359374993, 0, 0.0662824214, 0)
+ApplyWS.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
+ApplyWS.Font = Enum.Font.SourceSansLight
+ApplyWS.Text = "Apply WalkSpeed"
+ApplyWS.TextColor3 = Color3.fromRGB(255, 255, 255)
+ApplyWS.TextSize = 18.000
+ApplyWS.TextWrapped = true
+
+UICorner_9.Parent = ApplyWS
+
+WSTextBox.Name = "WSTextBox"
+WSTextBox.Parent = ApplyWS
+WSTextBox.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+WSTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WSTextBox.BorderSizePixel = 0
+WSTextBox.Position = UDim2.new(0.861952841, 0, 0.135135129, 0)
+WSTextBox.Size = UDim2.new(0.12626262, 0, 0.702702701, 0)
+WSTextBox.Font = Enum.Font.SourceSansLight
+WSTextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+WSTextBox.PlaceholderText = "Number"
+WSTextBox.Text = ""
+WSTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+WSTextBox.TextSize = 14.000
+WSTextBox.TextWrapped = true
+
+UICorner_10.Parent = WSTextBox
+
+ApplyJP.Name = "ApplyJP"
+ApplyJP.Parent = Tab1
+ApplyJP.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ApplyJP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ApplyJP.BorderSizePixel = 0
+ApplyJP.Position = UDim2.new(0.0359374993, 0, 0.210374638, 0)
+ApplyJP.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
+ApplyJP.Font = Enum.Font.SourceSansLight
+ApplyJP.Text = "Apply JumpPower"
+ApplyJP.TextColor3 = Color3.fromRGB(255, 255, 255)
+ApplyJP.TextSize = 18.000
+ApplyJP.TextWrapped = true
+
+UICorner_11.Parent = ApplyJP
+
+JPTextBox.Name = "JPTextBox"
+JPTextBox.Parent = ApplyJP
+JPTextBox.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+JPTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JPTextBox.BorderSizePixel = 0
+JPTextBox.Position = UDim2.new(0.861952841, 0, 0.135135129, 0)
+JPTextBox.Size = UDim2.new(0.12626262, 0, 0.702702701, 0)
+JPTextBox.Font = Enum.Font.SourceSansLight
+JPTextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+JPTextBox.PlaceholderText = "Number"
+JPTextBox.Text = ""
+JPTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+JPTextBox.TextSize = 14.000
+JPTextBox.TextWrapped = true
+
+UICorner_12.Parent = JPTextBox
+
+ApplyZoom.Name = "ApplyZoom"
+ApplyZoom.Parent = Tab1
+ApplyZoom.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ApplyZoom.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ApplyZoom.BorderSizePixel = 0
+ApplyZoom.Position = UDim2.new(0.0359374993, 0, 0.351585001, 0)
+ApplyZoom.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
+ApplyZoom.Font = Enum.Font.SourceSansLight
+ApplyZoom.Text = "Apply Max Zoom"
+ApplyZoom.TextColor3 = Color3.fromRGB(255, 255, 255)
+ApplyZoom.TextSize = 18.000
+ApplyZoom.TextWrapped = true
+
+UICorner_13.Parent = ApplyZoom
+
+ZoomTextBox.Name = "ZoomTextBox"
+ZoomTextBox.Parent = ApplyZoom
+ZoomTextBox.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+ZoomTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ZoomTextBox.BorderSizePixel = 0
+ZoomTextBox.Position = UDim2.new(0.861952841, 0, 0.135135129, 0)
+ZoomTextBox.Size = UDim2.new(0.12626262, 0, 0.702702701, 0)
+ZoomTextBox.Font = Enum.Font.SourceSansLight
+ZoomTextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+ZoomTextBox.PlaceholderText = "Number"
+ZoomTextBox.Text = ""
+ZoomTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+ZoomTextBox.TextSize = 14.000
+ZoomTextBox.TextWrapped = true
+
+UICorner_14.Parent = ZoomTextBox
+
+Tab2.Name = "Tab2"
+Tab2.Parent = MainFrame
+Tab2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tab2.BackgroundTransparency = 1.000
+Tab2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab2.BorderSizePixel = 0
+Tab2.Position = UDim2.new(0, 0, 0.0693333298, 0)
+Tab2.Size = UDim2.new(1, 0, 0.925333321, 0)
+
+EnableESP.Name = "EnableESP"
+EnableESP.Parent = Tab2
+EnableESP.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+EnableESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnableESP.BorderSizePixel = 0
+EnableESP.Position = UDim2.new(0.0359374993, 0, 0.0662824214, 0)
+EnableESP.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
+EnableESP.Font = Enum.Font.SourceSansLight
+EnableESP.Text = "Enable ESP"
+EnableESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnableESP.TextSize = 18.000
+EnableESP.TextWrapped = true
+
+UICorner_15.Parent = EnableESP
+
+ESPColor.Name = "ESPColor"
+ESPColor.Parent = EnableESP
+ESPColor.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+ESPColor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ESPColor.BorderSizePixel = 0
+ESPColor.Position = UDim2.new(0.861952841, 0, 0.135135129, 0)
+ESPColor.Size = UDim2.new(0.12626262, 0, 0.702702701, 0)
+ESPColor.Font = Enum.Font.SourceSansLight
+ESPColor.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+ESPColor.PlaceholderText = "Color (HEX)"
+ESPColor.Text = ""
+ESPColor.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESPColor.TextSize = 14.000
+ESPColor.TextWrapped = true
+
+UICorner_16.Parent = ESPColor
+
+EnableOut.Name = "EnableOut"
+EnableOut.Parent = Tab2
+EnableOut.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+EnableOut.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnableOut.BorderSizePixel = 0
+EnableOut.Position = UDim2.new(0.0359374993, 0, 0.210374638, 0)
+EnableOut.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
+EnableOut.Font = Enum.Font.SourceSansLight
+EnableOut.Text = "Enable Outline"
+EnableOut.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnableOut.TextSize = 18.000
+EnableOut.TextWrapped = true
+
+UICorner_17.Parent = EnableOut
+
+OutlineColor.Name = "OutlineColor"
+OutlineColor.Parent = EnableOut
+OutlineColor.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+OutlineColor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OutlineColor.BorderSizePixel = 0
+OutlineColor.Position = UDim2.new(0.861952841, 0, 0.135135129, 0)
+OutlineColor.Size = UDim2.new(0.12626262, 0, 0.702702701, 0)
+OutlineColor.Font = Enum.Font.SourceSansLight
+OutlineColor.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+OutlineColor.PlaceholderText = "Color (HEX)"
+OutlineColor.Text = ""
+OutlineColor.TextColor3 = Color3.fromRGB(255, 255, 255)
+OutlineColor.TextSize = 14.000
+OutlineColor.TextWrapped = true
+
+UICorner_18.Parent = OutlineColor
+
+Tab3.Name = "Tab3"
+Tab3.Parent = MainFrame
+Tab3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tab3.BackgroundTransparency = 1.000
+Tab3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab3.BorderSizePixel = 0
+Tab3.Position = UDim2.new(0, 0, 0.0693333298, 0)
+Tab3.Size = UDim2.new(1, 0, 0.925333321, 0)
+Tab3.Visible = false
+
+ApplyFPS.Name = "ApplyFPS"
+ApplyFPS.Parent = Tab3
+ApplyFPS.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ApplyFPS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ApplyFPS.BorderSizePixel = 0
+ApplyFPS.Position = UDim2.new(0.0359374993, 0, 0.0662824214, 0)
+ApplyFPS.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
+ApplyFPS.Font = Enum.Font.SourceSansLight
+ApplyFPS.Text = "Set FPS Cap"
+ApplyFPS.TextColor3 = Color3.fromRGB(255, 255, 255)
+ApplyFPS.TextSize = 18.000
+ApplyFPS.TextWrapped = true
+
+UICorner_19.Parent = ApplyFPS
+
+FPSTextBox.Name = "FPSTextBox"
+FPSTextBox.Parent = ApplyFPS
+FPSTextBox.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+FPSTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FPSTextBox.BorderSizePixel = 0
+FPSTextBox.Position = UDim2.new(0.861952841, 0, 0.135135129, 0)
+FPSTextBox.Size = UDim2.new(0.12626262, 0, 0.702702701, 0)
+FPSTextBox.Font = Enum.Font.SourceSansLight
+FPSTextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+FPSTextBox.PlaceholderText = "Number"
+FPSTextBox.Text = ""
+FPSTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPSTextBox.TextSize = 14.000
+FPSTextBox.TextWrapped = true
+
+UICorner_20.Parent = FPSTextBox
+
+ExecScript.Name = "ExecScript"
+ExecScript.Parent = Tab3
+ExecScript.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ExecScript.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExecScript.BorderSizePixel = 0
+ExecScript.Position = UDim2.new(0.0359374993, 0, 0.210374638, 0)
+ExecScript.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
+ExecScript.Font = Enum.Font.SourceSansLight
+ExecScript.Text = "Execute Script In Editor."
+ExecScript.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecScript.TextSize = 18.000
+ExecScript.TextWrapped = true
+
+UICorner_21.Parent = ExecScript
+
+ScriptEditor.Name = "ScriptEditor"
+ScriptEditor.Parent = Tab3
+ScriptEditor.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+ScriptEditor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptEditor.BorderSizePixel = 0
+ScriptEditor.Position = UDim2.new(0.0345695987, 0, 0.354155362, 0)
+ScriptEditor.SelectionImageObject = ExecScript
+ScriptEditor.Size = UDim2.new(0.928125024, 0, 0.149855912, 0)
+ScriptEditor.Font = Enum.Font.SourceSansLight
+ScriptEditor.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+ScriptEditor.PlaceholderText = "Paste Script Here!"
+ScriptEditor.Text = "print(\"UNXHub On Top!\")"
+ScriptEditor.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptEditor.TextSize = 14.000
+ScriptEditor.TextWrapped = true
+ScriptEditor.TextXAlignment = Enum.TextXAlignment.Left
+ScriptEditor.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_22.Parent = ScriptEditor
+
+OverdriveH.Name = "OverdriveH"
+OverdriveH.Parent = Tab3
+OverdriveH.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+OverdriveH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OverdriveH.BorderSizePixel = 0
+OverdriveH.Position = UDim2.new(0.0359375477, 0, 0.538904905, 0)
+OverdriveH.Size = UDim2.new(0.442187488, 0, 0.106628239, 0)
+OverdriveH.Font = Enum.Font.SourceSansLight
+OverdriveH.Text = "Overdrive H (MM2, Blade Ball, Dead Rails, Fisch)"
+OverdriveH.TextColor3 = Color3.fromRGB(255, 255, 255)
+OverdriveH.TextSize = 18.000
+OverdriveH.TextWrapped = true
+
+UICorner_23.Parent = OverdriveH
+
+LoadIy.Name = "LoadIy"
+LoadIy.Parent = Tab3
+LoadIy.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+LoadIy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LoadIy.BorderSizePixel = 0
+LoadIy.Position = UDim2.new(0.497652233, 0, 0.538904905, 0)
+LoadIy.Size = UDim2.new(0.465624988, 0, 0.106628239, 0)
+LoadIy.Font = Enum.Font.SourceSansLight
+LoadIy.Text = "Infinite Yield (Universal)"
+LoadIy.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadIy.TextSize = 18.000
+LoadIy.TextWrapped = true
+
+UICorner_24.Parent = LoadIy
+
+IYUniversal.Name = "IYUniversal"
+IYUniversal.Parent = Tab3
+IYUniversal.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+IYUniversal.BorderColor3 = Color3.fromRGB(0, 0, 0)
+IYUniversal.BorderSizePixel = 0
+IYUniversal.Position = UDim2.new(0.0359374993, 0, 0.677233458, 0)
+IYUniversal.Size = UDim2.new(0.442187488, 0, 0.106628239, 0)
+IYUniversal.Font = Enum.Font.SourceSansLight
+IYUniversal.Text = "Nameless Admin (Universal)"
+IYUniversal.TextColor3 = Color3.fromRGB(255, 255, 255)
+IYUniversal.TextSize = 18.000
+IYUniversal.TextWrapped = true
+
+UICorner_25.Parent = IYUniversal
+
+Tab4.Name = "Tab4"
+Tab4.Parent = MainFrame
+Tab4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tab4.BackgroundTransparency = 1.000
+Tab4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab4.BorderSizePixel = 0
+Tab4.Position = UDim2.new(0, 0, 0.0693333298, 0)
+Tab4.Size = UDim2.new(1, 0, 0.925333321, 0)
+Tab4.Visible = false
+
+OpenUNX.Name = "OpenUNX"
+OpenUNX.Parent = UNXHubUI
+OpenUNX.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+OpenUNX.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenUNX.BorderSizePixel = 0
+OpenUNX.Position = UDim2.new(0.00691881916, 0, 0.0154702961, 0)
+OpenUNX.Size = UDim2.new(0.0761070102, 0, 0.153155938, 0)
+OpenUNX.Visible = false
+OpenUNX.Font = Enum.Font.SourceSansLight
+OpenUNX.Text = "Open UNXHub!"
+OpenUNX.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenUNX.TextSize = 24.000
+OpenUNX.TextWrapped = true
+
+UICorner_26.CornerRadius = UDim.new(0, 5)
+UICorner_26.Parent = OpenUNX
+
+local function SwitchTab1()
+	Tab1.Visible = true
+	Tab2.Visible = false
+	Tab3.Visible = false
+	Tab4.Visible = false
+end
+
+local function SwitchTab2()
+	Tab1.Visible = false
+	Tab2.Visible = true
+	Tab3.Visible = false
+	Tab4.Visible = false
+end
+
+local function SwitchTab3()
+	Tab1.Visible = false
+	Tab2.Visible = false
+	Tab3.Visible = true
+	Tab4.Visible = false
+end
+
+local function SwitchTab4()
+	Tab1.Visible = false
+	Tab2.Visible = false
+	Tab3.Visible = false
+	Tab4.Visible = true
+end
+
+local function CloseUI()
+	warn("Goodbye ".. game.Players.LocalPlayer.Name .."!")
+	UNXHubUI:Destroy()
+end
+
+local function MinimizeUI()
+	MainFrame.Visible = false
+	TabsFrame.Visible = false
+	OpenUNX.Visible = true
+end
+
+local function OpenUNX1()
+	OpenUNX.Visible = false
+	TabsFrame.Visible = true
+	MainFrame.Visible = true
+end
+
+local function ChangePWS()
+	local Value = WSTextBox.Text
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	if WSTextBox.Text == "" then
+		WSTextBox.Text = "Input A Number!"
+		wait(1)
+		WSTextBox.Text = ""
+	elseif WSTextBox.Text == " " then
+		WSTextBox.Text = "Input A Number!"
+		wait(1)
+		WSTextBox.Text = ""
+	else
+		local Value = WSTextBox.Text
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end
+end
+
+local function ChangePJP()
+	local Value = JPTextBox.Text
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	if JPTextBox.Text == "" then
+		JPTextBox.Text = "Input A Number!"
+		wait(1)
+		JPTextBox.Text = ""
+	elseif JPTextBox.Text == " " then
+		JPTextBox.Text = "Input A Number!"
+		wait(1)
+		JPTextBox.Text = ""
+	else
+		local Value = JPTextBox.Text
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end
+end
+
+local function ChangePZoom()
+	local Value = WSTextBox.Text
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	if ZoomTextBox.Text == "" then
+		ZoomTextBox.Text = "Input A Number!"
+		wait(1)
+		ZoomTextBox.Text = ""
+	elseif JPTextBox.Text == " " then
+		ZoomTextBox.Text = "Input A Number!"
+		wait(1)
+		ZoomTextBox.Text = ""
+	else
+		local Value = ZoomTextBox.Text
+		game.Players.LocalPlayer.CameraMaxZoomDistance = Value
+	end
+end
+
+local function RunScript()
+	local scripttext = ScriptEditor.Text
+	loadstring(scripttext)
+end
+
+local function fpscap()
+	local value = FPSTextBox.Text
+	setfpscap(value)
+end
+
+
+local function ESPEnabled()
+
+end
+
+local function RunODH()
+	loadstring(game:HttpGet("https://api.overdrivehub.xyz/v1/auth"))()
+end
+
+local function RunIY()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end
+
+local function RunNA()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+end
+
+--// Credits To Depso (Modded By Me :))
+local Players = game:GetService("Players")
+
+local HighlightsEnabled = false
+
+local ActiveHighlights = {}
+local PlayerConnections = {}
+
+local function ApplyHighlight(Player)
+	if not HighlightsEnabled then return end
+
+	local Connections = {}
+	local PlayerId = Player.UserId
+
+	local Character = Player.Character or Player.CharacterAdded:Wait()
+	local Humanoid = Character:WaitForChild("Humanoid")
+	local HightLighter = Instance.new("Highlight", Character)
+
+	ActiveHighlights[PlayerId] = HightLighter
+
+	local function UpdateFillColor()
+		local DefaultColor = Color3.fromRGB(255, 48, 51)
+		HightLighter.FillColor = (Player.TeamColor and Player.TeamColor.Color) or DefaultColor
+	end
+
+	local function Disconnect()
+		if HightLighter then
+			HightLighter:Remove()
+		end
+		ActiveHighlights[PlayerId] = nil
+
+		for _, Connection in next, Connections do
+			Connection:Disconnect()
+		end
+	end
+
+	table.insert(Connections, Player:GetPropertyChangedSignal("TeamColor"):Connect(UpdateFillColor))
+	table.insert(Connections, Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+		if Humanoid.Health <= 0 then
+			Disconnect()
+		end
+	end))
+
+	PlayerConnections[PlayerId] = Connections
+
+	UpdateFillColor()
+end
+
+local function RemoveHighlight(Player)
+	local PlayerId = Player.UserId
+
+	-- Remove highlight
+	if ActiveHighlights[PlayerId] then
+		ActiveHighlights[PlayerId]:Remove()
+		ActiveHighlights[PlayerId] = nil
+	end
+
+	-- Disconnect connections
+	if PlayerConnections[PlayerId] then
+		for _, Connection in next, PlayerConnections[PlayerId] do
+			Connection:Disconnect()
+		end
+		PlayerConnections[PlayerId] = nil
+	end
+end
+
+local function HightLightPlayer(Player)
+	if not HighlightsEnabled then return end
+
+	if Player.Character then
+		ApplyHighlight(Player)
+	end
+
+	local CharacterConnection = Player.CharacterAdded:Connect(function()
+		if HighlightsEnabled then
+			ApplyHighlight(Player)
+		end
+	end)
+
+	if not PlayerConnections[Player.UserId] then
+		PlayerConnections[Player.UserId] = {}
+	end
+	table.insert(PlayerConnections[Player.UserId], CharacterConnection)
+end
+
+local function EnableHighlights()
+	HighlightsEnabled = true
+
+
+	for _, Player in next, Players:GetPlayers() do
+		HightLightPlayer(Player)
+	end
+end
+
+local function DisableHighlights()
+	HighlightsEnabled = false
+	for _, Player in next, Players:GetPlayers() do
+		RemoveHighlight(Player)
+	end
+end
+
+local function ToggleHighlights()
+	if HighlightsEnabled then
+		DisableHighlights()
+		print("Player highlights disabled")
+	else
+		EnableHighlights()
+		print("Player highlights enabled")
+	end
+end
+
+EnableOut.MouseButton1Click:Connect(function()
+	ToggleHighlights()
+end)
+
+
+Players.PlayerAdded:Connect(function(Player)
+	if HighlightsEnabled then
+		HightLightPlayer(Player)
+	end
+end)
+
+Players.PlayerRemoving:Connect(function(Player)
+	RemoveHighlight(Player)
+end)
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+
+local ESPEnabled = false
+local ESPConnections = {}
+local PlayerESPs = {}
+
+local function createESP(player)
+	if player == LocalPlayer or not player.Character or not player.Character:FindFirstChild("Head") then
+		return
+	end
+
+	local character = player.Character
+	local head = character.Head
+	
+	local billboardGui = Instance.new("BillboardGui")
+	billboardGui.Name = "UNXHub ESP"
+	billboardGui.Adornee = head
+	billboardGui.Size = UDim2.new(0, 200, 0, 50)
+	billboardGui.StudsOffset = Vector3.new(0, 2, 0)
+	billboardGui.AlwaysOnTop = true
+	billboardGui.Parent = head
+
+	local textLabel = Instance.new("TextLabel")
+	textLabel.Size = UDim2.new(1, 0, 1, 0)
+	textLabel.BackgroundTransparency = 1
+	textLabel.Font = Enum.Font.SourceSansLight
+	textLabel.TextColor3 = Color3.new(1, 1, 1)
+	textLabel.TextStrokeTransparency = 0
+	textLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
+	textLabel.TextScaled = true
+	textLabel.Parent = billboardGui
+
+	PlayerESPs[player] = {
+		gui = billboardGui,
+		label = textLabel,
+		player = player
+	}
+
+	local connection = RunService.Heartbeat:Connect(function()
+		if not ESPEnabled or not player.Character or not player.Character:FindFirstChild("Head") or 
+			not LocalPlayer.Character or not LocalPlayer.Character:FindFirstChild("Head") then
+			return
+		end
+
+		local distance = (player.Character.Head.Position - LocalPlayer.Character.Head.Position).Magnitude
+		textLabel.Text = player.Name .. "\n" .. math.floor(distance) .. " studs"
+	end)
+
+	ESPConnections[player] = connection
+end
+
+local function removeESP(player)
+	if PlayerESPs[player] then
+		PlayerESPs[player].gui:Destroy()
+		PlayerESPs[player] = nil
+	end
+
+	if ESPConnections[player] then
+		ESPConnections[player]:Disconnect()
+		ESPConnections[player] = nil
+	end
+end
+
+local function removeAllESP()
+	for player, _ in pairs(PlayerESPs) do
+		removeESP(player)
+	end
+end
+
+local function addESPToAllPlayers()
+	for _, player in pairs(Players:GetPlayers()) do
+		if player ~= LocalPlayer then
+			createESP(player)
+		end
+	end
+end
+
+local function ESPEnabledFunction()
+	ESPEnabled = not ESPEnabled
+
+	if ESPEnabled then
+		addESPToAllPlayers()
+		ESPConnections.PlayerAdded = Players.PlayerAdded:Connect(function(player)
+			if ESPEnabled then
+				player.CharacterAdded:Connect(function()
+					wait(1)
+					if ESPEnabled then
+						createESP(player)
+					end
+				end)
+
+				if player.Character then
+					createESP(player)
+				end
+			end
+		end)
+
+
+		ESPConnections.PlayerRemoving = Players.PlayerRemoving:Connect(function(player)
+			removeESP(player)
+		end)
+	else
+		removeAllESP()
+		
+		for _, connection in pairs(ESPConnections) do
+			if typeof(connection) == "RBXScriptConnection" then
+				connection:Disconnect()
+			end
+		end
+		ESPConnections = {}
+	end
+end
+
+
+Players.PlayerRemoving:Connect(function(player)
+	removeESP(player)
+end)
+
+local phrases = {
+	"Let Him Cook",
+	"Let Me Cook",
+	"UNXHub Is Now Done Loading",
+	"UNXHub :0000 Is Gud",
+	"UNXHUB Loaded",
+	"All Loaded Up!, Good Exploiting",
+	"Let me check if it loaded... yea it did",
+	"<<<UNXHub>>> UNXHub Loaded Sucessfully.",
+	"How Did I Even Make This?",
+	"Basically: UNXHub Is Loaded",
+	"Solara Also Steals Your Malware..., Wise Words...",
+	"Developer why UNXHub No Work?",
+	"The Current Time Is: ".. os.time() .."!",
+	"Hello :)",
+	"Hi :), Thanks For Using UNXHub!",
+	"From 1-10 i Choose: ".. math.random(1,10) .."!"
+}
+
+print(phrases[math.random(#phrases)])
+
+EnableESP.MouseButton1Click:Connect(ESPEnabledFunction)
+OverdriveH.MouseButton1Click:Connect(RunODH)
+IYUniversal.MouseButton1Click:Connect(RunIY)
+LoadIy.MouseButton1Click:Connect(RunNA)
+ExecScript.MouseButton1Click:Connect(RunScript)
+ApplyZoom.MouseButton1Click:Connect(ChangePZoom)
+ApplyJP.MouseButton1Click:Connect(ChangePJP)
+ApplyWS.MouseButton1Click:Connect(ChangePWS)
+Close.MouseButton1Click:Connect(CloseUI)
+Minimize.MouseButton1Click:Connect(MinimizeUI)
+OpenUNX.MouseButton1Click:Connect(OpenUNX1)
+LocalPlayerTab1.MouseButton1Click:Connect(SwitchTab1)
+ESPTab2.MouseButton1Click:Connect(SwitchTab2)
+OtherTab3.MouseButton1Click:Connect(SwitchTab3)
+ConfigTab4.MouseButton1Click:Connect(SwitchTab4)
