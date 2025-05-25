@@ -1,8 +1,7 @@
--- Welcome To UNXHub's Source Code!
--- The Current Version Is: Beta 0.3.1
--- Setting Up Variables: Line 7
--- Setting Up UI: Line 69
--- Script & Stuff: Line 550
+-- Hello There User, Welcome To UNXHub Source Code!, Here U Can See Everything UNXHub Does!
+-- Setting Up Variables: Line 6
+-- Setting Up UI: Line 68
+-- Functions And Stuff: Line 549
 
 local UNXHubUI = Instance.new("ScreenGui")
 local TabsFrame = Instance.new("Frame")
@@ -936,6 +935,86 @@ local phrases = {
 }
 
 print(phrases[math.random(#phrases)])
+
+local UserInputService = game:GetService("UserInputService")
+
+local gui = MainFrame
+
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+	local delta = input.Position - dragStart
+	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+gui.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		dragging = true
+		dragStart = input.Position
+		startPos = gui.Position
+
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+
+gui.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		dragInput = input
+	end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		update(input)
+	end
+end)
+
+local UserInputService1 = game:GetService("UserInputService")
+
+local gui1 = TabsFrame
+
+local dragging1
+local dragInput1
+local dragStart1
+local startPos1
+
+local function update1(input1)
+	local delta1 = input1.Position - dragStart1
+	gui1.Position = UDim2.new(startPos1.X.Scale, startPos1.X.Offset + delta1.X, startPos1.Y.Scale, startPos1.Y.Offset + delta1.Y)
+end
+
+gui1.InputBegan:Connect(function(input1)
+	if input1.UserInputType == Enum.UserInputType.MouseButton1 or input1.UserInputType == Enum.UserInputType.Touch then
+		dragging1 = true
+		dragStart1 = input1.Position
+		startPos1 = gui1.Position
+
+		input1.Changed:Connect(function()
+			if input1.UserInputState == Enum.UserInputState.End then
+				dragging1 = false
+			end
+		end)
+	end
+end)
+
+gui1.InputChanged:Connect(function(input1)
+	if input1.UserInputType == Enum.UserInputType.MouseMovement or input1.UserInputType == Enum.UserInputType.Touch then
+		dragInput1 = input1
+	end
+end)
+
+UserInputService1.InputChanged:Connect(function(input1)
+	if input1 == dragInput1 and dragging1 then
+		update1(input1)
+	end
+end)
 
 EnableESP.MouseButton1Click:Connect(ESPEnabledFunction)
 ApplyFPS.MouseButton1Click:Connect(fpscap)
