@@ -1268,6 +1268,8 @@ UserInputService1.InputChanged:Connect(function(input1)
 	end
 end)
 
+UNXHubUI.ResetOnSpawn = false -- DO NOT MESS WITH IT.
+
 ApplyFPS.MouseButton1Click:Connect(fpscap)
 OverdriveH.MouseButton1Click:Connect(RunODH)
 IYUniversal.MouseButton1Click:Connect(RunNA)
