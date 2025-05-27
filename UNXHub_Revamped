@@ -1,3 +1,24 @@
+print([[
+
+ _   _ _   _ __   __ _   _       _      
+| | | | \ | |\ \ / /| | | |     | |     
+| | | |  \| | \ V / | |_| |_   _| |__   
+| | | | . ` | /   \ |  _  | | | | '_ \  
+| |_| | |\  |/ /^\ \| | | | |_| | |_) | 
+ \___/\_| \_/\/   \/\_| |_/\__,_|_.__/  
+
+]])
+print("UNXHub: Revamped (1.0.0) :D")
+
+local player = game:GetService("Players").LocalPlayer
+
+print("Player Name: " .. player.Name)
+print("Display Name: " .. player.DisplayName)
+print("UserID: " .. player.UserId)
+
+print("Executor Level:")
+printidentity()
+
 local UNXHubUI = Instance.new("ScreenGui")
 local OpenUNX = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
