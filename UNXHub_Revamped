@@ -20,8 +20,6 @@ print("UserID: " .. player.UserId)
 print("Local Executor: " .. exec)
 print("Local Executor Level:")
 
-printidentity()
-
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local Workspace = game:GetService("Workspace")
