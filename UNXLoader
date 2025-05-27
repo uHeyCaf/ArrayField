@@ -1,0 +1,146 @@
+warn("UNXHub: Loader::User:".. game.Players.LocalPlayer.Name "::Done_Loading")
+
+local players = game:GetService("Players")
+local tweenService = game:GetService("TweenService")
+local localPlayer = players.LocalPlayer
+local gui = localPlayer:WaitForChild("PlayerGui")
+
+local mainGui = Instance.new("ScreenGui")
+mainGui.Name = "LoaderInterface"
+mainGui.Parent = gui
+
+local window = Instance.new("Frame")
+window.Name = "MainWindow"
+window.Size = UDim2.new(0.2, 0, 0.35, 0)
+window.Position = UDim2.new(0.5, 0, 0.5, 0)
+window.AnchorPoint = Vector2.new(0.5, 0.5)
+window.BackgroundColor3 = Color3.fromRGB(45, 50, 55)
+window.BorderSizePixel = 0
+window.Parent = mainGui
+
+local windowCorners = Instance.new("UICorner")
+windowCorners.CornerRadius = UDim.new(0, 12)
+windowCorners.Parent = window
+
+local header = Instance.new("TextLabel")
+header.Name = "HeaderText"
+header.Size = UDim2.new(1, 0, 0.2, 0)
+header.Position = UDim2.new(0, 0, 0.08, 0)
+header.BackgroundTransparency = 1
+header.Text = "UNXLoader"
+header.TextColor3 = Color3.fromRGB(255, 255, 255)
+header.TextScaled = true
+header.Font = Enum.Font.SourceSansLight
+header.Parent = window
+
+local hubButton = Instance.new("TextButton")
+hubButton.Name = "HubButton"
+hubButton.Size = UDim2.new(0.8, 0, 0.18, 0)
+hubButton.Position = UDim2.new(0.1, 0, 0.35, 0)
+hubButton.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+hubButton.BorderSizePixel = 0
+hubButton.Text = "UNXHub"
+hubButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+hubButton.TextScaled = true
+hubButton.Font = Enum.Font.SourceSansLight
+hubButton.Parent = window
+
+local hubButtonCorners = Instance.new("UICorner")
+hubButtonCorners.CornerRadius = UDim.new(0, 8)
+hubButtonCorners.Parent = hubButton
+
+local oldHubButton = Instance.new("TextButton")
+oldHubButton.Name = "OldHubButton"
+oldHubButton.Size = UDim2.new(0.8, 0, 0.18, 0)
+oldHubButton.Position = UDim2.new(0.1, 0, 0.58, 0)
+oldHubButton.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+oldHubButton.BorderSizePixel = 0
+oldHubButton.Text = "UNXHub (Old)"
+oldHubButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+oldHubButton.TextScaled = true
+oldHubButton.Font = Enum.Font.SourceSansLight
+oldHubButton.Parent = window
+
+local oldHubButtonCorners = Instance.new("UICorner")
+oldHubButtonCorners.CornerRadius = UDim.new(0, 8)
+oldHubButtonCorners.Parent = oldHubButton
+
+local credits = Instance.new("TextLabel")
+credits.Name = "CreditsText"
+credits.Size = UDim2.new(1, 0, 0.1, 0)
+credits.Position = UDim2.new(0, 0, 0.85, 0)
+credits.BackgroundTransparency = 1
+credits.Text = "(c) UNXHub Developer"
+credits.TextColor3 = Color3.fromRGB(180, 180, 180)
+credits.TextScaled = true
+credits.Font = Enum.Font.SourceSansLight
+credits.Parent = window
+
+window.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+
+local isDragging = false
+local startDrag = nil
+local startPosition = nil
+
+local function updateWindowPosition(input)
+    local delta = input.Position - startDrag
+    window.Position = UDim2.new(
+        startPosition.X.Scale, 
+        startPosition.X.Offset + delta.X, 
+        startPosition.Y.Scale, 
+        startPosition.Y.Offset + delta.Y
+    )
+end
+
+window.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        isDragging = true
+        startDrag = input.Position
+        startPosition = window.Position
+        
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                isDragging = false
+            end
+        end)
+    end
+end)
+
+window.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        if isDragging then
+            updateWindowPosition(input)
+        end
+    end
+end)
+
+local function addHoverEffect(button)
+    local defaultColor = button.BackgroundColor3
+    local hoverColor = Color3.fromRGB(85, 90, 95)
+    
+    button.MouseEnter:Connect(function()
+        local fadeIn = tweenService:Create(button, TweenInfo.new(0.15), {BackgroundColor3 = hoverColor})
+        fadeIn:Play()
+    end)
+    
+    button.MouseLeave:Connect(function()
+        local fadeOut = tweenService:Create(button, TweenInfo.new(0.15), {BackgroundColor3 = defaultColor})
+        fadeOut:Play()
+    end)
+end
+
+addHoverEffect(hubButton)
+addHoverEffect(oldHubButton)
+
+local function loadNewHub()
+    mainGui:Destroy()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/uHeyCaf/ArrayField/refs/heads/main/UNXHub",true))()
+end
+
+local function loadOldHub()
+    mainGui:Destroy()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/uHeyCaf/ArrayField/refs/heads/main/OldUNXHub",true))()
+end
+
+hubButton.MouseButton1Click:Connect(loadNewHub)
+oldHubButton.MouseButton1Click:Connect(loadOldHub)
