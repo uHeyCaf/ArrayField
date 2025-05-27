@@ -1,123 +1,99 @@
--- Hello There User, Welcome To UNXHub Source Code!, Here U Can See Everything UNXHub Does!
--- Setting Up Variables: Line 6
--- Setting Up UI: Line 68
--- Functions And Stuff: Line 549
-
-local UNXHubUI = Instance.new("ScreenGui")
-local TabsFrame = Instance.new("Frame")
+	local UNXHubUI = Instance.new("ScreenGui")
+local OpenUNX = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
-local Bar = Instance.new("Frame")
-local Close = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local Minimize = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
+local TabsFrame = Instance.new("Frame")
 local ButtonSafeArea = Instance.new("Frame")
-local LocalPlayerTab1 = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local ESPTab2 = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local ConfigTab4 = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
 local OtherTab3 = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local ConfigTab4 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local ESPTab2 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local LocalPlayerTab1 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Bar = Instance.new("Frame")
+local Minimize = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
 local UICorner_7 = Instance.new("UICorner")
 local MainFrame = Instance.new("Frame")
+local Tab4 = Instance.new("Frame")
+local Tab2 = Instance.new("Frame")
+local EnableSkel = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
+local EnableBox = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local EnableTrcs = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local EnableOut = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local EnableESP = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local Tab1 = Instance.new("Frame")
+local ApplyZoom = Instance.new("TextButton")
+local ZoomTextBox = Instance.new("TextBox")
+local UICorner_13 = Instance.new("UICorner")
+local UICorner_14 = Instance.new("UICorner")
+local ApplyJP = Instance.new("TextButton")
+local JPTextBox = Instance.new("TextBox")
+local UICorner_15 = Instance.new("UICorner")
+local UICorner_16 = Instance.new("UICorner")
+local ApplyWS = Instance.new("TextButton")
+local WSTextBox = Instance.new("TextBox")
+local UICorner_17 = Instance.new("UICorner")
+local UICorner_18 = Instance.new("UICorner")
+local UICorner_19 = Instance.new("UICorner")
 local Bar2 = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
-local Tab1 = Instance.new("Frame")
-local ApplyWS = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
-local WSTextBox = Instance.new("TextBox")
-local UICorner_10 = Instance.new("UICorner")
-local ApplyJP = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
-local JPTextBox = Instance.new("TextBox")
-local UICorner_12 = Instance.new("UICorner")
-local ApplyZoom = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
-local ZoomTextBox = Instance.new("TextBox")
-local UICorner_14 = Instance.new("UICorner")
-local Tab2 = Instance.new("Frame")
-local EnableESP = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
-local ESPColor = Instance.new("TextBox")
-local UICorner_16 = Instance.new("UICorner")
-local EnableOut = Instance.new("TextButton")
-local UICorner_17 = Instance.new("UICorner")
-local OutlineColor = Instance.new("TextBox")
-local UICorner_18 = Instance.new("UICorner")
 local Tab3 = Instance.new("Frame")
 local ApplyFPS = Instance.new("TextButton")
-local UICorner_19 = Instance.new("UICorner")
-local FPSTextBox = Instance.new("TextBox")
 local UICorner_20 = Instance.new("UICorner")
-local ExecScript = Instance.new("TextButton")
+local FPSTextBox = Instance.new("TextBox")
 local UICorner_21 = Instance.new("UICorner")
-local ScriptEditor = Instance.new("TextBox")
+local CopyJobID = Instance.new("TextButton")
 local UICorner_22 = Instance.new("UICorner")
-local OverdriveH = Instance.new("TextButton")
+local ExecScript = Instance.new("TextButton")
 local UICorner_23 = Instance.new("UICorner")
-local LoadIy = Instance.new("TextButton")
-local UICorner_24 = Instance.new("UICorner")
 local IYUniversal = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local JoinJobID = Instance.new("TextButton")
+local JobIDTextBox = Instance.new("TextBox")
 local UICorner_25 = Instance.new("UICorner")
-local Tab4 = Instance.new("Frame")
-local OpenUNX = Instance.new("TextButton")
 local UICorner_26 = Instance.new("UICorner")
+local LoadIy = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local OverdriveH = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
+local ScriptEditor = Instance.new("TextBox")
+local UICorner_29 = Instance.new("UICorner")
 
 UNXHubUI.Name = "UNXHubUI"
 UNXHubUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 UNXHubUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+OpenUNX.Name = "OpenUNX"
+OpenUNX.Parent = UNXHubUI
+OpenUNX.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+OpenUNX.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenUNX.BorderSizePixel = 0
+OpenUNX.Position = UDim2.new(0.00691881916, 0, 0.0139082056, 0)
+OpenUNX.Size = UDim2.new(0.0761070102, 0, 0.152990267, 0)
+OpenUNX.Visible = false
+OpenUNX.Font = Enum.Font.SourceSansLight
+OpenUNX.Text = "Open UNXHub!"
+OpenUNX.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenUNX.TextSize = 24.000
+OpenUNX.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0, 5)
+UICorner.Parent = OpenUNX
 
 TabsFrame.Name = "TabsFrame"
 TabsFrame.Parent = UNXHubUI
 TabsFrame.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
 TabsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TabsFrame.BorderSizePixel = 0
-TabsFrame.Position = UDim2.new(0.190651953, 0, 0.207302064, 0)
-TabsFrame.Size = UDim2.new(0.114544891, 0, 0.58013612, 0)
-
-UICorner.Parent = TabsFrame
-
-Bar.Name = "Bar"
-Bar.Parent = TabsFrame
-Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Bar.BackgroundTransparency = 1.000
-Bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Bar.BorderSizePixel = 0
-Bar.Size = UDim2.new(1, 0, 0.0853333324, 0)
-
-Close.Name = "Close"
-Close.Parent = Bar
-Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Close.BorderSizePixel = 0
-Close.Position = UDim2.new(0.0796140134, 0, 0.28125, 0)
-Close.Size = UDim2.new(0.127516776, 0, 0.5625, 0)
-Close.Font = Enum.Font.Unknown
-Close.Text = "X"
-Close.TextColor3 = Color3.fromRGB(255, 0, 0)
-Close.TextSize = 14.000
-Close.TextWrapped = true
-
-UICorner_2.CornerRadius = UDim.new(0, 999)
-UICorner_2.Parent = Close
-
-Minimize.Name = "Minimize"
-Minimize.Parent = Bar
-Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
-Minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Minimize.BorderSizePixel = 0
-Minimize.Position = UDim2.new(0.255924493, 0, 0.28125, 0)
-Minimize.Size = UDim2.new(0.127516776, 0, 0.5625, 0)
-Minimize.Font = Enum.Font.Unknown
-Minimize.Text = "-"
-Minimize.TextColor3 = Color3.fromRGB(255, 255, 0)
-Minimize.TextSize = 14.000
-Minimize.TextWrapped = true
-
-UICorner_3.CornerRadius = UDim.new(0, 999)
-UICorner_3.Parent = Minimize
+TabsFrame.Position = UDim2.new(0.191420659, 0, 0.208623081, 0)
+TabsFrame.Size = UDim2.new(0.114544891, 0, 0.578929067, 0)
 
 ButtonSafeArea.Name = "ButtonSafeArea"
 ButtonSafeArea.Parent = TabsFrame
@@ -125,98 +101,197 @@ ButtonSafeArea.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ButtonSafeArea.BackgroundTransparency = 1.000
 ButtonSafeArea.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ButtonSafeArea.BorderSizePixel = 0
-ButtonSafeArea.Position = UDim2.new(0, 0, 0.101333335, 0)
-ButtonSafeArea.Size = UDim2.new(1, 0, 0.901333332, 0)
-
-LocalPlayerTab1.Name = "LocalPlayerTab1"
-LocalPlayerTab1.Parent = ButtonSafeArea
-LocalPlayerTab1.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-LocalPlayerTab1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-LocalPlayerTab1.BorderSizePixel = 0
-LocalPlayerTab1.Position = UDim2.new(0.0469798669, 0, -0.00295857992, 0)
-LocalPlayerTab1.Size = UDim2.new(0.906040251, 0, 0.100591719, 0)
-LocalPlayerTab1.Font = Enum.Font.SourceSansLight
-LocalPlayerTab1.Text = "Local Player"
-LocalPlayerTab1.TextColor3 = Color3.fromRGB(255, 255, 255)
-LocalPlayerTab1.TextSize = 18.000
-LocalPlayerTab1.TextWrapped = true
-
-UICorner_4.Parent = LocalPlayerTab1
-
-ESPTab2.Name = "ESPTab2"
-ESPTab2.Parent = ButtonSafeArea
-ESPTab2.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-ESPTab2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ESPTab2.BorderSizePixel = 0
-ESPTab2.Position = UDim2.new(0.0469798669, 0, 0.126365125, 0)
-ESPTab2.Size = UDim2.new(0.906040251, 0, 0.100591719, 0)
-ESPTab2.Font = Enum.Font.SourceSansLight
-ESPTab2.Text = "Visuals"
-ESPTab2.TextColor3 = Color3.fromRGB(255, 255, 255)
-ESPTab2.TextSize = 18.000
-ESPTab2.TextWrapped = true
-
-UICorner_5.Parent = ESPTab2
-
-ConfigTab4.Name = "ConfigTab4"
-ConfigTab4.Parent = ButtonSafeArea
-ConfigTab4.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-ConfigTab4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ConfigTab4.BorderSizePixel = 0
-ConfigTab4.Position = UDim2.new(0.0469798669, 0, 0.388328403, 0)
-ConfigTab4.Size = UDim2.new(0.906040251, 0, 0.100591719, 0)
-ConfigTab4.Font = Enum.Font.SourceSansLight
-ConfigTab4.Text = "Configurations"
-ConfigTab4.TextColor3 = Color3.fromRGB(255, 255, 255)
-ConfigTab4.TextSize = 18.000
-ConfigTab4.TextWrapped = true
-
-UICorner_6.Parent = ConfigTab4
+ButtonSafeArea.Position = UDim2.new(0, 0, 0.0990990996, 0)
+ButtonSafeArea.Size = UDim2.new(1, 0, 0.9009009, 0)
 
 OtherTab3.Name = "OtherTab3"
 OtherTab3.Parent = ButtonSafeArea
 OtherTab3.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 OtherTab3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 OtherTab3.BorderSizePixel = 0
-OtherTab3.Position = UDim2.new(0.0469798669, 0, 0.255688727, 0)
-OtherTab3.Size = UDim2.new(0.906040251, 0, 0.100591719, 0)
+OtherTab3.Position = UDim2.new(0.0469798669, 0, 0.25333333, 0)
+OtherTab3.Size = UDim2.new(0.906040251, 0, 0.100000001, 0)
 OtherTab3.Font = Enum.Font.SourceSansLight
-OtherTab3.Text = "Other"
+OtherTab3.Text = "Other Stuff"
 OtherTab3.TextColor3 = Color3.fromRGB(255, 255, 255)
 OtherTab3.TextSize = 18.000
 OtherTab3.TextWrapped = true
 
-UICorner_7.Parent = OtherTab3
+UICorner_2.Parent = OtherTab3
+
+ConfigTab4.Name = "ConfigTab4"
+ConfigTab4.Parent = ButtonSafeArea
+ConfigTab4.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ConfigTab4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ConfigTab4.BorderSizePixel = 0
+ConfigTab4.Position = UDim2.new(0.0469798669, 0, 0.386666656, 0)
+ConfigTab4.Size = UDim2.new(0.906040251, 0, 0.100000001, 0)
+ConfigTab4.Font = Enum.Font.SourceSansLight
+ConfigTab4.Text = "UNX Config"
+ConfigTab4.TextColor3 = Color3.fromRGB(255, 255, 255)
+ConfigTab4.TextSize = 18.000
+ConfigTab4.TextWrapped = true
+
+UICorner_3.Parent = ConfigTab4
+
+ESPTab2.Name = "ESPTab2"
+ESPTab2.Parent = ButtonSafeArea
+ESPTab2.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ESPTab2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ESPTab2.BorderSizePixel = 0
+ESPTab2.Position = UDim2.new(0.0469798669, 0, 0.126666665, 0)
+ESPTab2.Size = UDim2.new(0.906040251, 0, 0.100000001, 0)
+ESPTab2.Font = Enum.Font.SourceSansLight
+ESPTab2.Text = "Visuals"
+ESPTab2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESPTab2.TextSize = 18.000
+ESPTab2.TextWrapped = true
+
+UICorner_4.Parent = ESPTab2
+
+LocalPlayerTab1.Name = "LocalPlayerTab1"
+LocalPlayerTab1.Parent = ButtonSafeArea
+LocalPlayerTab1.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+LocalPlayerTab1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LocalPlayerTab1.BorderSizePixel = 0
+LocalPlayerTab1.Position = UDim2.new(0.0469798669, 0, 0, 0)
+LocalPlayerTab1.Size = UDim2.new(0.906040251, 0, 0.100000001, 0)
+LocalPlayerTab1.Font = Enum.Font.SourceSansLight
+LocalPlayerTab1.Text = "Character"
+LocalPlayerTab1.TextColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayerTab1.TextSize = 18.000
+LocalPlayerTab1.TextWrapped = true
+
+UICorner_5.Parent = LocalPlayerTab1
+
+Bar.Name = "Bar"
+Bar.Parent = TabsFrame
+Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bar.BackgroundTransparency = 1.000
+Bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar.BorderSizePixel = 0
+Bar.Size = UDim2.new(1, 0, 0.0840840861, 0)
+
+Minimize.Name = "Minimize"
+Minimize.Parent = Bar
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+Minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Minimize.BorderSizePixel = 0
+Minimize.Position = UDim2.new(0.0738255009, 0, 0.285714298, 0)
+Minimize.Size = UDim2.new(0.127516776, 0, 0.535714269, 0)
+Minimize.Font = Enum.Font.Unknown
+Minimize.Text = "-"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 0)
+Minimize.TextSize = 14.000
+Minimize.TextWrapped = true
+
+UICorner_6.CornerRadius = UDim.new(0, 999)
+UICorner_6.Parent = Minimize
+
+UICorner_7.Parent = TabsFrame
 
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = UNXHubUI
 MainFrame.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
 MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MainFrame.BorderSizePixel = 0
-MainFrame.Position = UDim2.new(0.316412836, 0, 0.209644228, 0)
-MainFrame.Size = UDim2.new(0.492004901, 0, 0.58013612, 0)
+MainFrame.Position = UDim2.new(0.315959394, 0, 0.208623081, 0)
+MainFrame.Size = UDim2.new(0.492004901, 0, 0.578929067, 0)
 
-UICorner_8.Parent = MainFrame
+Tab4.Name = "Tab4"
+Tab4.Parent = MainFrame
+Tab4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tab4.BackgroundTransparency = 1.000
+Tab4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab4.BorderSizePixel = 0
+Tab4.Position = UDim2.new(0, 0, 0.0690690726, 0)
+Tab4.Size = UDim2.new(1, 0, 0.92492491, 0)
+Tab4.Visible = false
 
-Bar2.Name = "Bar2"
-Bar2.Parent = MainFrame
-Bar2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Bar2.BackgroundTransparency = 1.000
-Bar2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Bar2.BorderSizePixel = 0
-Bar2.Size = UDim2.new(1, 0, 0.0853333324, 0)
+Tab2.Name = "Tab2"
+Tab2.Parent = MainFrame
+Tab2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tab2.BackgroundTransparency = 1.000
+Tab2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab2.BorderSizePixel = 0
+Tab2.Position = UDim2.new(0, 0, 0.0690690726, 0)
+Tab2.Size = UDim2.new(1, 0, 0.92492491, 0)
+Tab2.Visible = false
 
-TextLabel.Parent = Bar2
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Size = UDim2.new(1, 0, 0.8125, 0)
-TextLabel.Font = Enum.Font.SourceSansLight
-TextLabel.Text = "UNXHub Revamped! (Beta 0.3.0)"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 18.000
-TextLabel.TextWrapped = true
+EnableSkel.Name = "EnableSkel"
+EnableSkel.Parent = Tab2
+EnableSkel.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+EnableSkel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnableSkel.BorderSizePixel = 0
+EnableSkel.Position = UDim2.new(0.0343750007, 0, 0.490259737, 0)
+EnableSkel.Size = UDim2.new(0.928125024, 0, 0.103896104, 0)
+EnableSkel.Font = Enum.Font.SourceSansLight
+EnableSkel.Text = "Toggle Skeleton ESP"
+EnableSkel.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnableSkel.TextSize = 18.000
+EnableSkel.TextWrapped = true
+
+UICorner_8.Parent = EnableSkel
+
+EnableBox.Name = "EnableBox"
+EnableBox.Parent = Tab2
+EnableBox.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+EnableBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnableBox.BorderSizePixel = 0
+EnableBox.Position = UDim2.new(0.0343750007, 0, 0.629870117, 0)
+EnableBox.Size = UDim2.new(0.928125024, 0, 0.103896104, 0)
+EnableBox.Font = Enum.Font.SourceSansLight
+EnableBox.Text = "Toggle Box ESP"
+EnableBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnableBox.TextSize = 18.000
+EnableBox.TextWrapped = true
+
+UICorner_9.Parent = EnableBox
+
+EnableTrcs.Name = "EnableTrcs"
+EnableTrcs.Parent = Tab2
+EnableTrcs.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+EnableTrcs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnableTrcs.BorderSizePixel = 0
+EnableTrcs.Position = UDim2.new(0.0343750007, 0, 0.350649357, 0)
+EnableTrcs.Size = UDim2.new(0.928125024, 0, 0.103896104, 0)
+EnableTrcs.Font = Enum.Font.SourceSansLight
+EnableTrcs.Text = "Toggle Tracers"
+EnableTrcs.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnableTrcs.TextSize = 18.000
+EnableTrcs.TextWrapped = true
+
+UICorner_10.Parent = EnableTrcs
+
+EnableOut.Name = "EnableOut"
+EnableOut.Parent = Tab2
+EnableOut.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+EnableOut.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnableOut.BorderSizePixel = 0
+EnableOut.Position = UDim2.new(0.0343750007, 0, 0.207792208, 0)
+EnableOut.Size = UDim2.new(0.928125024, 0, 0.103896104, 0)
+EnableOut.Font = Enum.Font.SourceSansLight
+EnableOut.Text = "Toggle Outline"
+EnableOut.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnableOut.TextSize = 18.000
+EnableOut.TextWrapped = true
+
+UICorner_11.Parent = EnableOut
+
+EnableESP.Name = "EnableESP"
+EnableESP.Parent = Tab2
+EnableESP.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+EnableESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnableESP.BorderSizePixel = 0
+EnableESP.Position = UDim2.new(0.0343750007, 0, 0.0649350658, 0)
+EnableESP.Size = UDim2.new(0.928125024, 0, 0.103896104, 0)
+EnableESP.Font = Enum.Font.SourceSansLight
+EnableESP.Text = "Toggle ESP"
+EnableESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnableESP.TextSize = 18.000
+EnableESP.TextWrapped = true
+
+UICorner_12.Parent = EnableESP
 
 Tab1.Name = "Tab1"
 Tab1.Parent = MainFrame
@@ -224,96 +299,30 @@ Tab1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Tab1.BackgroundTransparency = 1.000
 Tab1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Tab1.BorderSizePixel = 0
-Tab1.Position = UDim2.new(0, 0, 0.0693333298, 0)
-Tab1.Size = UDim2.new(1, 0, 0.925333321, 0)
+Tab1.Position = UDim2.new(0, 0, 0.0690690726, 0)
+Tab1.Size = UDim2.new(1, 0, 0.92492491, 0)
 Tab1.Visible = false
-
-ApplyWS.Name = "ApplyWS"
-ApplyWS.Parent = Tab1
-ApplyWS.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-ApplyWS.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ApplyWS.BorderSizePixel = 0
-ApplyWS.Position = UDim2.new(0.0359374993, 0, 0.0662824214, 0)
-ApplyWS.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
-ApplyWS.Font = Enum.Font.SourceSansLight
-ApplyWS.Text = "Apply WalkSpeed"
-ApplyWS.TextColor3 = Color3.fromRGB(255, 255, 255)
-ApplyWS.TextSize = 18.000
-ApplyWS.TextWrapped = true
-
-UICorner_9.Parent = ApplyWS
-
-WSTextBox.Name = "WSTextBox"
-WSTextBox.Parent = ApplyWS
-WSTextBox.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
-WSTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-WSTextBox.BorderSizePixel = 0
-WSTextBox.Position = UDim2.new(0.861952841, 0, 0.135135129, 0)
-WSTextBox.Size = UDim2.new(0.12626262, 0, 0.702702701, 0)
-WSTextBox.Font = Enum.Font.SourceSansLight
-WSTextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
-WSTextBox.PlaceholderText = "Number"
-WSTextBox.Text = ""
-WSTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-WSTextBox.TextSize = 14.000
-WSTextBox.TextWrapped = true
-
-UICorner_10.Parent = WSTextBox
-
-ApplyJP.Name = "ApplyJP"
-ApplyJP.Parent = Tab1
-ApplyJP.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-ApplyJP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ApplyJP.BorderSizePixel = 0
-ApplyJP.Position = UDim2.new(0.0359374993, 0, 0.210374638, 0)
-ApplyJP.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
-ApplyJP.Font = Enum.Font.SourceSansLight
-ApplyJP.Text = "Apply JumpPower"
-ApplyJP.TextColor3 = Color3.fromRGB(255, 255, 255)
-ApplyJP.TextSize = 18.000
-ApplyJP.TextWrapped = true
-
-UICorner_11.Parent = ApplyJP
-
-JPTextBox.Name = "JPTextBox"
-JPTextBox.Parent = ApplyJP
-JPTextBox.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
-JPTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-JPTextBox.BorderSizePixel = 0
-JPTextBox.Position = UDim2.new(0.861952841, 0, 0.135135129, 0)
-JPTextBox.Size = UDim2.new(0.12626262, 0, 0.702702701, 0)
-JPTextBox.Font = Enum.Font.SourceSansLight
-JPTextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
-JPTextBox.PlaceholderText = "Number"
-JPTextBox.Text = ""
-JPTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-JPTextBox.TextSize = 14.000
-JPTextBox.TextWrapped = true
-
-UICorner_12.Parent = JPTextBox
 
 ApplyZoom.Name = "ApplyZoom"
 ApplyZoom.Parent = Tab1
 ApplyZoom.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 ApplyZoom.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ApplyZoom.BorderSizePixel = 0
-ApplyZoom.Position = UDim2.new(0.0359374993, 0, 0.351585001, 0)
-ApplyZoom.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
+ApplyZoom.Position = UDim2.new(0.0343750007, 0, 0.350649357, 0)
+ApplyZoom.Size = UDim2.new(0.928125024, 0, 0.103896104, 0)
 ApplyZoom.Font = Enum.Font.SourceSansLight
 ApplyZoom.Text = "Apply Max Zoom"
 ApplyZoom.TextColor3 = Color3.fromRGB(255, 255, 255)
 ApplyZoom.TextSize = 18.000
 ApplyZoom.TextWrapped = true
 
-UICorner_13.Parent = ApplyZoom
-
 ZoomTextBox.Name = "ZoomTextBox"
 ZoomTextBox.Parent = ApplyZoom
 ZoomTextBox.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
 ZoomTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ZoomTextBox.BorderSizePixel = 0
-ZoomTextBox.Position = UDim2.new(0.861952841, 0, 0.135135129, 0)
-ZoomTextBox.Size = UDim2.new(0.12626262, 0, 0.702702701, 0)
+ZoomTextBox.Position = UDim2.new(0.860269368, 0, 0.125, 0)
+ZoomTextBox.Size = UDim2.new(0.12626262, 0, 0.6875, 0)
 ZoomTextBox.Font = Enum.Font.SourceSansLight
 ZoomTextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
 ZoomTextBox.PlaceholderText = "Number"
@@ -322,80 +331,95 @@ ZoomTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 ZoomTextBox.TextSize = 14.000
 ZoomTextBox.TextWrapped = true
 
-UICorner_14.Parent = ZoomTextBox
+UICorner_13.Parent = ZoomTextBox
 
-Tab2.Name = "Tab2"
-Tab2.Parent = MainFrame
-Tab2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab2.BackgroundTransparency = 1.000
-Tab2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tab2.BorderSizePixel = 0
-Tab2.Position = UDim2.new(0, 0, 0.0693333298, 0)
-Tab2.Size = UDim2.new(1, 0, 0.925333321, 0)
+UICorner_14.Parent = ApplyZoom
 
-EnableESP.Name = "EnableESP"
-EnableESP.Parent = Tab2
-EnableESP.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-EnableESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-EnableESP.BorderSizePixel = 0
-EnableESP.Position = UDim2.new(0.0359374993, 0, 0.0662824214, 0)
-EnableESP.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
-EnableESP.Font = Enum.Font.SourceSansLight
-EnableESP.Text = "Enable ESP"
-EnableESP.TextColor3 = Color3.fromRGB(255, 255, 255)
-EnableESP.TextSize = 18.000
-EnableESP.TextWrapped = true
+ApplyJP.Name = "ApplyJP"
+ApplyJP.Parent = Tab1
+ApplyJP.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ApplyJP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ApplyJP.BorderSizePixel = 0
+ApplyJP.Position = UDim2.new(0.0343750007, 0, 0.207792208, 0)
+ApplyJP.Size = UDim2.new(0.928125024, 0, 0.103896104, 0)
+ApplyJP.Font = Enum.Font.SourceSansLight
+ApplyJP.Text = "Apply JumpPower"
+ApplyJP.TextColor3 = Color3.fromRGB(255, 255, 255)
+ApplyJP.TextSize = 18.000
+ApplyJP.TextWrapped = true
 
-UICorner_15.Parent = EnableESP
+JPTextBox.Name = "JPTextBox"
+JPTextBox.Parent = ApplyJP
+JPTextBox.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+JPTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JPTextBox.BorderSizePixel = 0
+JPTextBox.Position = UDim2.new(0.860269368, 0, 0.125, 0)
+JPTextBox.Size = UDim2.new(0.12626262, 0, 0.6875, 0)
+JPTextBox.Font = Enum.Font.SourceSansLight
+JPTextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+JPTextBox.PlaceholderText = "Number"
+JPTextBox.Text = ""
+JPTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+JPTextBox.TextSize = 14.000
+JPTextBox.TextWrapped = true
 
-ESPColor.Name = "ESPColor"
-ESPColor.Parent = EnableESP
-ESPColor.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
-ESPColor.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ESPColor.BorderSizePixel = 0
-ESPColor.Position = UDim2.new(0.861952841, 0, 0.135135129, 0)
-ESPColor.Size = UDim2.new(0.12626262, 0, 0.702702701, 0)
-ESPColor.Font = Enum.Font.SourceSansLight
-ESPColor.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
-ESPColor.PlaceholderText = "Color (HEX)"
-ESPColor.Text = ""
-ESPColor.TextColor3 = Color3.fromRGB(255, 255, 255)
-ESPColor.TextSize = 14.000
-ESPColor.TextWrapped = true
+UICorner_15.Parent = JPTextBox
 
-UICorner_16.Parent = ESPColor
+UICorner_16.Parent = ApplyJP
 
-EnableOut.Name = "EnableOut"
-EnableOut.Parent = Tab2
-EnableOut.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-EnableOut.BorderColor3 = Color3.fromRGB(0, 0, 0)
-EnableOut.BorderSizePixel = 0
-EnableOut.Position = UDim2.new(0.0359374993, 0, 0.210374638, 0)
-EnableOut.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
-EnableOut.Font = Enum.Font.SourceSansLight
-EnableOut.Text = "Enable Outline"
-EnableOut.TextColor3 = Color3.fromRGB(255, 255, 255)
-EnableOut.TextSize = 18.000
-EnableOut.TextWrapped = true
+ApplyWS.Name = "ApplyWS"
+ApplyWS.Parent = Tab1
+ApplyWS.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ApplyWS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ApplyWS.BorderSizePixel = 0
+ApplyWS.Position = UDim2.new(0.0343750007, 0, 0.0649350658, 0)
+ApplyWS.Size = UDim2.new(0.928125024, 0, 0.103896104, 0)
+ApplyWS.Font = Enum.Font.SourceSansLight
+ApplyWS.Text = "Apply WalkSpeed"
+ApplyWS.TextColor3 = Color3.fromRGB(255, 255, 255)
+ApplyWS.TextSize = 18.000
+ApplyWS.TextWrapped = true
 
-UICorner_17.Parent = EnableOut
+WSTextBox.Name = "WSTextBox"
+WSTextBox.Parent = ApplyWS
+WSTextBox.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+WSTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WSTextBox.BorderSizePixel = 0
+WSTextBox.Position = UDim2.new(0.860269368, 0, 0.125, 0)
+WSTextBox.Size = UDim2.new(0.12626262, 0, 0.6875, 0)
+WSTextBox.Font = Enum.Font.SourceSansLight
+WSTextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+WSTextBox.PlaceholderText = "Number"
+WSTextBox.Text = ""
+WSTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+WSTextBox.TextSize = 14.000
+WSTextBox.TextWrapped = true
 
-OutlineColor.Name = "OutlineColor"
-OutlineColor.Parent = EnableOut
-OutlineColor.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
-OutlineColor.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OutlineColor.BorderSizePixel = 0
-OutlineColor.Position = UDim2.new(0.861952841, 0, 0.135135129, 0)
-OutlineColor.Size = UDim2.new(0.12626262, 0, 0.702702701, 0)
-OutlineColor.Font = Enum.Font.SourceSansLight
-OutlineColor.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
-OutlineColor.PlaceholderText = "Color (HEX)"
-OutlineColor.Text = ""
-OutlineColor.TextColor3 = Color3.fromRGB(255, 255, 255)
-OutlineColor.TextSize = 14.000
-OutlineColor.TextWrapped = true
+UICorner_17.Parent = WSTextBox
 
-UICorner_18.Parent = OutlineColor
+UICorner_18.Parent = ApplyWS
+
+UICorner_19.Parent = MainFrame
+
+Bar2.Name = "Bar2"
+Bar2.Parent = MainFrame
+Bar2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bar2.BackgroundTransparency = 1.000
+Bar2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar2.BorderSizePixel = 0
+Bar2.Size = UDim2.new(1, 0, 0.0840840861, 0)
+
+TextLabel.Parent = Bar2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(1, 0, 0.785714269, 0)
+TextLabel.Font = Enum.Font.SourceSansLight
+TextLabel.Text = "UNXHub (1.0.0)"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 18.000
+TextLabel.TextWrapped = true
 
 Tab3.Name = "Tab3"
 Tab3.Parent = MainFrame
@@ -403,148 +427,170 @@ Tab3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Tab3.BackgroundTransparency = 1.000
 Tab3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Tab3.BorderSizePixel = 0
-Tab3.Position = UDim2.new(0, 0, 0.0693333298, 0)
-Tab3.Size = UDim2.new(1, 0, 0.925333321, 0)
-Tab3.Visible = false
+Tab3.Position = UDim2.new(0, 0, 0.0690690726, 0)
+Tab3.Size = UDim2.new(1, 0, 0.92492491, 0)
 
 ApplyFPS.Name = "ApplyFPS"
 ApplyFPS.Parent = Tab3
 ApplyFPS.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 ApplyFPS.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ApplyFPS.BorderSizePixel = 0
-ApplyFPS.Position = UDim2.new(0.0359374993, 0, 0.0662824214, 0)
-ApplyFPS.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
+ApplyFPS.Position = UDim2.new(0.0359374993, 0, 0.0322573781, 0)
+ApplyFPS.Size = UDim2.new(0.928125024, 0, 0.0909090936, 0)
 ApplyFPS.Font = Enum.Font.SourceSansLight
 ApplyFPS.Text = "Set FPS Cap"
 ApplyFPS.TextColor3 = Color3.fromRGB(255, 255, 255)
 ApplyFPS.TextSize = 18.000
 ApplyFPS.TextWrapped = true
 
-UICorner_19.Parent = ApplyFPS
+UICorner_20.Parent = ApplyFPS
 
 FPSTextBox.Name = "FPSTextBox"
 FPSTextBox.Parent = ApplyFPS
 FPSTextBox.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
 FPSTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 FPSTextBox.BorderSizePixel = 0
-FPSTextBox.Position = UDim2.new(0.861952841, 0, 0.135135129, 0)
-FPSTextBox.Size = UDim2.new(0.12626262, 0, 0.702702701, 0)
+FPSTextBox.Position = UDim2.new(0.860269368, 0, 0.125, 0)
+FPSTextBox.Size = UDim2.new(0.12626262, 0, 0.6875, 0)
 FPSTextBox.Font = Enum.Font.SourceSansLight
 FPSTextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
-FPSTextBox.PlaceholderText = "Number"
+FPSTextBox.PlaceholderText = "FPS"
 FPSTextBox.Text = ""
 FPSTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 FPSTextBox.TextSize = 14.000
 FPSTextBox.TextWrapped = true
 
-UICorner_20.Parent = FPSTextBox
+UICorner_21.Parent = FPSTextBox
+
+CopyJobID.Name = "CopyJobID"
+CopyJobID.Parent = Tab3
+CopyJobID.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+CopyJobID.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CopyJobID.BorderSizePixel = 0
+CopyJobID.Position = UDim2.new(0.0359374993, 0, 0.868995845, 0)
+CopyJobID.Size = UDim2.new(0.928125024, 0, 0.0909090936, 0)
+CopyJobID.Font = Enum.Font.SourceSansLight
+CopyJobID.Text = "Copy Current Server JobID"
+CopyJobID.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyJobID.TextSize = 18.000
+CopyJobID.TextWrapped = true
+
+UICorner_22.Parent = CopyJobID
 
 ExecScript.Name = "ExecScript"
 ExecScript.Parent = Tab3
 ExecScript.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 ExecScript.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ExecScript.BorderSizePixel = 0
-ExecScript.Position = UDim2.new(0.0359374993, 0, 0.210374638, 0)
-ExecScript.Size = UDim2.new(0.928125024, 0, 0.106628239, 0)
+ExecScript.Position = UDim2.new(0.0359374993, 0, 0.16761215, 0)
+ExecScript.Size = UDim2.new(0.928125024, 0, 0.0909090936, 0)
 ExecScript.Font = Enum.Font.SourceSansLight
 ExecScript.Text = "Execute Script In Editor."
 ExecScript.TextColor3 = Color3.fromRGB(255, 255, 255)
 ExecScript.TextSize = 18.000
 ExecScript.TextWrapped = true
 
-UICorner_21.Parent = ExecScript
+UICorner_23.Parent = ExecScript
 
-ScriptEditor.Name = "ScriptEditor"
-ScriptEditor.Parent = Tab3
-ScriptEditor.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
-ScriptEditor.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ScriptEditor.BorderSizePixel = 0
-ScriptEditor.Position = UDim2.new(0.0345695987, 0, 0.354155362, 0)
-ScriptEditor.SelectionImageObject = ExecScript
-ScriptEditor.Size = UDim2.new(0.928125024, 0, 0.149855912, 0)
-ScriptEditor.Font = Enum.Font.SourceSansLight
-ScriptEditor.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
-ScriptEditor.PlaceholderText = "Paste Script Here!"
-ScriptEditor.Text = "print(\"UNXHub On Top!\")"
-ScriptEditor.TextColor3 = Color3.fromRGB(255, 255, 255)
-ScriptEditor.TextSize = 14.000
-ScriptEditor.TextWrapped = true
-ScriptEditor.TextXAlignment = Enum.TextXAlignment.Left
-ScriptEditor.TextYAlignment = Enum.TextYAlignment.Top
-
-UICorner_22.Parent = ScriptEditor
-
-OverdriveH.Name = "OverdriveH"
-OverdriveH.Parent = Tab3
-OverdriveH.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-OverdriveH.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OverdriveH.BorderSizePixel = 0
-OverdriveH.Position = UDim2.new(0.0359375477, 0, 0.538904905, 0)
-OverdriveH.Size = UDim2.new(0.442187488, 0, 0.106628239, 0)
-OverdriveH.Font = Enum.Font.SourceSansLight
-OverdriveH.Text = "Overdrive H (MM2, Blade Ball, Dead Rails, Fisch)"
-OverdriveH.TextColor3 = Color3.fromRGB(255, 255, 255)
-OverdriveH.TextSize = 18.000
-OverdriveH.TextWrapped = true
-
-UICorner_23.Parent = OverdriveH
-
-LoadIy.Name = "LoadIy"
-LoadIy.Parent = Tab3
-LoadIy.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-LoadIy.BorderColor3 = Color3.fromRGB(0, 0, 0)
-LoadIy.BorderSizePixel = 0
-LoadIy.Position = UDim2.new(0.497652233, 0, 0.538904905, 0)
-LoadIy.Size = UDim2.new(0.465624988, 0, 0.106628239, 0)
-LoadIy.Font = Enum.Font.SourceSansLight
-LoadIy.Text = "Infinite Yield (Universal)"
-LoadIy.TextColor3 = Color3.fromRGB(255, 255, 255)
-LoadIy.TextSize = 18.000
-LoadIy.TextWrapped = true
-
-UICorner_24.Parent = LoadIy
-
-IYUniversal.Name = "NAUniversal"
+IYUniversal.Name = "IYUniversal"
 IYUniversal.Parent = Tab3
 IYUniversal.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 IYUniversal.BorderColor3 = Color3.fromRGB(0, 0, 0)
 IYUniversal.BorderSizePixel = 0
-IYUniversal.Position = UDim2.new(0.0359374993, 0, 0.677233458, 0)
-IYUniversal.Size = UDim2.new(0.442187488, 0, 0.106628239, 0)
+IYUniversal.Position = UDim2.new(0.0359374993, 0, 0.607514799, 0)
+IYUniversal.Size = UDim2.new(0.442187488, 0, 0.0909090936, 0)
 IYUniversal.Font = Enum.Font.SourceSansLight
 IYUniversal.Text = "Nameless Admin (Universal)"
 IYUniversal.TextColor3 = Color3.fromRGB(255, 255, 255)
 IYUniversal.TextSize = 18.000
 IYUniversal.TextWrapped = true
 
-UICorner_25.Parent = IYUniversal
+UICorner_24.Parent = IYUniversal
 
-Tab4.Name = "Tab4"
-Tab4.Parent = MainFrame
-Tab4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab4.BackgroundTransparency = 1.000
-Tab4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tab4.BorderSizePixel = 0
-Tab4.Position = UDim2.new(0, 0, 0.0693333298, 0)
-Tab4.Size = UDim2.new(1, 0, 0.925333321, 0)
-Tab4.Visible = false
+JoinJobID.Name = "JoinJobID"
+JoinJobID.Parent = Tab3
+JoinJobID.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+JoinJobID.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JoinJobID.BorderSizePixel = 0
+JoinJobID.Position = UDim2.new(0.0359374993, 0, 0.742869616, 0)
+JoinJobID.Size = UDim2.new(0.928125024, 0, 0.0909090936, 0)
+JoinJobID.Font = Enum.Font.SourceSansLight
+JoinJobID.Text = "Join Server (Needs JobID!)"
+JoinJobID.TextColor3 = Color3.fromRGB(255, 255, 255)
+JoinJobID.TextSize = 18.000
+JoinJobID.TextWrapped = true
 
-OpenUNX.Name = "OpenUNX"
-OpenUNX.Parent = UNXHubUI
-OpenUNX.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
-OpenUNX.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OpenUNX.BorderSizePixel = 0
-OpenUNX.Position = UDim2.new(0.00691881916, 0, 0.0154702961, 0)
-OpenUNX.Size = UDim2.new(0.0761070102, 0, 0.153155938, 0)
-OpenUNX.Visible = false
-OpenUNX.Font = Enum.Font.SourceSansLight
-OpenUNX.Text = "Open UNXHub!"
-OpenUNX.TextColor3 = Color3.fromRGB(255, 255, 255)
-OpenUNX.TextSize = 24.000
-OpenUNX.TextWrapped = true
+JobIDTextBox.Name = "JobIDTextBox"
+JobIDTextBox.Parent = JoinJobID
+JobIDTextBox.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+JobIDTextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JobIDTextBox.BorderSizePixel = 0
+JobIDTextBox.Position = UDim2.new(0.860269368, 0, 0.125, 0)
+JobIDTextBox.Size = UDim2.new(0.12626262, 0, 0.6875, 0)
+JobIDTextBox.Font = Enum.Font.SourceSansLight
+JobIDTextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+JobIDTextBox.PlaceholderText = "JobID"
+JobIDTextBox.Text = ""
+JobIDTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+JobIDTextBox.TextSize = 14.000
+JobIDTextBox.TextWrapped = true
 
-UICorner_26.CornerRadius = UDim.new(0, 5)
-UICorner_26.Parent = OpenUNX
+UICorner_25.Parent = JobIDTextBox
+
+UICorner_26.Parent = JoinJobID
+
+LoadIy.Name = "LoadIy"
+LoadIy.Parent = Tab3
+LoadIy.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+LoadIy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LoadIy.BorderSizePixel = 0
+LoadIy.Position = UDim2.new(0.496874988, 0, 0.481389046, 0)
+LoadIy.Size = UDim2.new(0.465624988, 0, 0.0909090936, 0)
+LoadIy.Font = Enum.Font.SourceSansLight
+LoadIy.Text = "Infinite Yield (Universal)"
+LoadIy.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadIy.TextSize = 18.000
+LoadIy.TextWrapped = true
+
+UICorner_27.Parent = LoadIy
+
+OverdriveH.Name = "OverdriveH"
+OverdriveH.Parent = Tab3
+OverdriveH.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+OverdriveH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OverdriveH.BorderSizePixel = 0
+OverdriveH.Position = UDim2.new(0.0359374993, 0, 0.481389046, 0)
+OverdriveH.Size = UDim2.new(0.442187488, 0, 0.0909090936, 0)
+OverdriveH.Font = Enum.Font.SourceSansLight
+OverdriveH.Text = "Overdrive H (MM2, Blade Ball, Dead Rails, Fisch)"
+OverdriveH.TextColor3 = Color3.fromRGB(255, 255, 255)
+OverdriveH.TextSize = 18.000
+OverdriveH.TextWrapped = true
+
+UICorner_28.Parent = OverdriveH
+
+ScriptEditor.Name = "ScriptEditor"
+ScriptEditor.Parent = Tab3
+ScriptEditor.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+ScriptEditor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptEditor.BorderSizePixel = 0
+ScriptEditor.Position = UDim2.new(0.0359374993, 0, 0.302966863, 0)
+ScriptEditor.SelectionImageObject = ExecScript
+ScriptEditor.Size = UDim2.new(0.928125024, 0, 0.133116886, 0)
+ScriptEditor.Font = Enum.Font.SourceSansLight
+ScriptEditor.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+ScriptEditor.PlaceholderText = "Paste Script Here!"
+ScriptEditor.Text = ""
+ScriptEditor.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptEditor.TextSize = 14.000
+ScriptEditor.TextWrapped = true
+ScriptEditor.TextXAlignment = Enum.TextXAlignment.Left
+ScriptEditor.TextYAlignment = Enum.TextYAlignment.Top
+
+Tab3.Visible = False
+Tab1.Visible = True
+
+UICorner_29.Parent = ScriptEditor
 
 local function SwitchTab1()
 	Tab1.Visible = true
@@ -576,6 +622,8 @@ end
 
 local function CloseUI()
 	warn("Goodbye ".. game.Players.LocalPlayer.Name .."!")
+	DisableHighlights()
+	disableESP()
 	UNXHubUI:Destroy()
 end
 
@@ -606,6 +654,30 @@ local function ChangePWS()
 		local Value = WSTextBox.Text
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 	end
+end
+
+-- Hello :> - Gato
+
+local function JoinJobID1()
+	local tpservice = game:GetService("TeleportService")
+	local jobID = JobIDTextBox.Text
+	local placeID = game.PlaceId
+
+	tpservice:TeleportToPlaceInstance(placeID, jobID, game.Players.LocalPlayer)
+end
+
+local function CopyJobID1()
+	local jobID = game.JobId
+
+	if setclipboard then
+		setclipboard(jobID)
+	elseif toclipboard then
+		toclipboard(jobID)
+	else
+		warn("<<<UNXHub>>> Error 1: Your Executor Does Not Support: n/ toclipboard(), n/ setclipboard(). ")
+	end
+
+	print("JobID: ".. jobID	.." Copied To Clipboard.")
 end
 
 local function ChangePJP()
@@ -652,11 +724,6 @@ local function fpscap()
 	setfpscap(value)
 end
 
-
-local function ESPEnabled()
-
-end
-
 local function RunODH()
 	loadstring(game:HttpGet("https://api.overdrivehub.xyz/v1/auth"))()
 end
@@ -673,247 +740,424 @@ end
 local Players = game:GetService("Players")
 
 local HighlightsEnabled = false
-
 local ActiveHighlights = {}
 local PlayerConnections = {}
 
-local function ApplyHighlight(Player)
-	if not HighlightsEnabled then return end
+local function ApplyHighlightToCharacter(Player, Character)
+	local UserId = Player.UserId
 
-	local Connections = {}
-	local PlayerId = Player.UserId
-
-	local Character = Player.Character or Player.CharacterAdded:Wait()
-	local Humanoid = Character:WaitForChild("Humanoid")
-	local HightLighter = Instance.new("Highlight", Character)
-
-	ActiveHighlights[PlayerId] = HightLighter
-
-	local function UpdateFillColor()
-		local DefaultColor = Color3.fromRGB(255, 48, 51)
-		HightLighter.FillColor = (Player.TeamColor and Player.TeamColor.Color) or DefaultColor
+	if ActiveHighlights[UserId] then
+		ActiveHighlights[UserId]:Destroy()
 	end
 
-	local function Disconnect()
-		if HightLighter then
-			HightLighter:Remove()
-		end
-		ActiveHighlights[PlayerId] = nil
+	local Highlighter = Instance.new("Highlight")
+	Highlighter.Name = "PlayerHighlight"
+	Highlighter.FillTransparency = 1
+	Highlighter.OutlineColor = (Player.TeamColor and Player.TeamColor.Color) or Color3.fromRGB(255, 48, 51)
+	Highlighter.Adornee = Character
+	Highlighter.Parent = Character
 
-		for _, Connection in next, Connections do
-			Connection:Disconnect()
-		end
-	end
-
-	table.insert(Connections, Player:GetPropertyChangedSignal("TeamColor"):Connect(UpdateFillColor))
-	table.insert(Connections, Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
-		if Humanoid.Health <= 0 then
-			Disconnect()
-		end
-	end))
-
-	PlayerConnections[PlayerId] = Connections
-
-	UpdateFillColor()
+	ActiveHighlights[UserId] = Highlighter
 end
 
-local function RemoveHighlight(Player)
-	local PlayerId = Player.UserId
+local function SetupPlayerHighlight(Player)
+	local UserId = Player.UserId
 
-	-- Remove highlight
-	if ActiveHighlights[PlayerId] then
-		ActiveHighlights[PlayerId]:Remove()
-		ActiveHighlights[PlayerId] = nil
-	end
+	local function OnCharacterAdded(Character)
+		local Humanoid = Character:WaitForChild("Humanoid")
 
-	-- Disconnect connections
-	if PlayerConnections[PlayerId] then
-		for _, Connection in next, PlayerConnections[PlayerId] do
-			Connection:Disconnect()
+		if HighlightsEnabled then
+			ApplyHighlightToCharacter(Player, Character)
 		end
-		PlayerConnections[PlayerId] = nil
-	end
-end
 
-local function HightLightPlayer(Player)
-	if not HighlightsEnabled then return end
+		table.insert(PlayerConnections[UserId], Player:GetPropertyChangedSignal("TeamColor"):Connect(function()
+			local Highlight = ActiveHighlights[UserId]
+			if Highlight then
+				Highlight.OutlineColor = (Player.TeamColor and Player.TeamColor.Color) or Color3.fromRGB(255, 48, 51)
+			end
+		end))
+
+		table.insert(PlayerConnections[UserId], Humanoid.Died:Connect(function()
+			RemoveHighlight(Player)
+		end))
+	end
+
+	local charAddedConn = Player.CharacterAdded:Connect(OnCharacterAdded)
+	table.insert(PlayerConnections[UserId], charAddedConn)
 
 	if Player.Character then
-		ApplyHighlight(Player)
+		OnCharacterAdded(Player.Character)
+	end
+end
+
+function RemoveHighlight(Player)
+	local UserId = Player.UserId
+
+	if ActiveHighlights[UserId] then
+		ActiveHighlights[UserId]:Destroy()
+		ActiveHighlights[UserId] = nil
 	end
 
-	local CharacterConnection = Player.CharacterAdded:Connect(function()
-		if HighlightsEnabled then
-			ApplyHighlight(Player)
+	if PlayerConnections[UserId] then
+		for _, conn in pairs(PlayerConnections[UserId]) do
+			conn:Disconnect()
 		end
-	end)
-
-	if not PlayerConnections[Player.UserId] then
-		PlayerConnections[Player.UserId] = {}
+		PlayerConnections[UserId] = nil
 	end
-	table.insert(PlayerConnections[Player.UserId], CharacterConnection)
 end
 
-local function EnableHighlights()
+function EnableHighlights()
 	HighlightsEnabled = true
-
-
-	for _, Player in next, Players:GetPlayers() do
-		HightLightPlayer(Player)
+	for _, player in pairs(Players:GetPlayers()) do
+		PlayerConnections[player.UserId] = {}
+		SetupPlayerHighlight(player)
 	end
 end
 
-local function DisableHighlights()
+function DisableHighlights()
 	HighlightsEnabled = false
-	for _, Player in next, Players:GetPlayers() do
-		RemoveHighlight(Player)
+	for _, player in pairs(Players:GetPlayers()) do
+		RemoveHighlight(player)
 	end
 end
 
-local function ToggleHighlights()
+function ToggleHighlights()
 	if HighlightsEnabled then
 		DisableHighlights()
-		print("Player highlights disabled")
 	else
 		EnableHighlights()
-		print("Player highlights enabled")
 	end
 end
 
-EnableOut.MouseButton1Click:Connect(function()
-	ToggleHighlights()
-end)
+EnableOut.MouseButton1Click:Connect(ToggleHighlights)
 
-
-Players.PlayerAdded:Connect(function(Player)
+Players.PlayerAdded:Connect(function(player)
 	if HighlightsEnabled then
-		HightLightPlayer(Player)
+		PlayerConnections[player.UserId] = {}
+		SetupPlayerHighlight(player)
 	end
 end)
 
-Players.PlayerRemoving:Connect(function(Player)
-	RemoveHighlight(Player)
-end)
+Players.PlayerRemoving:Connect(RemoveHighlight)
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
+local Camera = workspace.CurrentCamera
 
-local ESPEnabled = false
-local ESPConnections = {}
-local PlayerESPs = {}
+local button = EnableESP
+local ESPEnabledFunction = false
+
+local ESPObjects = {}
+
+local function getPlayerColor(player)
+	if player.Team then
+		return player.TeamColor.Color
+	else
+		return Color3.new(1, 1, 1) -- White
+	end
+end
 
 local function createESP(player)
-	if player == LocalPlayer or not player.Character or not player.Character:FindFirstChild("Head") then
-		return
-	end
+	if player == LocalPlayer then return end
+	if ESPObjects[player] then return end
 
-	local character = player.Character
-	local head = character.Head
-	
-	local billboardGui = Instance.new("BillboardGui")
-	billboardGui.Name = "UNXHub ESP"
-	billboardGui.Adornee = head
-	billboardGui.Size = UDim2.new(0, 200, 0, 50)
-	billboardGui.StudsOffset = Vector3.new(0, 2, 0)
-	billboardGui.AlwaysOnTop = true
-	billboardGui.Parent = head
+	local nameText = Drawing.new("Text")
+	nameText.Size = 13
+	nameText.Center = true
+	nameText.Outline = true
 
-	local textLabel = Instance.new("TextLabel")
-	textLabel.Size = UDim2.new(1, 0, 1, 0)
-	textLabel.BackgroundTransparency = 1
-	textLabel.Font = Enum.Font.SourceSansLight
-	textLabel.TextColor3 = Color3.new(1, 1, 1)
-	textLabel.TextStrokeTransparency = 0
-	textLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
-	textLabel.TextScaled = true
-	textLabel.Parent = billboardGui
+	local infoText = Drawing.new("Text")
+	infoText.Size = 12
+	infoText.Center = true
+	infoText.Outline = true
 
-	PlayerESPs[player] = {
-		gui = billboardGui,
-		label = textLabel,
-		player = player
+	ESPObjects[player] = {
+		Name = nameText,
+		Info = infoText
 	}
-
-	local connection = RunService.Heartbeat:Connect(function()
-		if not ESPEnabled or not player.Character or not player.Character:FindFirstChild("Head") or 
-			not LocalPlayer.Character or not LocalPlayer.Character:FindFirstChild("Head") then
-			return
-		end
-
-		local distance = (player.Character.Head.Position - LocalPlayer.Character.Head.Position).Magnitude
-		textLabel.Text = player.Name .. "\n" .. math.floor(distance) .. " studs"
-	end)
-
-	ESPConnections[player] = connection
 end
 
 local function removeESP(player)
-	if PlayerESPs[player] then
-		PlayerESPs[player].gui:Destroy()
-		PlayerESPs[player] = nil
-	end
-
-	if ESPConnections[player] then
-		ESPConnections[player]:Disconnect()
-		ESPConnections[player] = nil
+	if ESPObjects[player] then
+		ESPObjects[player].Name:Remove()
+		ESPObjects[player].Info:Remove()
+		ESPObjects[player] = nil
 	end
 end
 
-local function removeAllESP()
-	for player, _ in pairs(PlayerESPs) do
+local function updateESP()
+	for player, esp in pairs(ESPObjects) do
+		if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			local hrp = player.Character.HumanoidRootPart
+			local pos, onScreen = Camera:WorldToViewportPoint(hrp.Position)
+
+			local color = getPlayerColor(player)
+			esp.Name.Color = color
+			esp.Info.Color = color
+
+			if onScreen then
+				local distance = (Camera.CFrame.Position - hrp.Position).Magnitude
+				local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+				local health = humanoid and math.floor(humanoid.Health) or 0
+
+				esp.Name.Position = Vector2.new(pos.X, pos.Y - 20)
+				esp.Name.Text = player.Name
+				esp.Name.Visible = true
+
+				esp.Info.Position = Vector2.new(pos.X, pos.Y - 7)
+				esp.Info.Text = "HP: "..health.." | "..math.floor(distance).."m"
+				esp.Info.Visible = true
+			else
+				esp.Name.Visible = false
+				esp.Info.Visible = false
+			end
+		else
+			removeESP(player)
+		end
+	end
+end
+
+local function enableESP()
+	for _, player in ipairs(Players:GetPlayers()) do
+		createESP(player)
+	end
+end
+
+local function disableESP()
+	for player, _ in pairs(ESPObjects) do
 		removeESP(player)
 	end
 end
 
-local function addESPToAllPlayers()
-	for _, player in pairs(Players:GetPlayers()) do
-		if player ~= LocalPlayer then
+button.MouseButton1Click:Connect(function()
+	ESPEnabledFunction = not ESPEnabledFunction
+	if ESPEnabledFunction then
+		enableESP()
+	else
+		disableESP()
+	end
+end)
+
+Players.PlayerAdded:Connect(function(player)
+	player.CharacterAdded:Connect(function()
+		if ESPEnabledFunction then
 			createESP(player)
 		end
+	end)
+end)
+
+RunService.RenderStepped:Connect(function()
+	if ESPEnabledFunction then
+		updateESP()
 	end
-end
+end)
 
-local function ESPEnabledFunction()
-	ESPEnabled = not ESPEnabled
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
+local LocalPlayer = Players.LocalPlayer
+local Camera = Workspace.CurrentCamera
 
-	if ESPEnabled then
-		addESPToAllPlayers()
-		ESPConnections.PlayerAdded = Players.PlayerAdded:Connect(function(player)
-			if ESPEnabled then
-				player.CharacterAdded:Connect(function()
-					wait(1)
-					if ESPEnabled then
-						createESP(player)
+local tracersOn = false
+local tracerLines = {}
+local button = EnableTrcs
+
+function toggleTracers()
+	tracersOn = not tracersOn
+
+	if tracersOn then
+		RunService:BindToRenderStep("Tracers", Enum.RenderPriority.Camera.Value + 1, function()
+			for _, line in ipairs(tracerLines) do
+				line:Destroy()
+			end
+			tracerLines = {}
+
+			for _, player in ipairs(Players:GetPlayers()) do
+				if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+					local root = player.Character.HumanoidRootPart
+					local screenPos, onScreen = Camera:WorldToViewportPoint(root.Position)
+
+					if onScreen then
+						local line = Drawing.new("Line")
+						line.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y)
+						line.To = Vector2.new(screenPos.X, screenPos.Y)
+						line.Color = player.TeamColor.Color
+						line.Thickness = 2
+						line.Transparency = 1
+						line.Visible = true
+						table.insert(tracerLines, line)
 					end
-				end)
-
-				if player.Character then
-					createESP(player)
 				end
 			end
 		end)
-
-
-		ESPConnections.PlayerRemoving = Players.PlayerRemoving:Connect(function(player)
-			removeESP(player)
-		end)
 	else
-		removeAllESP()
-		
-		for _, connection in pairs(ESPConnections) do
-			if typeof(connection) == "RBXScriptConnection" then
-				connection:Disconnect()
-			end
+		RunService:UnbindFromRenderStep("Tracers")
+		for _, line in ipairs(tracerLines) do
+			line:Destroy()
 		end
-		ESPConnections = {}
+		tracerLines = {}
 	end
 end
 
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
+local LocalPlayer = Players.LocalPlayer
+local Camera = Workspace.CurrentCamera
 
-Players.PlayerRemoving:Connect(function(player)
-	removeESP(player)
-end)
+local skelOn = false
+local skeletonLines = {}
+local button1 = EnableSkel
+
+function drawLine(p1, p2, color)
+	local line = Drawing.new("Line")
+	line.From = p1
+	line.To = p2
+	line.Color = color
+	line.Thickness = 2
+	line.Transparency = 1
+	line.Visible = true
+	return line
+end
+
+function toggleSkeleton()
+	skelOn = not skelOn
+
+	if skelOn then
+		RunService:BindToRenderStep("SkeletonESP", Enum.RenderPriority.Camera.Value + 1, function()
+			for _, line in ipairs(skeletonLines) do
+				line:Destroy()
+			end
+			skeletonLines = {}
+
+			for _, player in ipairs(Players:GetPlayers()) do
+				if player ~= LocalPlayer and player.Character then
+					local char = player.Character
+					local parts = {
+						Head = char:FindFirstChild("Head"),
+						Torso = char:FindFirstChild("UpperTorso") or char:FindFirstChild("Torso"),
+						Hip = char:FindFirstChild("LowerTorso") or char:FindFirstChild("Torso"),
+						LeftArm = char:FindFirstChild("LeftUpperArm") or char:FindFirstChild("Left Arm"),
+						RightArm = char:FindFirstChild("RightUpperArm") or char:FindFirstChild("Right Arm"),
+						LeftLeg = char:FindFirstChild("LeftUpperLeg") or char:FindFirstChild("Left Leg"),
+						RightLeg = char:FindFirstChild("RightUpperLeg") or char:FindFirstChild("Right Leg")
+					}
+
+					local color = player.TeamColor.Color
+					local function getScreen(part)
+						if part then
+							local pos, visible = Camera:WorldToViewportPoint(part.Position)
+							if visible then return Vector2.new(pos.X, pos.Y) end
+						end
+						return nil
+					end
+
+					local head = getScreen(parts.Head)
+					local torso = getScreen(parts.Torso)
+					local hip = getScreen(parts.Hip)
+					local la = getScreen(parts.LeftArm)
+					local ra = getScreen(parts.RightArm)
+					local ll = getScreen(parts.LeftLeg)
+					local rl = getScreen(parts.RightLeg)
+
+					if head and torso then
+						table.insert(skeletonLines, drawLine(head, torso, color))
+					end
+					if torso and hip then
+						table.insert(skeletonLines, drawLine(torso, hip, color))
+					end
+					if torso and la then
+						table.insert(skeletonLines, drawLine(torso, la, color))
+					end
+					if torso and ra then
+						table.insert(skeletonLines, drawLine(torso, ra, color))
+					end
+					if hip and ll then
+						table.insert(skeletonLines, drawLine(hip, ll, color))
+					end
+					if hip and rl then
+						table.insert(skeletonLines, drawLine(hip, rl, color))
+					end
+				end
+			end
+		end)
+	else
+		RunService:UnbindFromRenderStep("SkeletonESP")
+		for _, line in ipairs(skeletonLines) do
+			line:Destroy()
+		end
+		skeletonLines = {}
+	end
+end
+
+local boxESPEnabled = false
+local boxESPConnections = {}
+local newPlayerConnection
+
+function TurnOnBoxESP()
+	EnableBox.MouseButton1Click:Connect(function()
+		boxESPEnabled = not boxESPEnabled
+
+		if boxESPEnabled then
+			local function addBox(char, player)
+				local hrp = char:FindFirstChild("HumanoidRootPart")
+				if hrp and not hrp:FindFirstChild("ESPBox") then
+					local box = Instance.new("BoxHandleAdornment")
+					box.Name = "ESPBox"
+					box.Adornee = hrp
+					box.Size = Vector3.new(4, 6, 4)
+					box.Color3 = player.TeamColor.Color
+					box.AlwaysOnTop = true
+					box.ZIndex = 5
+					box.Transparency = 0.5
+					box.Parent = hrp
+				end
+			end
+
+			local function setupPlayer(player)
+				if player ~= game.Players.LocalPlayer then
+					if player.Character then
+						addBox(player.Character, player)
+					end
+					boxESPConnections[player] = player.CharacterAdded:Connect(function(char)
+						addBox(char, player)
+					end)
+				end
+			end
+
+			for _, player in pairs(game.Players:GetPlayers()) do
+				setupPlayer(player)
+			end
+
+			newPlayerConnection = game.Players.PlayerAdded:Connect(function(player)
+				setupPlayer(player)
+			end)
+
+		else
+			for _, player in pairs(game.Players:GetPlayers()) do
+				if player ~= game.Players.LocalPlayer then
+					local hrp = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+					if hrp then
+						local box = hrp:FindFirstChild("ESPBox")
+						if box then
+							box:Destroy()
+						end
+					end
+					if boxESPConnections[player] then
+						boxESPConnections[player]:Disconnect()
+						boxESPConnections[player] = nil
+					end
+				end
+			end
+
+			if newPlayerConnection then
+				newPlayerConnection:Disconnect()
+				newPlayerConnection = nil
+			end
+		end
+	end)
+end
 
 local phrases = {
 	"Let Him Cook",
@@ -933,6 +1177,14 @@ local phrases = {
 	"Hi :), Thanks For Using UNXHub!",
 	"From 1-10 i Choose: ".. math.random(1,10) .."!"
 }
+
+-- local function soi()
+--	while true do
+--		-- soi soi soi soi 
+--		task.wait("")
+-- 		print("soi")
+--	end
+-- end
 
 print(phrases[math.random(#phrases)])
 
@@ -1016,19 +1268,22 @@ UserInputService1.InputChanged:Connect(function(input1)
 	end
 end)
 
-EnableESP.MouseButton1Click:Connect(ESPEnabledFunction)
 ApplyFPS.MouseButton1Click:Connect(fpscap)
 OverdriveH.MouseButton1Click:Connect(RunODH)
 IYUniversal.MouseButton1Click:Connect(RunNA)
 LoadIy.MouseButton1Click:Connect(RunIY)
 ExecScript.MouseButton1Click:Connect(RunScript)
+JoinJobID.MouseButton1Click:Connect(JoinJobID1)
+CopyJobID.MouseButton1Click:Connect(CopyJobID1)
 ApplyZoom.MouseButton1Click:Connect(ChangePZoom)
 ApplyJP.MouseButton1Click:Connect(ChangePJP)
 ApplyWS.MouseButton1Click:Connect(ChangePWS)
-Close.MouseButton1Click:Connect(CloseUI)
 Minimize.MouseButton1Click:Connect(MinimizeUI)
 OpenUNX.MouseButton1Click:Connect(OpenUNX1)
 LocalPlayerTab1.MouseButton1Click:Connect(SwitchTab1)
 ESPTab2.MouseButton1Click:Connect(SwitchTab2)
 OtherTab3.MouseButton1Click:Connect(SwitchTab3)
 ConfigTab4.MouseButton1Click:Connect(SwitchTab4)
+button.MouseButton1Click:Connect(toggleTracers)
+button1.MouseButton1Click:Connect(toggleSkeleton)
+TurnOnBoxESP()
