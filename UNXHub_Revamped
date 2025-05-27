@@ -1,4 +1,4 @@
-	local UNXHubUI = Instance.new("ScreenGui")
+local UNXHubUI = Instance.new("ScreenGui")
 local OpenUNX = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
 local TabsFrame = Instance.new("Frame")
