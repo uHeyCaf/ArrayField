@@ -1,8 +1,8 @@
 -- Are We DeadHuzz?
 
 local player = game.Players.LocalPlayer
-local exec = (type(identifyexecutor) == "function" and identifyexecutor()) or "Unknown"
-
+local exec = (type(identifyexecutor) == "function" and identifyexecutor()) or "Not Possible To Fetch Executor Name, Your Executor Probably Dont Support identifyexecutor()"
+local level = (type(printidentity) == "function" and printidentity()) or "Not Possible To Fetch Executor Level, You Executor Probably Dont Support printidentity()"
 print([[
 
  _   _ _   _ __   __ _   _       _      
@@ -18,7 +18,7 @@ print("Player Name: " .. player.Name)
 print("Display Name: " .. player.DisplayName)
 print("UserID: " .. player.UserId)
 print("Local Executor: " .. exec)
-print("Local Executor Level: ".. printidentity())
+print("Local Executor Level: ".. level)
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
