@@ -1,3 +1,8 @@
+-- Are We DeadHuzz?
+
+local player = game.Players.LocalPlayer
+local exec = (type(identifyexecutor) == "function" and identifyexecutor()) or "Unknown"
+
 print([[
 
  _   _ _   _ __   __ _   _       _      
@@ -9,15 +14,11 @@ print([[
 
 ]])
 print("UNXHub: Revamped (1.0.0) :D")
-
-local player = game.Players.LocalPlayer
-
 print("Player Name: " .. player.Name)
 print("Display Name: " .. player.DisplayName)
 print("UserID: " .. player.UserId)
-
-print("Executor Level:")
-printidentity()
+print("Local Executor: " .. exec)
+print("Local Executor Level: ".. printidentity())
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
