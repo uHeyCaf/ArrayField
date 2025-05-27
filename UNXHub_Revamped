@@ -19,6 +19,7 @@ print("Display Name: " .. player.DisplayName)
 print("UserID: " .. player.UserId)
 print("Local Executor: " .. exec)
 print("Local Executor Level:")
+
 printidentity()
 
 local Players = game:GetService("Players")
