@@ -112,8 +112,6 @@ local UICorner_33 = Instance.new("UICorner")
 local FlySpeedTXT = Instance.new("TextBox")
 local UICorner_34 = Instance.new("UICorner")
 
---Properties:
-
 UNXHubUI.Name = "UNXHubUI"
 UNXHubUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 UNXHubUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -510,7 +508,7 @@ TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
 TextLabel.Size = UDim2.new(1, 0, 0.785714269, 0)
 TextLabel.Font = Enum.Font.SourceSansLight
-TextLabel.Text = "UNXHub (1.1.0)"
+TextLabel.Text = "UNXHub (1.1.1)"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 18.000
 TextLabel.TextWrapped = true
@@ -1740,6 +1738,7 @@ end)
 UNXHubUI.ResetOnSpawn = false -- DO NOT MESS WITH IT.
 
 ApplyFPS.MouseButton1Click:Connect(fpscap)
+EnableBox_2.MouseButton1Click:Connect(InfJumpF)
 OverdriveH.MouseButton1Click:Connect(RunODH)
 LoadIy.MouseButton1Click:Connect(RunIY)
 CopyJobID_2.MouseButton1Click:Connect(Rejoin)
