@@ -1,4 +1,4 @@
--- Are We DeadHuzz?
+-- btw solara also steals your malware
 
 local player = game.Players.LocalPlayer
 local exec = (type(identifyexecutor) == "function" and identifyexecutor()) or "Not Possible To Fetch Executor Name, Your Executor Probably Dont Support identifyexecutor()"
@@ -21,6 +21,9 @@ print("Local Executor: " .. exec)
 print("Local Executor Level:")
 printidentity()
 print("-------------- UXNHub Loaded Info --------------")
+
+-- DebugMode Still On Beta And Wont Do Much Shit...
+local debugmode = false
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -112,8 +115,16 @@ local UICorner_36 = Instance.new("UICorner")
 local UIScale = Instance.new("UIScale")
 local UIScale_2 = Instance.new("UIScale")
 local UIScale_3 = Instance.new("UIScale")
+local btnsfx = Instance.new("Sound")
+local startsfx = Instance.new("Sound")
 
 print("[SUCESS]: Variables Set, Step (1/3) Complete.")
+
+btnsfx.SoundId = "rbxassetid://9113749897"
+btnsfx.Parent = game.SoundService
+
+startsfx.SoundId = "rbxassetid://140419294351439"
+startsfx.Parent = game.SoundService
 
 UNXHubUI.Name = "UNXHubUI"
 UNXHubUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -543,7 +554,7 @@ TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
 TextLabel.Size = UDim2.new(1, 0, 0.785714269, 0)
 TextLabel.Font = Enum.Font.SourceSansLight
-TextLabel.Text = "UNXHub (1.1.1a)"
+TextLabel.Text = "UNXHub (1.1.2)"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 18.000
 TextLabel.TextWrapped = true
@@ -762,9 +773,31 @@ UIScale.Parent = MainFrame
 UIScale_2.Parent = TabsFrame
 UIScale_3.Parent = FlyFrame
 
+local TweenService = game:GetService("TweenService")
+
+local frames = {MainFrame, TabsFrame}
+local tweenInfo = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+
+local function fade(targetTransparency)
+	for _, frame in ipairs(frames) do
+		local goal = {BackgroundTransparency = targetTransparency}
+		local tween = TweenService:Create(frame, tweenInfo, goal)
+		tween:Play()
+	end
+end
+
+local function fadeOut()
+	fade(1)
+end
+
+local function fadeIn()
+	fade(0)
+end
+
 print("[SUCESS]: UX Created Sucessfully, Step (2/3) Done.")
 
 local function SwitchTab1()
+	btnsfx:Play()
 	Tab1.Visible = true
 	Tab2.Visible = false
 	Tab3.Visible = false
@@ -772,6 +805,7 @@ local function SwitchTab1()
 end
 
 local function SwitchTab2()
+	btnsfx:Play()
 	Tab1.Visible = false
 	Tab2.Visible = true
 	Tab3.Visible = false
@@ -779,6 +813,7 @@ local function SwitchTab2()
 end
 
 local function SwitchTab3()
+	btnsfx:Play()
 	Tab1.Visible = false
 	Tab2.Visible = false
 	Tab3.Visible = true
@@ -786,6 +821,7 @@ local function SwitchTab3()
 end
 
 local function SwitchTab4()
+	btnsfx:Play()
 	Tab1.Visible = false
 	Tab2.Visible = false
 	Tab3.Visible = false
@@ -793,6 +829,11 @@ local function SwitchTab4()
 end
 
 local function MinimizeUI()
+	btnsfx:Play()
+	if debugmode == true then
+		print("[DEBUG]: UI Hidden.")
+	end
+	fadeOut()
 	MainFrame.Visible = false
 	TabsFrame.Visible = false
 	OpenUNX.Visible = true
@@ -906,7 +947,11 @@ EnableFly.MouseButton1Down:connect(function()
 	if isFlying == true then
 		isFlying = false
 		teleportWalking = false
-
+		
+		if debugmode == true then
+			print("[DEBUG]: Fly Toggle Turned Off.")
+		end
+		
 		unfreezeCharacter()
 
 		player.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,true)
@@ -929,6 +974,10 @@ EnableFly.MouseButton1Down:connect(function()
 		isFlying = true
 
 		freezeCharacter()
+
+		if debugmode == true then
+			print("[DEBUG]: Fly Toggle Turned On.")
+		end
 
 		for i = 1, flySpeed do
 			spawn(function()
@@ -1069,6 +1118,11 @@ player.CharacterAdded:Connect(function(character)
 end)
 
 local function OpenUNX1()
+	if debugmode == true then
+		print("[DEBUG]: UI Visible")
+	end
+	btnsfx:Play()	
+	fadeIn()
 	OpenUNX.Visible = false
 	TabsFrame.Visible = true
 	MainFrame.Visible = true
@@ -1094,7 +1148,7 @@ end
 
 local function ChangeScale()
 	local value = ScaleTxT.Text
-	
+
 	if value >= "2.000000000000000000001" then
 		ScaleTxT.Text = "Please, Set Scale In This Range: 2-0.5"
 		wait(1)
@@ -1125,13 +1179,13 @@ local function CopyJobID1()
 
 	if setclipboard then
 		setclipboard(jobID)
+		print("[SUCESS]: JobID: ".. jobID	.." Copied To Clipboard.")
 	elseif toclipboard then
 		toclipboard(jobID)
+		print("[SUCESS]: JobID: ".. jobID	.." Copied To Clipboard.")
 	else
-		warn("<<<UNXHub>>> Error 1: Your Executor Does Not Support: n/ toclipboard(), n/ setclipboard(). ")
+		warn("[ERROR]: Your Executor: ".. exec .." Does Not Support: toclipboard() or setclipboard(). ")
 	end
-
-	print("JobID: ".. jobID	.." Copied To Clipboard.")
 end
 
 local function ChangePJP()
@@ -1192,7 +1246,7 @@ local InfJumpEnabled = false
 function InfJumpF()
 	local player = game.Players.LocalPlayer
 	local humanoid = player.Character:WaitForChild("Humanoid")
-
+	
 	game:GetService("UserInputService").JumpRequest:Connect(function()
 		if InfJumpEnabled then
 			humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
@@ -1221,7 +1275,11 @@ local function Rejoin()
 	local tpservice = game:GetService("TeleportService")
 	local jobID = game.JobId
 	local placeID = game.PlaceId
-
+	
+	if debugmode == true then
+		print("[DEBUG]: Rejoining...")
+	end
+	
 	tpservice:TeleportToPlaceInstance(placeID, jobID, game.Players.LocalPlayer)
 end
 
@@ -1796,6 +1854,8 @@ button.MouseButton1Click:Connect(toggleTracers)
 button1.MouseButton1Click:Connect(toggleSkeleton)
 ScaleUI.MouseButton1Click:Connect(ChangeScale)
 TurnOnBoxESP()
+
+startsfx:Play()
 
 print("[SUCESS]: All Functions & Buttons Done, Step (3/3) Done.")
 
