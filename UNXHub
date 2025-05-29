@@ -19,14 +19,8 @@ print("Display Name: " .. player.DisplayName)
 print("UserID: " .. player.UserId)
 print("Local Executor: " .. exec)
 print("Local Executor Level:")
-
 printidentity()
-
-
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
+print("-------------- UXNHub Loaded Info --------------")
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -52,65 +46,74 @@ local UICorner_6 = Instance.new("UICorner")
 local UICorner_7 = Instance.new("UICorner")
 local MainFrame = Instance.new("Frame")
 local Tab4 = Instance.new("Frame")
+local ScaleUI = Instance.new("TextButton")
+local ScaleTxT = Instance.new("TextBox")
+local UICorner_8 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
 local Tab2 = Instance.new("Frame")
 local EnableBox = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local EnableTrcs = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
-local EnableESP = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
-local EnableSkel = Instance.new("TextButton")
+local EnableTrcs = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
-local EnableOut = Instance.new("TextButton")
+local EnableESP = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
+local EnableSkel = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local EnableOut = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
 local Tab1 = Instance.new("Frame")
 local ApplyZoom = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
 local ZoomTextBox = Instance.new("TextBox")
-local UICorner_14 = Instance.new("UICorner")
+local UICorner_16 = Instance.new("UICorner")
 local ApplyJP = Instance.new("TextButton")
 local JPTextBox = Instance.new("TextBox")
-local UICorner_15 = Instance.new("UICorner")
-local UICorner_16 = Instance.new("UICorner")
-local ApplyWS = Instance.new("TextButton")
-local WSTextBox = Instance.new("TextBox")
 local UICorner_17 = Instance.new("UICorner")
 local UICorner_18 = Instance.new("UICorner")
-local ApplyGrav = Instance.new("TextButton")
+local ApplyWS = Instance.new("TextButton")
+local WSTextBox = Instance.new("TextBox")
 local UICorner_19 = Instance.new("UICorner")
-local ZoomTextBox_2 = Instance.new("TextBox")
 local UICorner_20 = Instance.new("UICorner")
-local EnableBox_2 = Instance.new("TextButton")
+local ApplyGrav = Instance.new("TextButton")
 local UICorner_21 = Instance.new("UICorner")
+local ZoomTextBox_2 = Instance.new("TextBox")
 local UICorner_22 = Instance.new("UICorner")
+local InfJumpB = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local UICorner_24 = Instance.new("UICorner")
 local Bar2 = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local Tab3 = Instance.new("Frame")
 local ApplyFPS = Instance.new("TextButton")
-local UICorner_23 = Instance.new("UICorner")
-local FPSTextBox = Instance.new("TextBox")
-local UICorner_24 = Instance.new("UICorner")
-local CopyJobID = Instance.new("TextButton")
 local UICorner_25 = Instance.new("UICorner")
-local ExecScript = Instance.new("TextButton")
+local FPSTextBox = Instance.new("TextBox")
 local UICorner_26 = Instance.new("UICorner")
+local CopyJobID = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local ExecScript = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
 local JoinJobID = Instance.new("TextButton")
 local JobIDTextBox = Instance.new("TextBox")
-local UICorner_27 = Instance.new("UICorner")
-local UICorner_28 = Instance.new("UICorner")
-local LoadIy = Instance.new("TextButton")
 local UICorner_29 = Instance.new("UICorner")
-local OverdriveH = Instance.new("TextButton")
 local UICorner_30 = Instance.new("UICorner")
-local CopyJobID_2 = Instance.new("TextButton")
+local LoadIy = Instance.new("TextButton")
 local UICorner_31 = Instance.new("UICorner")
-local FlyFrame = Instance.new("Frame")
+local OverdriveH = Instance.new("TextButton")
 local UICorner_32 = Instance.new("UICorner")
+local RejServer = Instance.new("TextButton")
+local UICorner_33 = Instance.new("UICorner")
+local FlyFrame = Instance.new("Frame")
+local UICorner_34 = Instance.new("UICorner")
 local Title = Instance.new("TextLabel")
 local FlyButton = Instance.new("TextButton")
-local UICorner_33 = Instance.new("UICorner")
+local UICorner_35 = Instance.new("UICorner")
 local FlySpeedTXT = Instance.new("TextBox")
-local UICorner_34 = Instance.new("UICorner")
+local UICorner_36 = Instance.new("UICorner")
+local UIScale = Instance.new("UIScale")
+local UIScale_2 = Instance.new("UIScale")
+local UIScale_3 = Instance.new("UIScale")
+
+print("[SUCESS]: Variables Set, Step (1/3) Complete.")
 
 UNXHubUI.Name = "UNXHubUI"
 UNXHubUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -254,6 +257,38 @@ Tab4.Position = UDim2.new(0, 0, 0.0690690726, 0)
 Tab4.Size = UDim2.new(1, 0, 0.92492491, 0)
 Tab4.Visible = false
 
+ScaleUI.Name = "ScaleUI"
+ScaleUI.Parent = Tab4
+ScaleUI.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ScaleUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScaleUI.BorderSizePixel = 0
+ScaleUI.Position = UDim2.new(0.0343750007, 0, 0.0649350658, 0)
+ScaleUI.Size = UDim2.new(0.928125024, 0, 0.103896104, 0)
+ScaleUI.Font = Enum.Font.SourceSansLight
+ScaleUI.Text = "UI Scale"
+ScaleUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScaleUI.TextSize = 18.000
+ScaleUI.TextWrapped = true
+
+ScaleTxT.Name = "ScaleTxT"
+ScaleTxT.Parent = ScaleUI
+ScaleTxT.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+ScaleTxT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScaleTxT.BorderSizePixel = 0
+ScaleTxT.Position = UDim2.new(0.860269368, 0, 0.125, 0)
+ScaleTxT.Size = UDim2.new(0.12626262, 0, 0.6875, 0)
+ScaleTxT.Font = Enum.Font.SourceSansLight
+ScaleTxT.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+ScaleTxT.PlaceholderText = "UI Scale"
+ScaleTxT.Text = ""
+ScaleTxT.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScaleTxT.TextSize = 14.000
+ScaleTxT.TextWrapped = true
+
+UICorner_8.Parent = ScaleTxT
+
+UICorner_9.Parent = ScaleUI
+
 Tab2.Name = "Tab2"
 Tab2.Parent = MainFrame
 Tab2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -277,7 +312,7 @@ EnableBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 EnableBox.TextSize = 18.000
 EnableBox.TextWrapped = true
 
-UICorner_8.Parent = EnableBox
+UICorner_10.Parent = EnableBox
 
 EnableTrcs.Name = "EnableTrcs"
 EnableTrcs.Parent = Tab2
@@ -292,7 +327,7 @@ EnableTrcs.TextColor3 = Color3.fromRGB(255, 255, 255)
 EnableTrcs.TextSize = 18.000
 EnableTrcs.TextWrapped = true
 
-UICorner_9.Parent = EnableTrcs
+UICorner_11.Parent = EnableTrcs
 
 EnableESP.Name = "EnableESP"
 EnableESP.Parent = Tab2
@@ -307,7 +342,7 @@ EnableESP.TextColor3 = Color3.fromRGB(255, 255, 255)
 EnableESP.TextSize = 18.000
 EnableESP.TextWrapped = true
 
-UICorner_10.Parent = EnableESP
+UICorner_12.Parent = EnableESP
 
 EnableSkel.Name = "EnableSkel"
 EnableSkel.Parent = Tab2
@@ -322,7 +357,7 @@ EnableSkel.TextColor3 = Color3.fromRGB(255, 255, 255)
 EnableSkel.TextSize = 18.000
 EnableSkel.TextWrapped = true
 
-UICorner_11.Parent = EnableSkel
+UICorner_13.Parent = EnableSkel
 
 EnableOut.Name = "EnableOut"
 EnableOut.Parent = Tab2
@@ -337,7 +372,7 @@ EnableOut.TextColor3 = Color3.fromRGB(255, 255, 255)
 EnableOut.TextSize = 18.000
 EnableOut.TextWrapped = true
 
-UICorner_12.Parent = EnableOut
+UICorner_14.Parent = EnableOut
 
 Tab1.Name = "Tab1"
 Tab1.Parent = MainFrame
@@ -361,7 +396,7 @@ ApplyZoom.TextColor3 = Color3.fromRGB(255, 255, 255)
 ApplyZoom.TextSize = 18.000
 ApplyZoom.TextWrapped = true
 
-UICorner_13.Parent = ApplyZoom
+UICorner_15.Parent = ApplyZoom
 
 ZoomTextBox.Name = "ZoomTextBox"
 ZoomTextBox.Parent = ApplyZoom
@@ -378,7 +413,7 @@ ZoomTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 ZoomTextBox.TextSize = 14.000
 ZoomTextBox.TextWrapped = true
 
-UICorner_14.Parent = ZoomTextBox
+UICorner_16.Parent = ZoomTextBox
 
 ApplyJP.Name = "ApplyJP"
 ApplyJP.Parent = Tab1
@@ -408,9 +443,9 @@ JPTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 JPTextBox.TextSize = 14.000
 JPTextBox.TextWrapped = true
 
-UICorner_15.Parent = JPTextBox
+UICorner_17.Parent = JPTextBox
 
-UICorner_16.Parent = ApplyJP
+UICorner_18.Parent = ApplyJP
 
 ApplyWS.Name = "ApplyWS"
 ApplyWS.Parent = Tab1
@@ -440,9 +475,9 @@ WSTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 WSTextBox.TextSize = 14.000
 WSTextBox.TextWrapped = true
 
-UICorner_17.Parent = WSTextBox
+UICorner_19.Parent = WSTextBox
 
-UICorner_18.Parent = ApplyWS
+UICorner_20.Parent = ApplyWS
 
 ApplyGrav.Name = "ApplyGrav"
 ApplyGrav.Parent = Tab1
@@ -457,7 +492,7 @@ ApplyGrav.TextColor3 = Color3.fromRGB(255, 255, 255)
 ApplyGrav.TextSize = 18.000
 ApplyGrav.TextWrapped = true
 
-UICorner_19.Parent = ApplyGrav
+UICorner_21.Parent = ApplyGrav
 
 ZoomTextBox_2.Name = "ZoomTextBox"
 ZoomTextBox_2.Parent = ApplyGrav
@@ -474,24 +509,24 @@ ZoomTextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 ZoomTextBox_2.TextSize = 14.000
 ZoomTextBox_2.TextWrapped = true
 
-UICorner_20.Parent = ZoomTextBox_2
+UICorner_22.Parent = ZoomTextBox_2
 
-EnableBox_2.Name = "EnableBox"
-EnableBox_2.Parent = Tab1
-EnableBox_2.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-EnableBox_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-EnableBox_2.BorderSizePixel = 0
-EnableBox_2.Position = UDim2.new(0.0343750007, 0, 0.629870117, 0)
-EnableBox_2.Size = UDim2.new(0.928125024, 0, 0.103896104, 0)
-EnableBox_2.Font = Enum.Font.SourceSansLight
-EnableBox_2.Text = "Toggle Infinite Jump"
-EnableBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-EnableBox_2.TextSize = 18.000
-EnableBox_2.TextWrapped = true
+InfJumpB.Name = "InfJumpB"
+InfJumpB.Parent = Tab1
+InfJumpB.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+InfJumpB.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfJumpB.BorderSizePixel = 0
+InfJumpB.Position = UDim2.new(0.0343750007, 0, 0.629870117, 0)
+InfJumpB.Size = UDim2.new(0.928125024, 0, 0.103896104, 0)
+InfJumpB.Font = Enum.Font.SourceSansLight
+InfJumpB.Text = "Toggle Infinite Jump"
+InfJumpB.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfJumpB.TextSize = 18.000
+InfJumpB.TextWrapped = true
 
-UICorner_21.Parent = EnableBox_2
+UICorner_23.Parent = InfJumpB
 
-UICorner_22.Parent = MainFrame
+UICorner_24.Parent = MainFrame
 
 Bar2.Name = "Bar2"
 Bar2.Parent = MainFrame
@@ -508,7 +543,7 @@ TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
 TextLabel.Size = UDim2.new(1, 0, 0.785714269, 0)
 TextLabel.Font = Enum.Font.SourceSansLight
-TextLabel.Text = "UNXHub (1.1.1)"
+TextLabel.Text = "UNXHub (1.1.1a)"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 18.000
 TextLabel.TextWrapped = true
@@ -536,7 +571,7 @@ ApplyFPS.TextColor3 = Color3.fromRGB(255, 255, 255)
 ApplyFPS.TextSize = 18.000
 ApplyFPS.TextWrapped = true
 
-UICorner_23.Parent = ApplyFPS
+UICorner_25.Parent = ApplyFPS
 
 FPSTextBox.Name = "FPSTextBox"
 FPSTextBox.Parent = ApplyFPS
@@ -553,7 +588,7 @@ FPSTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 FPSTextBox.TextSize = 14.000
 FPSTextBox.TextWrapped = true
 
-UICorner_24.Parent = FPSTextBox
+UICorner_26.Parent = FPSTextBox
 
 CopyJobID.Name = "CopyJobID"
 CopyJobID.Parent = Tab3
@@ -568,7 +603,7 @@ CopyJobID.TextColor3 = Color3.fromRGB(255, 255, 255)
 CopyJobID.TextSize = 18.000
 CopyJobID.TextWrapped = true
 
-UICorner_25.Parent = CopyJobID
+UICorner_27.Parent = CopyJobID
 
 ExecScript.Name = "ExecScript"
 ExecScript.Parent = Tab3
@@ -583,7 +618,7 @@ ExecScript.TextColor3 = Color3.fromRGB(255, 255, 255)
 ExecScript.TextSize = 18.000
 ExecScript.TextWrapped = true
 
-UICorner_26.Parent = ExecScript
+UICorner_28.Parent = ExecScript
 
 JoinJobID.Name = "JoinJobID"
 JoinJobID.Parent = Tab3
@@ -613,9 +648,9 @@ JobIDTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 JobIDTextBox.TextSize = 14.000
 JobIDTextBox.TextWrapped = true
 
-UICorner_27.Parent = JobIDTextBox
+UICorner_29.Parent = JobIDTextBox
 
-UICorner_28.Parent = JoinJobID
+UICorner_30.Parent = JoinJobID
 
 LoadIy.Name = "LoadIy"
 LoadIy.Parent = Tab3
@@ -630,7 +665,7 @@ LoadIy.TextColor3 = Color3.fromRGB(255, 255, 255)
 LoadIy.TextSize = 18.000
 LoadIy.TextWrapped = true
 
-UICorner_29.Parent = LoadIy
+UICorner_31.Parent = LoadIy
 
 OverdriveH.Name = "OverdriveH"
 OverdriveH.Parent = Tab3
@@ -645,22 +680,22 @@ OverdriveH.TextColor3 = Color3.fromRGB(255, 255, 255)
 OverdriveH.TextSize = 18.000
 OverdriveH.TextWrapped = true
 
-UICorner_30.Parent = OverdriveH
+UICorner_32.Parent = OverdriveH
 
-CopyJobID_2.Name = "CopyJobID"
-CopyJobID_2.Parent = Tab3
-CopyJobID_2.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-CopyJobID_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CopyJobID_2.BorderSizePixel = 0
-CopyJobID_2.Position = UDim2.new(0.0359374993, 0, 0.696917951, 0)
-CopyJobID_2.Size = UDim2.new(0.928125024, 0, 0.0909090936, 0)
-CopyJobID_2.Font = Enum.Font.SourceSansLight
-CopyJobID_2.Text = "Re-Join Server"
-CopyJobID_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-CopyJobID_2.TextSize = 18.000
-CopyJobID_2.TextWrapped = true
+RejServer.Name = "RejServer"
+RejServer.Parent = Tab3
+RejServer.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+RejServer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RejServer.BorderSizePixel = 0
+RejServer.Position = UDim2.new(0.0359374993, 0, 0.696917951, 0)
+RejServer.Size = UDim2.new(0.928125024, 0, 0.0909090936, 0)
+RejServer.Font = Enum.Font.SourceSansLight
+RejServer.Text = "Re-Join Server"
+RejServer.TextColor3 = Color3.fromRGB(255, 255, 255)
+RejServer.TextSize = 18.000
+RejServer.TextWrapped = true
 
-UICorner_31.Parent = CopyJobID_2
+UICorner_33.Parent = RejServer
 
 FlyFrame.Name = "FlyFrame"
 FlyFrame.Parent = UNXHubUI
@@ -669,8 +704,9 @@ FlyFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 FlyFrame.BorderSizePixel = 0
 FlyFrame.Position = UDim2.new(0.00999385584, 0, 0.0200866349, 0)
 FlyFrame.Size = UDim2.new(0.181426793, 0, 0.176366761, 0)
+FlyFrame.Visible = false
 
-UICorner_32.Parent = FlyFrame
+UICorner_34.Parent = FlyFrame
 
 Title.Name = "Title"
 Title.Parent = FlyFrame
@@ -701,7 +737,7 @@ FlyButton.TextScaled = true
 FlyButton.TextSize = 24.000
 FlyButton.TextWrapped = true
 
-UICorner_33.Parent = FlyButton
+UICorner_35.Parent = FlyButton
 
 FlySpeedTXT.Name = "FlySpeedTXT"
 FlySpeedTXT.Parent = FlyFrame
@@ -719,9 +755,14 @@ FlySpeedTXT.TextScaled = true
 FlySpeedTXT.TextSize = 24.000
 FlySpeedTXT.TextWrapped = true
 
-UICorner_34.Parent = FlySpeedTXT
+UICorner_36.Parent = FlySpeedTXT
 
 FlyFrame.Visible = false
+UIScale.Parent = MainFrame
+UIScale_2.Parent = TabsFrame
+UIScale_3.Parent = FlyFrame
+
+print("[SUCESS]: UX Created Sucessfully, Step (2/3) Done.")
 
 local function SwitchTab1()
 	Tab1.Visible = true
@@ -1050,6 +1091,25 @@ local function ChangePWS()
 	end
 end
 
+
+local function ChangeScale()
+	local value = ScaleTxT.Text
+	
+	if value >= "2.000000000000000000001" then
+		ScaleTxT.Text = "Please, Set Scale In This Range: 2-0.5"
+		wait(1)
+		ScaleTxT.Text = ""
+	elseif value <= "0.49999999999999999" then
+		ScaleTxT.Text = "Please, Set Scale In This Range: 2-0.5"
+		wait(1)
+		ScaleTxT.Text = ""
+	else
+		UIScale.Scale = value
+		UIScale_2.Scale = value
+		UIScale_3.Scale = value
+	end
+end
+
 -- Hello :> - Gato
 
 local function JoinJobID1()
@@ -1140,11 +1200,9 @@ function InfJumpF()
 	end)
 end
 
--- Call the function once to set it up
 InfJumpF()
 
--- Toggle Button (EnableBox_2)
-EnableBox_2.MouseButton1Click:Connect(function()
+InfJumpB.MouseButton1Click:Connect(function()
 	InfJumpEnabled = not InfJumpEnabled
 	if InfJumpEnabled then
 	else
@@ -1586,25 +1644,6 @@ function TurnOnBoxESP()
 	end)
 end
 
-local phrases = {
-	"Let Him Cook",
-	"Let Me Cook",
-	"UNXHub Is Now Done Loading",
-	"UNXHub :0000 Is Gud",
-	"UNXHUB Loaded",
-	"All Loaded Up!, Good Exploiting",
-	"Let me check if it loaded... yea it did",
-	"<<<UNXHub>>> UNXHub Loaded Sucessfully.",
-	"How Did I Even Make This?",
-	"Basically: UNXHub Is Loaded",
-	"Solara Also Steals Your Malware..., Wise Words...",
-	"Developer why UNXHub No Work?",
-	"The Current Time Is: ".. os.time() .."!",
-	"Hello :)",
-	"Hi :), Thanks For Using UNXHub!",
-	"From 1-10 i Choose: ".. math.random(1,10) .."!"
-}
-
 -- local function soi()
 --	while true do
 --		-- soi soi soi soi 
@@ -1612,8 +1651,6 @@ local phrases = {
 -- 		print("soi")
 --	end
 -- end
-
-print(phrases[math.random(#phrases)])
 
 local UserInputService = game:GetService("UserInputService")
 
@@ -1738,10 +1775,10 @@ end)
 UNXHubUI.ResetOnSpawn = false -- DO NOT MESS WITH IT.
 
 ApplyFPS.MouseButton1Click:Connect(fpscap)
-EnableBox_2.MouseButton1Click:Connect(InfJumpF)
+InfJumpB.MouseButton1Click:Connect(InfJumpF)
 OverdriveH.MouseButton1Click:Connect(RunODH)
 LoadIy.MouseButton1Click:Connect(RunIY)
-CopyJobID_2.MouseButton1Click:Connect(Rejoin)
+RejServer.MouseButton1Click:Connect(Rejoin)
 ExecScript.MouseButton1Click:Connect(FlyFC)
 JoinJobID.MouseButton1Click:Connect(JoinJobID1)
 CopyJobID.MouseButton1Click:Connect(CopyJobID1)
@@ -1757,4 +1794,29 @@ OtherTab3.MouseButton1Click:Connect(SwitchTab3)
 ConfigTab4.MouseButton1Click:Connect(SwitchTab4)
 button.MouseButton1Click:Connect(toggleTracers)
 button1.MouseButton1Click:Connect(toggleSkeleton)
+ScaleUI.MouseButton1Click:Connect(ChangeScale)
 TurnOnBoxESP()
+
+print("[SUCESS]: All Functions & Buttons Done, Step (3/3) Done.")
+
+
+local phrases = {
+	"Let Him Cook",
+	"Let Me Cook",
+	"UNXHub Is Now Done Loading",
+	"UNXHub :0000 Is Gud",
+	"UNXHUB Loaded",
+	"All Loaded Up!, Good Exploiting",
+	"Let me check if it loaded... yea it did",
+	"<<<UNXHub>>> UNXHub Loaded Sucessfully.",
+	"How Did I Even Make This?",
+	"Basically: UNXHub Is Loaded",
+	"Solara Also Steals Your Malware..., Wise Words...",
+	"Developer why UNXHub No Work?",
+	"The Current Time Is: ".. os.time() .."!",
+	"Hello :)",
+	"Hi :), Thanks For Using UNXHub!",
+	"From 1-10 i Choose: ".. math.random(1,10) .."!"
+}
+
+print("[NEUTRAL]: ".. phrases[math.random(#phrases)])
