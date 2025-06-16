@@ -2517,7 +2517,7 @@ if debugmode == true then
 		":D",
 		false
 	)
-else
+elseif debugmode == false then
 	errCall(
 		"Welcome",
 		"Welcome To UNXHub ".. game.Players.LocalPlayer.name .."!"
