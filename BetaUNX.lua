@@ -25,7 +25,7 @@ print("-------------- UXNHub Loaded Info --------------")
 
 -- DebugMode Usage: Find Errors In Script.
 
-debugmode = true
+debugmode = false
 
 if debugmode == true then
 	print("[DEBUG]: Creating Variables For The UI, Please Wait")
@@ -2509,12 +2509,21 @@ local phrases = {
 
 print("[NEUTRAL]: ".. phrases[math.random(#phrases)])
 
+errCall(
+    "Warning",
+    "You Are Using A Beta Version Of UNXHub, This May Not Work Or Be Unstable.",
+    "Okay",
+    "Continue",
+    true
+)
+
 if debugmode == true then
 	errCall(
-		"Debug Mode",
-                "Debug Mode Is Activated, Chat /console For More Information!",
-		"OK",
+		"Test",
+		"Test ".. game.Players.LocalPlayer.name .."!",
+		"OKs",
 		":D",
 		false
 	)
+	print("[DEBUG]: Testing Notification System Completed Sucessfuly!")
 end
