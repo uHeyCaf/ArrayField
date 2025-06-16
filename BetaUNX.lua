@@ -2513,15 +2513,7 @@ if debugmode == true then
 	errCall(
 		"Debug Mode",
                 "Debug Mode Is Activated, Chat /console For More Information!",
-		"OKs",
-		":D",
-		false
-	)
-elseif debugmode == false then
-	errCall(
-		"Welcome",
-		"Welcome To UNXHub ".. game.Players.LocalPlayer.name .."!"
-		"Thanks",
+		"OK",
 		":D",
 		false
 	)
