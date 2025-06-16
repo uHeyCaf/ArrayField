@@ -1,5 +1,5 @@
 
--- funi rainbow🥀✌️
+-- rip old notification system...
 
 local player = game.Players.LocalPlayer
 local exec = (type(identifyexecutor) == "function" and identifyexecutor()) or "Not Possible To Fetch Executor Name, Your Executor Probably Dont Support identifyexecutor()"
@@ -2510,10 +2510,10 @@ local phrases = {
 print("[NEUTRAL]: ".. phrases[math.random(#phrases)])
 
 errCall(
-    "Warning"
-    "You Are Using A Beta Version Of UNXHub, This May Not Work Or Be Unstable, If You Are Looking For The Stable Version, Please Rejoin The Game Using Rejoin In Misc Tab And Search For UNXHub On Script Cloud.",
-    "I Understand.",
-    "I Dont Understand.",
+    "Warning",
+    "You Are Using A Beta Version Of UNXHub, This May Not Work Or Be Unstable.",
+    "Okay",
+    "Continue",
     true
 )
 
@@ -2527,5 +2527,3 @@ if debugmode == true then
 	)
 	print("[DEBUG]: Testing Notification System Completed Sucessfuly!")
 end
-
--- BETA TEST AREA [CAUTION, MAY BREAK AT ANY GIVEN TIME]
