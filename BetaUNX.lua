@@ -26,6 +26,7 @@ print("-------------- UXNHub Loaded Info --------------")
 -- DebugMode Usage: Find Errors In Script.
 
 debugmode = true
+GayMode = true
 
 if debugmode == true then
 	print("[DEBUG]: Creating Variables For The UI, Please Wait")
@@ -2572,10 +2573,12 @@ end
 local bs = 0
 
 bi.RenderStepped:Connect(function(bt)
+	if not GayMode then return end
+
 	bs = (bs + bt * 0.1) % 1
-	local bu = bj(bs, 1, 1)       -- Frames: full bright
-	local bv = bj(bs, 1, 0.8)     -- Buttons: slightly darker
-	local bw = bj(bs, 1, 0.6)     -- TextBoxes: even darker
+	local bu = bj(bs, 1, 1)
+	local bv = bj(bs, 1, 0.8)
+	local bw = bj(bs, 1, 0.6)
 
 	for _, bx in ipairs(bc) do
 		if bx and bx.Parent then
