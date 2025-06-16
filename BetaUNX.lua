@@ -2527,3 +2527,52 @@ if debugmode == true then
 	)
 	print("[DEBUG]: Testing Notification System Completed Sucessfuly!")
 end
+
+-- TESTING AREA...
+
+local ba = game:GetService("Players").LocalPlayer
+local bb = ba:WaitForChild("PlayerGui"):WaitForChild("UNXHubUI", 5)
+if not bb then return end
+
+local bc = {}
+
+local function bd(be)
+	for _, bf in pairs(be:GetChildren()) do
+		if bf:IsA("Frame") then
+			table.insert(bc, bf)
+		end
+		bd(bf)
+	end
+end
+
+bd(bb)
+
+local bg = game:GetService("RunService")
+
+local function bh(bi, bj, bk)
+	local bl = math.floor(bi * 6)
+	local bm = bi * 6 - bl
+	local bn = bk * (1 - bj)
+	local bo = bk * (1 - bm * bj)
+	local bp = bk * (1 - (1 - bm) * bj)
+	bl = bl % 6
+	if bl == 0 then return Color3.new(bk, bp, bn)
+	elseif bl == 1 then return Color3.new(bo, bk, bn)
+	elseif bl == 2 then return Color3.new(bn, bk, bp)
+	elseif bl == 3 then return Color3.new(bn, bo, bk)
+	elseif bl == 4 then return Color3.new(bp, bn, bk)
+	elseif bl == 5 then return Color3.new(bk, bn, bo)
+	end
+end
+
+local bq = 0
+
+bg.RenderStepped:Connect(function(br)
+	bq = (bq + br * 0.1) % 1
+	local bs = bh(bq, 1, 1)
+	for _, bt in ipairs(bc) do
+		if bt and bt.Parent then
+			bt.BackgroundColor3 = bs
+		end
+	end
+end)
