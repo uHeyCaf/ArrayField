@@ -2534,45 +2534,64 @@ local ba = game:GetService("Players").LocalPlayer
 local bb = ba:WaitForChild("PlayerGui"):WaitForChild("UNXHubUI", 5)
 if not bb then return end
 
-local bc = {}
+local bc, bd, be = {}, {}, {}
 
-local function bd(be)
-	for _, bf in pairs(be:GetChildren()) do
-		if bf:IsA("Frame") then
-			table.insert(bc, bf)
+local function bf(bg)
+	for _, bh in pairs(bg:GetChildren()) do
+		if bh:IsA("Frame") then
+			table.insert(bc, bh)
+		elseif bh:IsA("TextButton") then
+			table.insert(bd, bh)
+		elseif bh:IsA("TextBox") then
+			table.insert(be, bh)
 		end
-		bd(bf)
+		bf(bh)
 	end
 end
 
-bd(bb)
+bf(bb)
 
-local bg = game:GetService("RunService")
+local bi = game:GetService("RunService")
 
-local function bh(bi, bj, bk)
-	local bl = math.floor(bi * 6)
-	local bm = bi * 6 - bl
-	local bn = bk * (1 - bj)
-	local bo = bk * (1 - bm * bj)
-	local bp = bk * (1 - (1 - bm) * bj)
-	bl = bl % 6
-	if bl == 0 then return Color3.new(bk, bp, bn)
-	elseif bl == 1 then return Color3.new(bo, bk, bn)
-	elseif bl == 2 then return Color3.new(bn, bk, bp)
-	elseif bl == 3 then return Color3.new(bn, bo, bk)
-	elseif bl == 4 then return Color3.new(bp, bn, bk)
-	elseif bl == 5 then return Color3.new(bk, bn, bo)
+local function bj(bk, bl, bm)
+	local bn = math.floor(bk * 6)
+	local bo = bk * 6 - bn
+	local bp = bm * (1 - bl)
+	local bq = bm * (1 - bo * bl)
+	local br = bm * (1 - (1 - bo) * bl)
+	bn = bn % 6
+	if bn == 0 then return Color3.new(bm, br, bp)
+	elseif bn == 1 then return Color3.new(bq, bm, bp)
+	elseif bn == 2 then return Color3.new(bp, bm, br)
+	elseif bn == 3 then return Color3.new(bp, bq, bm)
+	elseif bn == 4 then return Color3.new(br, bp, bm)
+	elseif bn == 5 then return Color3.new(bm, bp, bq)
 	end
 end
 
-local bq = 0
+local bs = 0
 
-bg.RenderStepped:Connect(function(br)
-	bq = (bq + br * 0.1) % 1
-	local bs = bh(bq, 1, 1)
-	for _, bt in ipairs(bc) do
-		if bt and bt.Parent then
-			bt.BackgroundColor3 = bs
+bi.RenderStepped:Connect(function(bt)
+	bs = (bs + bt * 0.1) % 1
+	local bu = bj(bs, 1, 1)       -- Frames: full bright
+	local bv = bj(bs, 1, 0.8)     -- Buttons: slightly darker
+	local bw = bj(bs, 1, 0.6)     -- TextBoxes: even darker
+
+	for _, bx in ipairs(bc) do
+		if bx and bx.Parent then
+			bx.BackgroundColor3 = bu
+		end
+	end
+
+	for _, by in ipairs(bd) do
+		if by and by.Parent then
+			by.BackgroundColor3 = bv
+		end
+	end
+
+	for _, bz in ipairs(be) do
+		if bz and bz.Parent then
+			bz.BackgroundColor3 = bw
 		end
 	end
 end)
