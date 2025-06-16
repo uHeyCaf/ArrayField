@@ -654,7 +654,7 @@ Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Title.BorderSizePixel = 0
 Title.Size = UDim2.new(1, 0, 0.785714269, 0)
 Title.Font = Enum.Font.SourceSansLight
-Title.Text = "UNXHub (1.1.4a BETA)"
+Title.Text = "UNXHub (1.1.4)"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 18.000
 Title.TextWrapped = true
@@ -1770,7 +1770,7 @@ local function ChangeScale()
 	if value >= "2.000000000000000000001" then
 		errCall(
 			"Wild Error Found!",
-			"Please, Input The Scale In This Range Of Numbers: 0.5-2",
+			"Please, Input The Scale Range In This Range: 0.5-2",
 			"OK",
 			":D",
 			false
@@ -1781,7 +1781,7 @@ local function ChangeScale()
 	elseif value <= "0.49999999999999999" then
 		errCall(
 			"Wild Error Found!",
-			"Please, Input The Scale In This Range Of Numbers: 0.5-2",
+			"Please, Input The Scale Range In This Range: 0.5-2",
 			"OK",
 			":D",
 			false
@@ -1999,7 +1999,7 @@ local function fpscap()
 	        errCall(
        
 			"Wild Error Found!",
-			"Invalid FPS Value, Please Only Use Numbers, Value: ".. tostring(FPSTextBox.Text) .."!",
+			"Unknown FPS Value Found: ".. tostring(FPSTextBox.Text) .."!",
 			"OK",
 			":D",
 			false
@@ -2509,26 +2509,18 @@ local phrases = {
 
 print("[NEUTRAL]: ".. phrases[math.random(#phrases)])
 
-errCall(
-    "Welcome",
-    "Welcome To UNXHub ".. game.Players.LocalPlayer.name .."!",
-    "Thanks",
-    ":D",
-    false
-)
-
 if debugmode == true then
 	errCall(
 		"Debug Mode",
-		"Debug Mode Is Activated, See Console For Information!",
-		"Continue,
-		"Cancel",
-		true
+                "Debug Mode Is Activated, Chat /console For More Information!",
+		"OKs",
+		":D",
+		false
 	)
-elseif
+else
 	errCall(
 		"Welcome",
-		"Welcome To UNXHub ".. game.Players.LocalPlayer.name .."!",
+		"Welcome To UNXHub ".. game.Players.LocalPlayer.name .."!"
 		"Thanks",
 		":D",
 		false
