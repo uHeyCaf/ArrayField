@@ -26,7 +26,7 @@ print("-------------- UXNHub Loaded Info --------------")
 -- DebugMode Usage: Find Errors In Script.
 
 debugmode = true
-GayMode = true
+GayMode = false
 
 if debugmode == true then
 	print("[DEBUG]: Creating Variables For The UI, Please Wait")
