@@ -1,10 +1,22 @@
 -- Never Using This But Fuck It.
 -- Example Usage: 
 --[[
-local aa = loadstring(game:HttpGet("URL"))()
+local NotifService = loadstring(game:HttpGet("https://raw.githubusercontent.com/uHeyCaf/ArrayField/refs/heads/main/UNX_NotificationService.lua"))()
 
-aa:Notif1("Title", "Description", "Button1", "Button2", Button2Activated (True/False))
-aa:Notif2("Title", "Description", Duration (Seconds))
+NotifService:Notif1("Title", "Description", "Button1", "Button2", true)
+
+-- Title: The Title Of The Window
+-- Description: What You Wanna Say
+-- Button1: Primary Button (Can Be Text)
+-- Button2: Secondary Button (Can Be Text)
+-- true/false: Bollean To Define If Buttton2 Is Visible, true = visible, false = invisible
+
+NotifService:Notif2("Title", "Description", 5)
+
+-- Title: Title Of The Notif
+-- Description What You Want To Say
+-- 5: Lifetime Of The Notif.
+
 ]]
 
 local aa = {}
