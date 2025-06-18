@@ -68,7 +68,7 @@ function Module.Notification(title, message, okText, cancelText, hasCancel)
 
     local header = Instance.new("Frame")
     header.Size = UDim2.new(1, 0, 0, 35)
-    header.BackgroundColor3 = Color3.fromRGB(0, 2, 39)
+    header.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
     header.BorderSizePixel = 0
     header.ZIndex = 2
     header.Parent = container
@@ -147,8 +147,8 @@ function Module.Notification(title, message, okText, cancelText, hasCancel)
 
     local dragging, dragStart, startPos = false, nil, nil
     local resizing, resizeStart, startSize = false, nil, nil
-    local colorDefault = Color3.fromRGB(18, 18, 18)
-    local colorDown = Color3.fromRGB(3, 6, 50)
+    local colorDefault = Color3.fromRGB(9, 9, 9)
+    local colorDown = Color3.fromRGB(18, 18, 18)
 
     local connections = {}
 
