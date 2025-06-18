@@ -60,7 +60,7 @@ function Module.Notification(title, message, okText, cancelText, hasCancel)
     local container = Instance.new("Frame")
     container.Size = UDim2.fromOffset(200, 125)
     container.Position = backShadow.Position
-    container.BackgroundColor3 = Color3.fromRGB(0, 2, 39)
+    container.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
     container.BorderSizePixel = 0
     container.ZIndex = 1
     container.Parent = gui
@@ -112,7 +112,7 @@ function Module.Notification(title, message, okText, cancelText, hasCancel)
     local okButton = Instance.new("TextButton")
     okButton.Size = UDim2.new(0.4, 0, 0, 35)
     okButton.Position = hasCancel and UDim2.new(0.08, 0, 1, -45) or UDim2.new(0.3, 0, 1, -45)
-    okButton.BackgroundColor3 = Color3.fromRGB(0, 4, 67)
+    okButton.BackgroundColor3 = Color3.fromRGB(9, 9, 9)
     okButton.Text = okText or "OK"
     okButton.Font = Enum.Font.SourceSansLight
     okButton.TextSize = 17
@@ -126,7 +126,7 @@ function Module.Notification(title, message, okText, cancelText, hasCancel)
         cancelButton = Instance.new("TextButton")
         cancelButton.Size = UDim2.new(0.4, 0, 0, 35)
         cancelButton.Position = UDim2.new(0.52, 0, 1, -45)
-        cancelButton.BackgroundColor3 = Color3.fromRGB(0, 4, 67)
+        cancelButton.BackgroundColor3 = Color3.fromRGB(9, 9, 9)
         cancelButton.Text = cancelText or "Cancel"
         cancelButton.Font = Enum.Font.SourceSansLight
         cancelButton.TextSize = 17
@@ -139,7 +139,7 @@ function Module.Notification(title, message, okText, cancelText, hasCancel)
     local resizeButton = Instance.new("Frame")
     resizeButton.Size = UDim2.fromOffset(20, 20)
     resizeButton.Position = UDim2.new(1, -20, 1, -20)
-    resizeButton.BackgroundColor3 = Color3.fromRGB(5, 8, 70)
+    resizeButton.BackgroundColor3 = Color3.fromRGB(9, 9, 9)
     resizeButton.BorderSizePixel = 0
     resizeButton.ZIndex = 3
     resizeButton.Parent = container
@@ -147,7 +147,7 @@ function Module.Notification(title, message, okText, cancelText, hasCancel)
 
     local dragging, dragStart, startPos = false, nil, nil
     local resizing, resizeStart, startSize = false, nil, nil
-    local colorDefault = Color3.fromRGB(5, 8, 70)
+    local colorDefault = Color3.fromRGB(18, 18, 18)
     local colorDown = Color3.fromRGB(3, 6, 50)
 
     local connections = {}
