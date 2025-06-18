@@ -1,7 +1,6 @@
 --[[
 
 Usage:
-
 local NotificationSystem = loadstring(game:HttpGet("https://raw.githubusercontent.com/uHeyCaf/ArrayField/refs/heads/main/UNX_NotificationService.lua"))()
 NotificationSystem.Notification("Title", "Message", "OK", "Cancel", true)
 
