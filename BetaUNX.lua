@@ -172,7 +172,7 @@ if debugmode == true then
 	print("[DEBUG]: Calling Ban API, Please Wait...")
 end
 
--- loadstring(game:HttpGet("https://raw.githubusercontent.com/uHeyCaf/UNX/refs/heads/main/API.lua",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/uHeyCaf/UNX/refs/heads/main/API.lua",true))()
 
 OpenUNX.Name = "OpenUNX"
 OpenUNX.Parent = UNXHubUI
@@ -668,7 +668,7 @@ logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 logo.BorderSizePixel = 0
 logo.Position = UDim2.new(0.00625000009, 0, 0.142857149, 0)
 logo.Size = UDim2.new(0.0296874978, 0, 0.678571403, 0)
-logo.Image = "rbxassetid://84759093733650"
+logo.Image = "rbxassetid://137779536741206"
 logo.ScaleType = Enum.ScaleType.Crop
 
 UICorner_30.Parent = logo
@@ -1133,7 +1133,7 @@ function errCall(af, ag, ah, ai, aj)
     as.Size = UDim2.fromOffset(26, 26)
     as.Position = UDim2.new(0, 8, 0.5, -13)
     as.BackgroundTransparency = 1
-    as.Image = "rbxassetid://84759093733650"
+    as.Image = "rbxassetid://137779536741206"
     as.ZIndex = 3
     as.Parent = ar
     Instance.new("UICorner", as).CornerRadius = UDim.new(0, 6)
