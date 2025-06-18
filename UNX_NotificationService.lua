@@ -1,3 +1,18 @@
+--[[
+
+Usage:
+
+local NotificationSystem = loadstring(game:HttpGet("https://raw.githubusercontent.com/uHeyCaf/ArrayField/refs/heads/main/UNX_NotificationService.lua"))()
+NotificationSystem.Notification("Title", "Message", "OK", "Cancel", true)
+
+-- Title: Error Message Title
+-- Message: The Message U Wanna Say
+-- OK: Button One (Primary)
+-- Cancel: Button Two (Secondary)
+-- true/false: true = button two visible, false = button two invisible
+
+]]
+
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
 local ContextActionService = game:GetService("ContextActionService")
