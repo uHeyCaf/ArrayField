@@ -70,7 +70,7 @@ function aa:Notif1(ah, ai, aj, ak, al)
     av.Size = UDim2.fromOffset(26, 26)
     av.Position = UDim2.new(0, 8, 0.5, -13)
     av.BackgroundTransparency = 1
-    av.Image = "rbxassetid://84759093733650"
+    av.Image = "rbxassetid://14951904106"
     Instance.new("UICorner", av).CornerRadius = UDim.new(0, 6)
     local aw = Instance.new("TextLabel", au)
     aw.Size = UDim2.new(1, -50, 1, 0)
