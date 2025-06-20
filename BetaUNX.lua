@@ -24,9 +24,9 @@ printidentity()
 print("-------------- UXNHub Loaded Info --------------")
 
 -- DebugMode Usage: Find Errors In Script.
-
+version = "1.1.4a [BETA]"
 debugmode = true
-GayMode = false
+gaymode = false
 
 if debugmode == true then
 	print("[DEBUG]: Creating Variables For The UI, Please Wait")
@@ -2520,13 +2520,14 @@ errCall(
 
 if debugmode == true then
 	errCall(
-		"Test",
-		"Test ".. game.Players.LocalPlayer.name .."!",
-		"OKs",
+		"Debug Mode",
+		"Warning, DebugMode Is Active.",
+		"OK",
 		":D",
 		false
 	)
 	print("[DEBUG]: Testing Notification System Completed Sucessfuly!")
+	print("[DEBUG]: Current Version: ".. version .."!")
 end
 
 -- TESTING AREA...
@@ -2573,7 +2574,7 @@ end
 local bs = 0
 
 bi.RenderStepped:Connect(function(bt)
-	if not GayMode then return end
+	if not gaymode then return end
 
 	bs = (bs + bt * 0.1) % 1
 	local bu = bj(bs, 1, 1)
