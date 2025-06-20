@@ -165,7 +165,7 @@ btnsfx.SoundId = "rbxassetid://107511012621133"
 btnsfx.Parent = workspace
 
 UNXHubUI.Name = "UNXHubUI"
-UNXHubUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+UNXHubUI.Parent = game.CoreGui
 UNXHubUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 if debugmode == true then
