@@ -3,7 +3,7 @@
 
 local player = game.Players.LocalPlayer
 local exec = (type(identifyexecutor) == "function" and identifyexecutor()) or "Not Possible To Fetch Executor Name, Your Executor Probably Dont Support identifyexecutor()"
-version = "1.1.4b [BETA-Pre-Release]"
+version = "1.1.4b"
 
 print([[
 
@@ -183,7 +183,7 @@ OpenUNX.BackgroundColor3 = Color3.fromRGB(0, 4, 67)
 OpenUNX.BorderColor3 = Color3.fromRGB(0, 0, 0)
 OpenUNX.BorderSizePixel = 0
 OpenUNX.Position = UDim2.new(0.00691881916, 0, 0.0139082056, 0)
-OpenUNX.Size = UDim2.new(0.3, 0, 0.3, 0)
+OpenUNX.Size = UDim2.new(0.1, 0, 0.1, 0)
 OpenUNX.Visible = false
 OpenUNX.ZIndex = 999999999
 OpenUNX.Image = "rbxassetid://137779536741206"
