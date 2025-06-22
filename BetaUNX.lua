@@ -183,7 +183,7 @@ OpenUNX.BackgroundColor3 = Color3.fromRGB(0, 4, 67)
 OpenUNX.BorderColor3 = Color3.fromRGB(0, 0, 0)
 OpenUNX.BorderSizePixel = 0
 OpenUNX.Position = UDim2.new(0.00691881916, 0, 0.0139082056, 0)
-OpenUNX.Size = UDim2.new(0.06, 0.06, 0.06, 0.06)
+OpenUNX.Size = UDim2.new(0.06, 0, 0.06, 0)
 OpenUNX.Visible = false
 OpenUNX.ZIndex = 999999999
 OpenUNX.Font = Enum.Font.SourceSansLight
@@ -191,6 +191,10 @@ OpenUNX.Text = "Show UI"
 OpenUNX.TextColor3 = Color3.fromRGB(255, 255, 255)
 OpenUNX.TextSize = 20.000
 OpenUNX.TextWrapped = true
+
+local aspect = Instance.new("UIAspectRatioConstraint")
+aspect.AspectRatio = 1
+aspect.Parent = OpenUNX
 
 UICorner.CornerRadius = UDim.new(99, 99)
 UICorner.Parent = OpenUNX
