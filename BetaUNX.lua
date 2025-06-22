@@ -25,7 +25,7 @@ printidentity()
 print("-------------- UXNHub Debugger Info --------------")
 
 -- DebugMode Usage: Find Errors In Script.
-debugmode = true
+debugmode = false
 
 if debugmode == true then
 	print("[DEBUG]: Creating Variables For The UI, Please Wait")
@@ -660,7 +660,7 @@ Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Title.BorderSizePixel = 0
 Title.Size = UDim2.new(1, 0, 0.785714269, 0)
 Title.Font = Enum.Font.SourceSansLight
-Title.Text = "UNXHub (1.1.4b [BETA])"
+Title.Text = "UNXHub (1.1.4b)"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 18.000
 Title.TextWrapped = true
@@ -2545,9 +2545,9 @@ local phrases = {
 print("[NEUTRAL]: ".. phrases[math.random(#phrases)])
 
 errCall(
-    "Warning",
-    "You Are Using a Beta Version Of UNXHub, ".. game.Players.LocalPlayer.Name .."!",
-    "Okay",
+    "Welcome",
+    "Welcome To UNXHub ".. game.Players.LocalPlayer.Name .."!",
+    "Thanks!",
     "Continue",
     true
 )
