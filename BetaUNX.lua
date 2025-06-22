@@ -2444,21 +2444,21 @@ FlyFrame.Active = true
 FlyFrame.Draggable = true
 FlyFrame.Selectable = true
 
-InfjumpFF.Active = true
-InfjumpFF.Draggable = true
-InfjumpFF.Selectable = true
+InfJumpFastButton.Active = true
+InfJumpFastButton.Draggable = true
+InfJumpFastButton.Selectable = true
 
-AimLockFF.Active = true
-AimLockFF.Draggable = true
-AimLockFF.Selectable = true
+AimLockFastButton.Active = true
+AimLockFastButton.Draggable = true
+AimLockFastButton.Selectable = true
 
-RejFF.Active = true
-RejFF.Draggable = true
-RejFF.Selectable = true
+RejoinFastButton.Active = true
+RejoinFastButton.Draggable = true
+RejoinFastButton.Selectable = true
 
-NoclipFF.Active = true
-NoclipFF.Draggable = true
-NoclipFF.Selectable = true
+NoclipFastButton.Active = true
+NoclipFastButton.Draggable = true
+NoclipFastButton.Selectable = true
 
 OpenUNX.Active = true
 OpenUNX.Draggable = true
