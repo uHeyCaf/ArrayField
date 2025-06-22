@@ -189,10 +189,10 @@ OpenUNX.ZIndex = 999999999
 OpenUNX.Font = Enum.Font.SourceSansLight
 OpenUNX.Text = "Show UI"
 OpenUNX.TextColor3 = Color3.fromRGB(255, 255, 255)
-OpenUNX.TextSize = 24.000
+OpenUNX.TextSize = 20.000
 OpenUNX.TextWrapped = true
 
-UICorner.CornerRadius = UDim.new(0, 5)
+UICorner.CornerRadius = UDim.new(99, 99)
 UICorner.Parent = OpenUNX
 
 TabsFrame.Name = "TabsFrame"
