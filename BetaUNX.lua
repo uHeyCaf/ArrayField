@@ -1,5 +1,5 @@
 
--- yeah bro pro coding here rn 😎
+-- yeah bro pro coding here rn 😎😎
 
 local player = game.Players.LocalPlayer
 local exec = (type(identifyexecutor) == "function" and identifyexecutor()) or "Not Possible To Fetch Executor Name, Your Executor Probably Dont Support identifyexecutor()"
