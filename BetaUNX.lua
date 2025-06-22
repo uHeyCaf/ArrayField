@@ -3,6 +3,7 @@
 
 local player = game.Players.LocalPlayer
 local exec = (type(identifyexecutor) == "function" and identifyexecutor()) or "Not Possible To Fetch Executor Name, Your Executor Probably Dont Support identifyexecutor()"
+version = "1.1.4b [BETA]"
 
 print([[
 
@@ -14,7 +15,7 @@ print([[
  \___/\_| \_/\/   \/\_| |_/\__,_|_.__/  
 
 ]])
-print("UNXHub: Revamped (1.0.0) :D")
+print("UNXHub ".. version .." :D")
 print("Player Name: " .. player.Name)
 print("Display Name: " .. player.DisplayName)
 print("UserID: " .. player.UserId)
@@ -24,7 +25,6 @@ printidentity()
 print("-------------- UXNHub Debugger Info --------------")
 
 -- DebugMode Usage: Find Errors In Script.
-version = "1.1.4b [BETA]"
 debugmode = true
 -- probably wont use this 
 rgbmode = true
