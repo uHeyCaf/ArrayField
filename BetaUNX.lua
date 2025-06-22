@@ -26,8 +26,6 @@ print("-------------- UXNHub Debugger Info --------------")
 
 -- DebugMode Usage: Find Errors In Script.
 debugmode = true
--- probably wont use this 
-rgbmode = false
 
 if debugmode == true then
 	print("[DEBUG]: Creating Variables For The UI, Please Wait")
@@ -2563,73 +2561,3 @@ if debugmode == true then
 	print("[DEBUG]: Testing Notification System Completed Sucessfuly!")
 	print("[DEBUG]: Current Version: ".. version .."!")
 end
-
--- TESTING AREA...
-
-local b0 = game.CoreGui.UNXErrorUI
-local ba = game:GetService("Players").LocalPlayer
-if not UNXHubUI, b0 then return end
-
-local bc, bd, be = {}, {}, {}
-
-local function bf(bg)
-	for _, bh in pairs(bg:GetChildren()) do
-		if bh:IsA("Frame") then
-			table.insert(bc, bh)
-		elseif bh:IsA("TextButton") then
-			table.insert(bd, bh)
-		elseif bh:IsA("TextBox") then
-			table.insert(be, bh)
-		end
-		bf(bh)
-	end
-end
-
-bf(UNXHubUI)
-
-local bi = game:GetService("RunService")
-
-local function bj(bk, bl, bm)
-	local bn = math.floor(bk * 6)
-	local bo = bk * 6 - bn
-	local bp = bm * (1 - bl)
-	local bq = bm * (1 - bo * bl)
-	local br = bm * (1 - (1 - bo) * bl)
-	bn = bn % 6
-	if bn == 0 then return Color3.new(bm, br, bp)
-	elseif bn == 1 then return Color3.new(bq, bm, bp)
-	elseif bn == 2 then return Color3.new(bp, bm, br)
-	elseif bn == 3 then return Color3.new(bp, bq, bm)
-	elseif bn == 4 then return Color3.new(br, bp, bm)
-	elseif bn == 5 then return Color3.new(bm, bp, bq)
-	end
-end
-
-local bs = 0
-
-bi.RenderStepped:Connect(function(bt)
-	if not rgbmode then return end
-
-	bs = (bs + bt * 0.1) % 1
-	local bu = bj(bs, 1, 1)
-	local bv = bj(bs, 1, 0.8)
-	local bw = bj(bs, 1, 0.6)
-
-	for _, bx in ipairs(bc) do
-		if bx and bx.Parent then
-			bx.BackgroundColor3 = bu
-		end
-	end
-
-	for _, by in ipairs(bd) do
-		if by and by.Parent then
-			by.BackgroundColor3 = bv
-		end
-	end
-
-	for _, bz in ipairs(be) do
-		if bz and bz.Parent then
-			bz.BackgroundColor3 = bw
-		end
-	end
-end)
