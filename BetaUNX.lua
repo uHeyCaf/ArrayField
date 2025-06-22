@@ -24,7 +24,7 @@ printidentity()
 print("-------------- UXNHub Debugger Info --------------")
 
 -- DebugMode Usage: Find Errors In Script.
-version = "1.1.4a"
+version = "1.1.4b [BETA]"
 debugmode = true
 -- probably wont use this 
 rgbmode = false
@@ -660,7 +660,7 @@ Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Title.BorderSizePixel = 0
 Title.Size = UDim2.new(1, 0, 0.785714269, 0)
 Title.Font = Enum.Font.SourceSansLight
-Title.Text = "UNXHub (1.1.4b)"
+Title.Text = "UNXHub (1.1.4b [BETA])"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 18.000
 Title.TextWrapped = true
