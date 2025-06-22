@@ -1,9 +1,9 @@
 
--- yeah bro pro coding here rn 😎😎😎
+-- yeah bro pro coding here rn 😎😎😎😎
 
 local player = game.Players.LocalPlayer
 local exec = (type(identifyexecutor) == "function" and identifyexecutor()) or "Not Possible To Fetch Executor Name, Your Executor Probably Dont Support identifyexecutor()"
-version = "1.1.4b [BETA-Pre-Release2]"
+version = "1.1.4b [BETA-Pre-Release]"
 
 print([[
 
