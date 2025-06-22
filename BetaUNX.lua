@@ -27,7 +27,7 @@ print("-------------- UXNHub Debugger Info --------------")
 version = "1.1.4b [BETA]"
 debugmode = true
 -- probably wont use this 
-rgbmode = false
+rgbmode = true
 
 if debugmode == true then
 	print("[DEBUG]: Creating Variables For The UI, Please Wait")
