@@ -40,7 +40,7 @@ local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
 local Camera = workspace.CurrentCamera
 local UNXHubUI = Instance.new("ScreenGui")
-local OpenUNX = Instance.new("TextButton")
+local OpenUNX = Instance.new("ImageLabel")
 local UICorner = Instance.new("UICorner")
 local TabsFrame = Instance.new("Frame")
 local ButtonSafeArea = Instance.new("Frame")
@@ -183,14 +183,12 @@ OpenUNX.BackgroundColor3 = Color3.fromRGB(0, 4, 67)
 OpenUNX.BorderColor3 = Color3.fromRGB(0, 0, 0)
 OpenUNX.BorderSizePixel = 0
 OpenUNX.Position = UDim2.new(0.00691881916, 0, 0.0139082056, 0)
-OpenUNX.Size = UDim2.new(0.06, 0, 0.06, 0)
+OpenUNX.Size = UDim2.new(0.3, 0, 0.3, 0)
 OpenUNX.Visible = false
 OpenUNX.ZIndex = 999999999
-OpenUNX.Font = Enum.Font.SourceSansLight
-OpenUNX.Text = "Show UI"
-OpenUNX.TextColor3 = Color3.fromRGB(255, 255, 255)
-OpenUNX.TextSize = 20.000
-OpenUNX.TextWrapped = true
+OpenUNX.Image = "rbxassetid://137779536741206"
+OpenUNX.ImageColor3 = Color3.new(1, 1, 1)
+OpenUNX.ScaleType = Enum.ScaleType.Fit
 
 local aspect = Instance.new("UIAspectRatioConstraint")
 aspect.AspectRatio = 1
@@ -2565,3 +2563,4 @@ if debugmode == true then
 	print("[DEBUG]: Testing Notification System Completed Sucessfuly!")
 	print("[DEBUG]: Current Version: ".. version .."!")
 end
+ 
