@@ -3,7 +3,7 @@
 
 local player = game.Players.LocalPlayer
 local exec = (type(identifyexecutor) == "function" and identifyexecutor()) or "Not Possible To Fetch Executor Name, Your Executor Probably Dont Support identifyexecutor()"
-version = "1.1.4b [BETA]"
+version = "1.1.4b [BETA-Pre-Release1]"
 
 print([[
 
@@ -27,7 +27,7 @@ print("-------------- UXNHub Debugger Info --------------")
 -- DebugMode Usage: Find Errors In Script.
 debugmode = true
 -- probably wont use this 
-rgbmode = true
+rgbmode = false
 
 if debugmode == true then
 	print("[DEBUG]: Creating Variables For The UI, Please Wait")
