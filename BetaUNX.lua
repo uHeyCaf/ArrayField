@@ -188,6 +188,7 @@ OpenUNX.Visible = false
 OpenUNX.ZIndex = 999999999
 OpenUNX.Font = Enum.Font.SourceSansLight
 OpenUNX.Text = "Show UI"
+OpenUNX.TextFits = true
 OpenUNX.TextColor3 = Color3.fromRGB(255, 255, 255)
 OpenUNX.TextSize = 20.000
 OpenUNX.TextWrapped = true
