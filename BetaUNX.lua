@@ -1094,8 +1094,8 @@ function errCall(af, ag, ah, ai, aj)
     am.SoundId = "rbxassetid://"139800881181209
     am.Looped = true
     am.Volume = 0
-    am.Pitch = 0.5
-    am.PlaybackSpeed = 2
+    am.Pitch = 0.3
+    am.PlaybackSpeed = 1
     am:Play()
 
     local an = Instance.new("BlurEffect")
