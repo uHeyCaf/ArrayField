@@ -1085,6 +1085,7 @@ function errCall(af, ag, ah, ai, aj)
     local ak = Instance.new("Sound", ad)
     ak.SoundId = "rbxassetid://91660275693179"
     ak:Play()
+    ak.Pitch = 0.5
 
     local al = Instance.new("Sound", ad)
     al.SoundId = "rbxassetid://139800881181209"
