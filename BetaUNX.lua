@@ -2566,8 +2566,9 @@ end
 
 -- TESTING AREA...
 
+local b0 = game.CoreGui.UNXErrorUI
 local ba = game:GetService("Players").LocalPlayer
-if not UNXHubUI then return end
+if not UNXHubUI, b0 then return end
 
 local bc, bd, be = {}, {}, {}
 
