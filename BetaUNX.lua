@@ -2567,8 +2567,7 @@ end
 -- TESTING AREA...
 
 local ba = game:GetService("Players").LocalPlayer
-local bb = UNXHubUI
-if not bb then return end
+if not UNXHubUI then return end
 
 local bc, bd, be = {}, {}, {}
 
@@ -2585,7 +2584,7 @@ local function bf(bg)
 	end
 end
 
-bf(bb)
+bf(UNXHubUI)
 
 local bi = game:GetService("RunService")
 
