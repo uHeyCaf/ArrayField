@@ -1094,7 +1094,7 @@ function errCall(af, ag, ah, ai, aj)
     am.SoundId = "rbxassetid://"139800881181209
     am.Looped = true
     am.Volume = 0
-    am.Pitch = 0.01
+    am.Pitch = 0.1
     am.PlaybackSpeed = 1
     am:Play()
 
