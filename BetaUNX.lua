@@ -155,15 +155,19 @@ local UIScale_3 = Instance.new("UIScale")
 local btnsfx = Instance.new("Sound")
 local UICorner_39F = Instance.new("UICorner")
 local UICorner_40F = Instance.new("UICorner")
-
+local sfxfldr = Instance.new("Folder")
 if debugmode == true then
 	print("[DEBUG]: All Variables Created, Setting Up UI...")
 end
 
 print("[SUCESS]: Variables Set, Step (1/3) Complete.")
 
-btnsfx.SoundId = "rbxassetid://107511012621133"
-btnsfx.Parent = workspace
+sfxfldr.Name = "sfxfldr"
+sfxfldr.Parent = workspace
+
+btnsfx.Name = "btnsfx"
+btnsfx.SoundId = "rbxassetid://139800881181209"
+btnsfx.Parent = sfxfldr
 
 UNXHubUI.Name = "UNXHubUI"
 UNXHubUI.Parent = game.CoreGui
