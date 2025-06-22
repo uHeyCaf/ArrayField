@@ -2444,6 +2444,26 @@ FlyFrame.Active = true
 FlyFrame.Draggable = true
 FlyFrame.Selectable = true
 
+InfjumpFF.Active = true
+InfjumpFF.Draggable = true
+InfjumpFF.Selectable = true
+
+AimLockFF.Active = true
+AimLockFF.Draggable = true
+AimLockFF.Selectable = true
+
+RejFF.Active = true
+RejFF.Draggable = true
+RejFF.Selectable = true
+
+NoclipFF.Active = true
+NoclipFF.Draggable = true
+NoclipFF.Selectable = true
+
+OpenUNX.Active = true
+OpenUNX.Draggable = true
+OpenUNX.Selectable = true
+
 UNXHubUI.ResetOnSpawn = false -- DO NOT MESS WITH IT.
 
 
