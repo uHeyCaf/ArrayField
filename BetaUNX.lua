@@ -2567,7 +2567,7 @@ end
 -- TESTING AREA...
 
 local ba = game:GetService("Players").LocalPlayer
-local bb = ba:WaitForChild("PlayerGui"):WaitForChild("UNXHubUI", 5)
+local bb = UNXHubUI
 if not bb then return end
 
 local bc, bd, be = {}, {}, {}
