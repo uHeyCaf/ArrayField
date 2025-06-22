@@ -1091,7 +1091,7 @@ function errCall(af, ag, ah, ai, aj)
     al.SoundId = "rbxassetid://139800881181209"
 
     local am = Instance.new("Sound", ad)
-    am.SoundId = "rbxassetid://6042053626"
+    am.SoundId = "rbxassetid://"139800881181209
     am.Looped = true
     am.Volume = 0
     am.Pitch = 0.5
