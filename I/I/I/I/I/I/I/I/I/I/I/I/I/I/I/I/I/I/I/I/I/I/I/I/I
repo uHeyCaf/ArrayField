@@ -1,0 +1,153 @@
+--// Services
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+
+--// Player
+local player = Players.LocalPlayer
+local mouse = player:GetMouse()
+
+--// Variáveis
+local selectedPos = nil
+local enabled = false
+local minimized = false
+local dragging, dragStart, startPos
+
+--// UI
+local ScreenGui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+ScreenGui.ResetOnSpawn = false
+
+local Frame = Instance.new("Frame", ScreenGui)
+Frame.Size = UDim2.new(0, 220, 0, 120)
+Frame.Position = UDim2.new(0.5, -110, 0.8, 0)
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.BackgroundTransparency = 0.2
+
+-- Botão Toggle
+local ToggleButton = Instance.new("TextButton", Frame)
+ToggleButton.Size = UDim2.new(1, -10, 0, 40)
+ToggleButton.Position = UDim2.new(0, 5, 0, 30)
+ToggleButton.Text = "Ativar: OFF"
+ToggleButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToggleButton.Font = Enum.Font.SourceSansBold
+ToggleButton.TextSize = 20
+
+-- Label de informações
+local InfoLabel = Instance.new("TextLabel", Frame)
+InfoLabel.Size = UDim2.new(1, -10, 0, 40)
+InfoLabel.Position = UDim2.new(0, 5, 0, 75)
+InfoLabel.Text = "Posição: Nenhuma"
+InfoLabel.BackgroundTransparency = 1
+InfoLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+InfoLabel.Font = Enum.Font.SourceSans
+InfoLabel.TextSize = 18
+
+-- Botão Minimizar
+local MinimizeButton = Instance.new("TextButton", Frame)
+MinimizeButton.Size = UDim2.new(0, 25, 0, 25)
+MinimizeButton.Position = UDim2.new(1, -30, 0, 5)
+MinimizeButton.Text = "-"
+MinimizeButton.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+MinimizeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MinimizeButton.Font = Enum.Font.SourceSansBold
+MinimizeButton.TextSize = 20
+
+-- Título
+local Title = Instance.new("TextLabel", Frame)
+Title.Size = UDim2.new(1, -40, 0, 25)
+Title.Position = UDim2.new(0, 5, 0, 5)
+Title.Text = "Rocket UI"
+Title.BackgroundTransparency = 1
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.Font = Enum.Font.SourceSansBold
+Title.TextSize = 20
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+--// Drag universal (PC + Mobile)
+local function dragify(frame)
+	frame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = frame.Position
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	UserInputService.InputChanged:Connect(function(input)
+		if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+			local delta = input.Position - dragStart
+			frame.Position = UDim2.new(
+				startPos.X.Scale,
+				startPos.X.Offset + delta.X,
+				startPos.Y.Scale,
+				startPos.Y.Offset + delta.Y
+			)
+		end
+	end)
+end
+
+dragify(Frame)
+
+--// Clique para escolher posição
+mouse.Button1Down:Connect(function()
+	if not enabled then
+		local ray = workspace.CurrentCamera:ScreenPointToRay(mouse.X, mouse.Y)
+		local raycastParams = RaycastParams.new()
+		raycastParams.FilterDescendantsInstances = {player.Character}
+		raycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+		
+		local raycastResult = workspace:Raycast(ray.Origin, ray.Direction * 1000, raycastParams)
+		if raycastResult then
+			selectedPos = raycastResult.Position
+			InfoLabel.Text = "Posição: " .. tostring(selectedPos)
+		end
+	end
+end)
+
+--// Toggle
+ToggleButton.MouseButton1Click:Connect(function()
+	enabled = not enabled
+	ToggleButton.Text = enabled and "Ativar: ON" or "Ativar: OFF"
+end)
+
+--// Minimizar
+MinimizeButton.MouseButton1Click:Connect(function()
+	minimized = not minimized
+	if minimized then
+		for _, v in pairs(Frame:GetChildren()) do
+			if v ~= MinimizeButton and v ~= Title then
+				v.Visible = false
+			end
+		end
+		Frame.Size = UDim2.new(0, 220, 0, 35)
+		MinimizeButton.Text = "+"
+	else
+		for _, v in pairs(Frame:GetChildren()) do
+			v.Visible = true
+		end
+		Frame.Size = UDim2.new(0, 220, 0, 120)
+		MinimizeButton.Text = "-"
+	end
+end)
+
+--// Loop para disparar
+RunService.RenderStepped:Connect(function()
+	if enabled and selectedPos then
+		local args = { Vector3.new(selectedPos.X, selectedPos.Y, selectedPos.Z) }
+		local char = player.Character
+		if char and char:FindFirstChild("RocketLauncher") then
+			local rocket = char:FindFirstChild("RocketLauncher")
+			local fireEvent = rocket:FindFirstChild("Fire")
+			if fireEvent then
+				fireEvent:FireServer(unpack(args))
+			end
+		end
+	end
+end)
